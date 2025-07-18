@@ -21,11 +21,11 @@ logger = logging.getLogger("PerpetualRSIMonitor")
 
 # 配置参数 - 永续合约版本
 class Config:
-    SYMBOL = ["PUMPUSDT", "CRVUSDT", "FARTCOINUSDT", "ACHUSDT", "ONDOUSDT"]  # 交易对（永续合约）
+    SYMBOL = ["ACHUSDT"]  # 交易对（永续合约）
     INTERVAL = "15m"  # K线周期
     RSI_PERIOD = 6  # RSI计算周期
-    OVERBOUGHT = 50  # 超买阈值
-    OVERSOLD = 40  # 超卖阈值
+    OVERBOUGHT = 95  # 超买阈值
+    OVERSOLD = 60  # 超卖阈值
     CHECK_INTERVAL = 5  # 检查间隔(秒)
     DINGDING_WEBHOOK = "https://oapi.dingtalk.com/robot/send?access_token=b8547d280dbe99c9845b95f726e2c3c82e1b9749540e5cb1b91ae5e9884ffa70"
     API_RETRY_TIMES = 3  # API请求重试次数

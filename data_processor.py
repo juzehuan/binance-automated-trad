@@ -7,8 +7,8 @@ logger = logging.getLogger('data_processor')
 
 class DataProcessor:
     @staticmethod
-    def calculate_rsi(data, period=14, return_all=False):
-        """计算RSI指标"""
+    def calculate_rsi(data, period=14):
+        """使用Wilder's Smoothing方法计算RSI，返回包含RSI列的DataFrame"""
         close_prices = data['close']
         deltas = close_prices.diff()
 
@@ -16,31 +16,34 @@ class DataProcessor:
         gains = deltas.where(deltas > 0, 0)
         losses = -deltas.where(deltas < 0, 0)
 
-        # 计算平均收益和损失（使用指数移动平均）
-        avg_gain = gains.ewm(alpha=1/period, min_periods=period).mean()
-        avg_loss = losses.ewm(alpha=1/period, min_periods=period).mean()
+        # 计算平均收益和损失
+        avg_gain = gains.rolling(window=period, min_periods=period).mean()
+        avg_loss = losses.rolling(window=period, min_periods=period).mean()
+
+        # 处理前n个数据点后的平均收益和损失
+        for i in range(period, len(avg_gain)):
+            avg_gain.iloc[i] = (avg_gain.iloc[i - 1] * (period - 1) + gains.iloc[i]) / period
+            avg_loss.iloc[i] = (avg_loss.iloc[i - 1] * (period - 1) + losses.iloc[i]) / period
 
         # 避免除以零
-        if avg_loss.sum() == 0:
-            return 100 if return_all else 100
+        avg_loss = avg_loss.replace(0, 0.0001)
 
         # 计算RSI
         rs = avg_gain / avg_loss
         rsi = 100 - (100 / (1 + rs))
 
-        if return_all:
-            return rsi
-        else:
-            return rsi.iloc[-1] if not rsi.empty else 50
+        # 添加RSI列到原始DataFrame
+        data['rsi'] = rsi
+        return data
 
     @staticmethod
     def process_kline_data(kline_data, state):
         """处理K线数据并更新交易状态"""
         try:
             # 提取K线数据
-            symbol = kline_data['symbol']
-            close_price = float(kline_data['close'])
-            timestamp = pd.to_datetime(kline_data['event_time'], unit='ms')
+            symbol = kline_data['k']['s']
+            close_price = float(kline_data['k']['c'])
+            timestamp = pd.to_datetime(kline_data['k']['t'], unit='ms')
 
             # 添加到K线列表
             # 如果是新K线，添加新记录；否则更新最后一条记录
