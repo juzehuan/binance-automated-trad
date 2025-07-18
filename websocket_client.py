@@ -1,10 +1,9 @@
-import websocket
 import json
-import threading
-import time
 import logging
+from binance import ThreadedWebsocketManager
 from dotenv import load_dotenv
 import os
+import time
 
 # 加载环境变量
 load_dotenv()
@@ -26,46 +25,13 @@ class BinanceWebSocketClient:
         self.interval = interval
         self.testnet = testnet
         self.proxies = proxies
-        self.ws = None
+        self.twm = None
         self.running = False
-        self.heartbeat_thread = None
         self.data_callback = None
         self.api_key = os.getenv('TEST_API_KEY' if testnet else 'API_KEY')
         self.api_secret = os.getenv('TEST_API_SECRET' if testnet else 'API_SECRET')
 
-    def connect(self):
-        """建立WebSocket连接"""
-        base_url = 'wss://testnet.binancefuture.com' if self.testnet else 'wss://fstream.binance.com'
-        stream_names = [f'{symbol.lower()}@kline_{self.interval}' for symbol in self.symbols]
-        streams = '/'.join(stream_names)
-        url = f'{base_url}/stream?streams={streams}'
-
-        logger.info(f'连接到WebSocket: {url}')
-        self.ws = websocket.WebSocketApp(
-            url,
-            on_open=self.on_open,
-            on_message=self.on_message,
-            on_error=self.on_error,
-            on_close=self.on_close
-        )
-
-        # 设置代理
-        if self.proxies:
-            self.ws.run_forever(http_proxy_host=self.proxies['http'].split('://')[1].split(':')[0],
-                               http_proxy_port=int(self.proxies['http'].split('://')[1].split(':')[1]))
-        else:
-            self.ws.run_forever()
-
-    def on_open(self, ws):
-        """WebSocket连接打开时调用"""
-        logger.info('WebSocket连接已打开')
-        self.running = True
-        # 启动心跳线程
-        self.heartbeat_thread = threading.Thread(target=self.send_heartbeat)
-        self.heartbeat_thread.daemon = True
-        self.heartbeat_thread.start()
-
-    def on_message(self, ws, message):
+    def on_message(self, message):
         """接收到WebSocket消息时调用"""
         try:
             data = json.loads(message)
@@ -77,42 +43,54 @@ class BinanceWebSocketClient:
         except Exception as e:
             logger.error(f'处理消息错误: {e}')
 
-    def on_error(self, ws, error):
+    def on_error(self, error):
         """WebSocket错误时调用"""
         logger.error(f'WebSocket错误: {error}')
 
-    def on_close(self, ws, close_status_code, close_msg):
+    def on_close(self):
         """WebSocket关闭时调用"""
-        logger.info(f'WebSocket连接已关闭: {close_status_code} - {close_msg}')
+        logger.info('WebSocket连接已关闭')
         self.running = False
         # 尝试重连
-        if close_status_code != 1000:
-            logger.info('尝试重新连接...')
-            time.sleep(5)
-            self.connect()
-
-    def send_heartbeat(self):
-        """发送心跳包保持连接"""
-        while self.running:
-            try:
-                self.ws.send(json.dumps({'method': 'PING'}))
-                time.sleep(30)
-            except Exception as e:
-                logger.error(f'发送心跳失败: {e}')
-                break
+        logger.info('尝试重新连接...')
+        time.sleep(5)
+        self.start(self.data_callback)
 
     def start(self, data_callback=None):
         """启动WebSocket客户端"""
         self.data_callback = data_callback
-        self.connect()
+        self.running = True
+
+        # 创建ThreadedWebsocketManager实例
+        self.twm = ThreadedWebsocketManager(
+            api_key=self.api_key,
+            api_secret=self.api_secret,
+            testnet=self.testnet,
+            proxies=self.proxies
+        )
+
+        # 启动WebSocket管理器
+        self.twm.start()
+
+        # 为每个交易对订阅K线流
+        for symbol in self.symbols:
+            stream_name = f'{symbol.lower()}@kline_{self.interval}'
+            logger.info(f'订阅流: {stream_name}')
+            self.twm.start_stream(
+                stream_name=stream_name,
+                callback=self.on_message,
+                on_error=self.on_error,
+                on_close=self.on_close
+            )
+
+        logger.info('WebSocket客户端已启动')
 
     def stop(self):
         """停止WebSocket客户端"""
         self.running = False
-        if self.ws:
-            self.ws.close()
-        if self.heartbeat_thread and self.heartbeat_thread.is_alive():
-            self.heartbeat_thread.join(1)
+        if self.twm:
+            self.twm.stop()
+            logger.info('WebSocket客户端已停止')
 
 # 通用工具函数
 def setup_logger(name, log_file=None, level=logging.INFO):

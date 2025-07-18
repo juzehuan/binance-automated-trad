@@ -1,0 +1,4 @@
+python-binance==1.0.19
+pandas==2.2.2
+websocket-client==1.8.0
+dotenv==0.21.0
