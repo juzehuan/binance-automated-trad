@@ -1,17 +1,46 @@
 from binance.client import Client
-from binance import ThreadedWebsocketManager
+
 from dotenv import load_dotenv
 import os
 import logging
+from logging.handlers import RotatingFileHandler
 import signal
 import time
 import pandas as pd
 import numpy as np
+import concurrent.futures
+from concurrent.futures import ThreadPoolExecutor
+import sys
 
-logging.basicConfig(
-    level=logging.DEBUG,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+# 配置日志系统
+logger = logging.getLogger('trading_system')
+logger.setLevel(logging.DEBUG)
+
+# 创建格式化器
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+
+# 控制台处理器
+console_handler = logging.StreamHandler(sys.stdout)
+console_handler.setLevel(logging.INFO)
+console_handler.setFormatter(formatter)
+
+# 文件处理器 (支持轮转)
+file_handler = RotatingFileHandler(
+    'trading.log',
+    maxBytes=5 * 1024 * 1024,  # 5MB
+    backupCount=5,  # 保留5个备份文件
+    encoding='utf-8'
 )
+file_handler.setLevel(logging.DEBUG)
+file_handler.setFormatter(formatter)
+
+# 移除默认处理器
+if logger.handlers:
+    logger.handlers = []
+
+# 添加处理器
+logger.addHandler(console_handler)
+logger.addHandler(file_handler)
 
 load_dotenv()
 api_key = os.getenv('TEST_API_KEY')
@@ -26,7 +55,7 @@ proxies = {
 
 # 配置参数
 class Config:
-    SYMBOL = 'ACHUSDT'  # 交易对
+    SYMBOLS = ["PUMPUSDT", "CRVUSDT", "FARTCOINUSDT", "ACHUSDT", "ONDOUSDT"]   # 多个交易对
     INTERVAL = '15m'  # K线周期
     RSI_PERIOD = 6  # RSI计算周期
     OVERBOUGHT = 90  # 超买阈值
@@ -43,11 +72,12 @@ class TradingState:
         self.klines = []
         self.take_profit_price = 0
 
-state = TradingState()
+# 为每个交易对创建独立的状态
+state_map = {symbol: TradingState() for symbol in Config.SYMBOLS}
 
 # 初始化变量
-twm=None # websocket
 client=None # 客户端
+refresh_interval = 5  # 刷新间隔(秒)
 
 def set_leverage(symbol, leverage):
     global client
@@ -56,10 +86,10 @@ def set_leverage(symbol, leverage):
             symbol=symbol,
             leverage=leverage
         )
-        logging.info(f"设置杠杆成功: {response}")
+        logger.info(f"设置杠杆成功: {response}")
         return response
     except Exception as e:
-        logging.error(f"设置杠杆失败: {e}")
+        logger.error(f"设置杠杆失败: {e}")
         return None
 
 def calculate_rsi(data, period=14):
@@ -94,15 +124,15 @@ def place_buy_order(symbol, quantity):
             type=Client.ORDER_TYPE_MARKET,
             quantity=quantity
         )
-        logging.info(f"买入订单已执行: {order}")
+        logger.info(f"买入订单已执行: {order}")
         state.in_position = True
         state.last_buy_price = float(order['fills'][0]['price'])
         # 设置止盈价格
         state.take_profit_price = state.last_buy_price * (1 + Config.TAKE_PROFIT_PERCENT / 100)
-        logging.info(f"设置止盈价格: {state.take_profit_price}")
+        logger.info(f"设置止盈价格: {state.take_profit_price}")
         return order
     except Exception as e:
-        logging.error(f"买入订单执行失败: {e}")
+        logger.error(f"买入订单执行失败: {e}")
         return None
 
 def place_sell_order(symbol, quantity):
@@ -114,13 +144,13 @@ def place_sell_order(symbol, quantity):
             type=Client.ORDER_TYPE_MARKET,
             quantity=quantity
         )
-        logging.info(f"卖出订单已执行: {order}")
+        logger.info(f"卖出订单已执行: {order}")
         state.in_position = False
         state.last_buy_price = 0
         state.take_profit_price = 0
         return order
     except Exception as e:
-        logging.error(f"卖出订单执行失败: {e}")
+        logger.error(f"卖出订单执行失败: {e}")
         return None
 
 def handle_socket_message(msg):
@@ -128,7 +158,7 @@ def handle_socket_message(msg):
     if msg['e'] == 'kline':
         kline = msg['k']
         # 添加日志查看kline['x']的值
-        logging.info(f"K线状态 - 闭合: {kline['x']}, 时间戳: {kline['T']}, 当前价格: {kline['c']}")
+        logger.info(f"K线状态 - 闭合: {kline['x']}, 时间戳: {kline['T']}, 当前价格: {kline['c']}")
         # 提取K线数据(实时计算，不等待K线闭合)
         close_price = float(kline['c'])
         timestamp = pd.to_datetime(kline['T'], unit='ms')
@@ -153,47 +183,71 @@ def handle_socket_message(msg):
             df = pd.DataFrame(state.klines)
             current_rsi = calculate_rsi(df, Config.RSI_PERIOD)
             status = "(K线闭合)" if kline['x'] else "(实时计算)"
-            logging.info(f"当前RSI{status}: {current_rsi:.2f}, 价格: {close_price}")
+            logger.info(f"当前RSI{status}: {current_rsi:.2f}, 价格: {close_price}")
 
             # 检查买入条件
             if current_rsi < Config.OVERSOLD and not state.in_position:
-                logging.info(f"RSI低于超卖阈值({Config.OVERSOLD}), 准备买入...")
+                logger.info(f"RSI低于超卖阈值({Config.OVERSOLD}), 准备买入...")
                 # 这里简化处理，实际交易中需要计算合适的交易量
                 place_buy_order(Config.SYMBOL, 0.001)
 
             # 检查止盈条件
             elif state.in_position and close_price >= state.take_profit_price:
-                logging.info(f"价格达到止盈点({state.take_profit_price}), 准备卖出...")
+                logger.info(f"价格达到止盈点({state.take_profit_price}), 准备卖出...")
                 place_sell_order(Config.SYMBOL, 0.001)
 
-def createWebSocket():
-    global twm
-    symbol = Config.SYMBOL
-    twm = ThreadedWebsocketManager(api_key=api_key, api_secret=api_secret,  testnet=Config.TESTNET, https_proxy=proxies['https'])
-    # start is required to initialise its internal loop
-    twm.start()
+def fetch_kline_data(symbol, interval):
+    global client
+    try:
+        # 获取最新的K线数据
+        klines = client.get_klines(
+            symbol=symbol,
+            interval=interval,
+            limit=Config.RSI_PERIOD + 10  # 获取足够计算RSI的数据
+        )
+        # 转换为DataFrame
+        df = pd.DataFrame(klines, columns=['timestamp', 'open', 'high', 'low', 'close', 'volume', 'close_time', 'quote_asset_volume', 'number_of_trades', 'taker_buy_base_asset_volume', 'taker_buy_quote_asset_volume', 'ignore'])
+        df['timestamp'] = pd.to_datetime(df['timestamp'], unit='ms')
+        df['close'] = df['close'].astype(float)
+        return df[['timestamp', 'close']]
+    except Exception as e:
+        logger.error(f"获取K线数据失败: {e}")
+        return None
 
+def process_kline_data(symbol, df):
+    state = state_map[symbol]
+    if df is None or df.empty:
+        return
 
+    # 更新K线数据
+    state.klines = df.to_dict('records')
+    logger.info(f"[{symbol}] 更新了{len(state.klines)}条K线数据")
 
-    twm.start_kline_socket(callback=handle_socket_message, symbol=symbol, interval=Config.INTERVAL)
+    # 当有足够数据时计算RSI
+    if len(state.klines) >= Config.RSI_PERIOD:
+        current_rsi = calculate_rsi(df, Config.RSI_PERIOD)
+        close_price = df['close'].iloc[-1]
+        logger.info(f"[{symbol}] 当前RSI: {current_rsi:.2f}, 价格: {close_price}")
 
-    return twm
+        # 检查买入条件
+        if current_rsi < Config.OVERSOLD and not state.in_position:
+            logger.info(f"[{symbol}] RSI低于超卖阈值({Config.OVERSOLD}), 准备买入...")
+            place_buy_order(symbol, 0.001)
 
-def closeWebSocket():
-    global twm
-    if twm is not None:
-        twm.stop()
-        logging.info("WebSocket连接已关闭")
-        twm = None
-    else:
-        logging.warning("没有活动的WebSocket连接")
+        # 检查止盈条件
+        elif state.in_position and close_price >= state.take_profit_price:
+            logger.info(f"[{symbol}] 价格达到止盈点({state.take_profit_price}), 准备卖出...")
+            place_sell_order(symbol, 0.001)
 
 # 定义信号处理函数，用于优雅退出
 def signal_handler(sig, frame):
-    logging.info('收到退出信号，正在关闭WebSocket...')
-    closeWebSocket()
-    logging.info('程序已退出')
+    logger.info('程序已退出')
     exit(0)
+def process_symbol(symbol):
+    # 处理单个交易对的数据获取和分析
+    df = fetch_kline_data(symbol, Config.INTERVAL)
+    process_kline_data(symbol, df)
+
 def main():
     global client
 
@@ -201,22 +255,26 @@ def main():
     client = Client(api_key, api_secret, {'proxies': proxies}, testnet=Config.TESTNET)
     client.ping()  # 测试连接并自动同步时间
 
-    # 设置合约杠杆
-    set_leverage(Config.SYMBOL, Config.LEVERAGE)
-
-    # 启动WebSocket
-    createWebSocket()
-
-
+    # 为每个交易对设置合约杠杆
+    for symbol in Config.SYMBOLS:
+        set_leverage(symbol, Config.LEVERAGE)
 
     # 注册信号处理器
     signal.signal(signal.SIGINT, signal_handler)
     signal.signal(signal.SIGTERM, signal_handler)
 
     # 保持程序运行
-    logging.info('程序正在运行，按Ctrl+C退出...')
-    while True:
-        time.sleep(1)
+    logger.info('程序正在运行，按Ctrl+C退出...')
+    # 创建线程池，最大线程数为交易对数量
+    max_workers = min(len(Config.SYMBOLS), 10)  # 限制最大线程数为10
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        while True:
+            # 提交所有交易对的处理任务
+            futures = {executor.submit(process_symbol, symbol): symbol for symbol in Config.SYMBOLS}
+            # 等待所有任务完成
+            concurrent.futures.wait(futures)
+            # 等待指定的刷新间隔
+            time.sleep(refresh_interval)
 
 if __name__ == '__main__':
     main()
