@@ -1,37 +1,52 @@
+from dataclasses import dataclass, field
 import os
 from dotenv import load_dotenv
 
 # 加载环境变量
 load_dotenv()
 
-class Config:
-
-    REFRESH_INTERVAL = 2  # REST API刷新间隔(秒)
+@dataclass
+class TradingConfig:
+    """交易系统配置参数"""
+    # 基础配置
+    REFRESH_INTERVAL: int = 2  # REST API刷新间隔(秒)
 
     # 交易对配置
-    SYMBOLS = ["ACHUSDT"]
-    INTERVAL = '15m'  # K线周期
+    SYMBOLS: list[str] = field(default_factory=lambda: ['ACHUSDT'])
+    INTERVAL: str = '15m'  # K线周期
 
     # RSI指标配置
-    RSI_PERIOD = 6
-    OVERBOUGHT = 30
-    OVERSOLD = 25
+    RSI_PERIOD: int = 6
+    OVERBOUGHT: int = 95
+    OVERSOLD: int = 60
 
     # 交易配置
-    TESTNET = False
-    LEVERAGE = 10
-    TAKE_PROFIT_PERCENT = 5
+    TESTNET: bool = False
+    LEVERAGE: int = 10
+    TAKE_PROFIT_PERCENT: float = 5.0
 
     # API配置
-    API_KEY = os.getenv('TEST_API_KEY' if TESTNET else 'ROOT_API_KEY')
-    API_SECRET = os.getenv('TEST_API_SECRET' if TESTNET else 'ROOT_API_SECRET')
+    API_KEY: str = os.getenv('ROOT_API_KEY', '')
+    API_SECRET: str = os.getenv('ROOT_API_SECRET', '')
+    TEST_API_KEY: str = os.getenv('TEST_API_KEY', '')
+    TEST_API_SECRET: str = os.getenv('TEST_API_SECRET', '')
 
     # 代理配置
-    PROXIES = {
+    PROXIES: dict[str, str] = field(default_factory=lambda: {
         'http': 'http://127.0.0.1:7890',
         'https': 'http://127.0.0.1:7890'
-    }
+    })
 
     # 日志配置
-    LOG_FILE = 'trading.log'
-    LOG_LEVEL = 'INFO'
+    LOG_FILE: str = 'trading.log'
+    LOG_LEVEL: str = 'INFO'
+
+    @property
+    def active_api_key(self) -> str:
+        """根据当前环境返回活跃的API Key"""
+        return self.TEST_API_KEY if self.TESTNET else self.API_KEY
+
+    @property
+    def active_api_secret(self) -> str:
+        """根据当前环境返回活跃的API Secret"""
+        return self.TEST_API_SECRET if self.TESTNET else self.API_SECRET

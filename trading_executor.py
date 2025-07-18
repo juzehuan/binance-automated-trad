@@ -1,15 +1,17 @@
-from config import Config
+from config import TradingConfig
 import logging
+from binance.exceptions import BinanceAPIException, BinanceOrderException
 
 logger = logging.getLogger('trading_executor')
 
 class TradingExecutor:
-    def __init__(self, client):
+    def __init__(self, client, config):
         self.client = client
+        self.config = config
 
     def set_leverage(self, symbol, leverage=None):
         """设置合约杠杆"""
-        leverage = leverage or Config.LEVERAGE
+        leverage = leverage or self.config.LEVERAGE
         try:
             response = self.client.futures_change_leverage(
                 symbol=symbol,
@@ -34,7 +36,7 @@ class TradingExecutor:
             state.in_position = True
             state.last_short_price = float(order['fills'][0]['price'])
             # 设置止盈价格（做空时止盈价格低于开仓价格）
-            state.take_profit_price = state.last_short_price * (1 - Config.TAKE_PROFIT_PERCENT / 100)
+            state.take_profit_price = state.last_short_price * (1 - self.config.TAKE_PROFIT_PERCENT / 100)
             logger.info(f"[{symbol}] 设置止盈价格: {state.take_profit_price}")
             return order
         except Exception as e:
@@ -71,8 +73,14 @@ class TradingExecutor:
                     return available_balance
             logger.warning(f"合约账户中未找到{asset}资产")
             return 0.0
+        except BinanceAPIException as e:
+            logger.error(f"获取{asset}合约余额API错误: 代码{e.code}, 消息{e.message}")
+            return 0.0
+        except BinanceOrderException as e:
+            logger.error(f"获取{asset}合约余额订单错误: {str(e)}")
+            return 0.0
         except Exception as e:
-            logger.error(f"获取{asset}合约余额失败: {str(e)}")
+            logger.error(f"获取{asset}合约余额未知错误: {str(e)}")
             return 0.0
 
     def get_latest_price(self, symbol):
@@ -90,9 +98,9 @@ class TradingExecutor:
         close_price = self.get_latest_price(symbol)
         if close_price is None:
             return
-        print(f"[{symbol}] 最新价格: {close_price}, RSI: {rsi_value}")
-        if rsi_value >= Config.OVERSOLD and not state.in_position:
-            logger.info(f"[{symbol}] RSI低于超卖阈值({Config.OVERSOLD}), 准备做空...")
+        logger.info(f"[{symbol}] 最新价格: {close_price}, RSI: {rsi_value}")
+        if rsi_value >= self.config.OVERSOLD and not state.in_position:
+            logger.info(f"[{symbol}] RSI低于超卖阈值({self.config.OVERSOLD}), 准备做空...")
             # 这里简化处理，实际交易中需要计算合适的交易量
             # 计算四分之一仓位
             # 使用USDT作为基础货币计算买入数量

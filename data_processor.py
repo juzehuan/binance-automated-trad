@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-from config import Config
+from config import TradingConfig
 import logging
 
 logger = logging.getLogger('data_processor')
@@ -36,8 +36,7 @@ class DataProcessor:
         data['rsi'] = rsi
         return data
 
-    @staticmethod
-    def process_kline_data(kline_data, state):
+    def process_kline_data(self, kline_data, state):
         """处理K线数据并更新交易状态"""
         try:
             # 提取K线数据
@@ -56,14 +55,14 @@ class DataProcessor:
                 state.klines[-1]['close'] = close_price
 
             # 保持K线列表长度
-            max_klines = Config.RSI_PERIOD + 10
+            max_klines = self.config.RSI_PERIOD + 10
             if len(state.klines) > max_klines:
                 state.klines.pop(0)
 
             # 当有足够数据时计算RSI
-            if len(state.klines) >= Config.RSI_PERIOD:
+            if len(state.klines) >= self.config.RSI_PERIOD:
                 df = pd.DataFrame(state.klines)
-                rsi_value = DataProcessor.calculate_rsi(df, Config.RSI_PERIOD)
+                rsi_value = DataProcessor.calculate_rsi(df, self.config.RSI_PERIOD)
                 logger.info(f"[{symbol}] 当前RSI: {rsi_value:.2f}, 价格: {close_price}")
                 return df, rsi_value
             return None, None

@@ -8,17 +8,18 @@ from concurrent.futures import ThreadPoolExecutor
 import sys
 
 # 导入自定义模块
-from config import Config
+from config import TradingConfig
 from data_processor import DataProcessor
 from binance.client import Client
 from trading_executor import TradingExecutor
 
-client = Client(Config.API_KEY, Config.API_SECRET)
-trading_executor = TradingExecutor(client)
+config = TradingConfig()
+client = Client(config.active_api_key, config.active_api_secret, testnet=config.TESTNET)
+trading_executor = TradingExecutor(client, config)
 
 # 配置日志系统
 logger = logging.getLogger('trading_system')
-logger.setLevel(getattr(logging, Config.LOG_LEVEL))
+logger.setLevel(getattr(logging, config.LOG_LEVEL))
 
 # 创建格式化器
 formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
@@ -32,13 +33,13 @@ class TradingFilter(logging.Filter):
 
 # 控制台处理器
 console_handler = logging.StreamHandler(sys.stdout)
-console_handler.setLevel(getattr(logging, Config.LOG_LEVEL))
+console_handler.setLevel(getattr(logging, config.LOG_LEVEL))
 console_handler.setFormatter(formatter)
 console_handler.addFilter(TradingFilter())
 
 # 文件处理器 (支持轮转)
 file_handler = RotatingFileHandler(
-    Config.LOG_FILE,
+    config.LOG_FILE,
     maxBytes=5 * 1024 * 1024,  # 5MB
     backupCount=5,  # 保留5个备份文件
     encoding='utf-8'
@@ -63,7 +64,7 @@ class TradingState:
         self.take_profit_price = 0
 
 # 为每个交易对创建独立的状态
-state_map = {symbol: TradingState() for symbol in Config.SYMBOLS}
+state_map = {symbol: TradingState() for symbol in config.SYMBOLS}
 
 # 初始化变量
 client = None
@@ -88,8 +89,8 @@ def process_symbol(symbol):
         try:
             klines = client.get_klines(
                 symbol=symbol,
-                interval=Config.INTERVAL,
-                limit=Config.RSI_PERIOD + 100
+                interval=config.INTERVAL,
+                limit=config.RSI_PERIOD + 100
             )
 
             # 处理K线数据
@@ -102,10 +103,10 @@ def process_symbol(symbol):
             logger.info(f"成功加载{len(state.klines)}条{symbol}的K线数据")
 
             # 计算初始RSI
-            if len(state.klines) >= Config.RSI_PERIOD:
+            if len(state.klines) >= config.RSI_PERIOD:
                 # 计算RSI并提取最新值
                   kline_df = pd.DataFrame(state.klines)
-                  DataProcessor.calculate_rsi(kline_df, Config.RSI_PERIOD)
+                  DataProcessor.calculate_rsi(kline_df, config.RSI_PERIOD)
                   rsi_value = kline_df['rsi'].iloc[-1] if not kline_df.empty else 50
                   trading_executor.check_trading_conditions(symbol, rsi_value, state)
                   logger.info(f"{symbol}当前RSI: {rsi_value:.2f}")
@@ -124,7 +125,7 @@ def main():
     global client
 
     # 初始化Binance客户端
-    client = Client(Config.API_KEY, Config.API_SECRET, {'proxies': Config.PROXIES}, testnet=Config.TESTNET)
+    client = Client(config.active_api_key, config.active_api_secret, {'proxies': config.PROXIES}, testnet=config.TESTNET)
     client.ping()  # 测试连接并自动同步时间
 
 
@@ -135,14 +136,14 @@ def main():
 
     logger.info('使用REST API数据源')
     # 创建线程池，最大线程数为交易对数量
-    max_workers = min(len(Config.SYMBOLS), 10)  # 限制最大线程数为10
+    max_workers = min(len(config.SYMBOLS), 10)  # 限制最大线程数为10
     with ThreadPoolExecutor(max_workers=max_workers) as executor:
         logger.info('程序正在运行，按Ctrl+C退出...')
         while True:
             # 提交所有交易对的处理任务
-            futures = {executor.submit(process_symbol, symbol): symbol for symbol in Config.SYMBOLS}
+            futures = {executor.submit(process_symbol, symbol): symbol for symbol in config.SYMBOLS}
             # 等待刷新间隔
-            time.sleep(Config.REFRESH_INTERVAL - 0.001)
+            time.sleep(config.REFRESH_INTERVAL - 0.001)
 
 
 if __name__ == '__main__':

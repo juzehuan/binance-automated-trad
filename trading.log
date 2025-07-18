@@ -37708,3 +37708,88 @@
 2025-07-18 23:13:45,443 - trading_system - INFO - 程序正在退出...
 2025-07-18 23:13:45,579 - trading_system - INFO - 成功加载106条ACHUSDT的K线数据
 2025-07-18 23:13:46,011 - trading_system - INFO - ACHUSDT当前RSI: 26.41
+2025-07-18 23:27:51,469 - trading_system - INFO - 使用REST API数据源
+2025-07-18 23:28:19,166 - trading_system - INFO - 使用REST API数据源
+2025-07-18 23:28:19,166 - trading_system - INFO - 程序正在运行，按Ctrl+C退出...
+2025-07-18 23:28:44,163 - trading_system - INFO - 使用REST API数据源
+2025-07-18 23:28:44,164 - trading_system - INFO - 程序正在运行，按Ctrl+C退出...
+2025-07-18 23:28:44,164 - trading_system - INFO - 开始处理交易对: BTCUSDT
+2025-07-18 23:28:44,164 - trading_system - ERROR - 获取BTCUSDT的K线数据失败: name 'Config' is not defined
+2025-07-18 23:28:44,165 - trading_system - INFO - 开始处理交易对: ETHUSDT
+2025-07-18 23:28:44,165 - trading_system - ERROR - 获取ETHUSDT的K线数据失败: name 'Config' is not defined
+2025-07-18 23:29:09,033 - trading_system - INFO - 使用REST API数据源
+2025-07-18 23:29:09,033 - trading_system - INFO - 程序正在运行，按Ctrl+C退出...
+2025-07-18 23:29:09,034 - trading_system - INFO - 开始处理交易对: BTCUSDT
+2025-07-18 23:29:09,034 - trading_system - INFO - 开始处理交易对: ETHUSDT
+2025-07-18 23:29:09,034 - trading_system - ERROR - 获取BTCUSDT的K线数据失败: name 'Config' is not defined
+2025-07-18 23:29:09,034 - trading_system - ERROR - 获取ETHUSDT的K线数据失败: name 'Config' is not defined
+2025-07-18 23:29:11,034 - trading_system - INFO - 开始处理交易对: BTCUSDT
+2025-07-18 23:29:11,034 - trading_system - INFO - 开始处理交易对: ETHUSDT
+2025-07-18 23:29:11,034 - trading_system - ERROR - 获取BTCUSDT的K线数据失败: name 'Config' is not defined
+2025-07-18 23:29:11,034 - trading_system - ERROR - 获取ETHUSDT的K线数据失败: name 'Config' is not defined
+2025-07-18 23:29:12,270 - trading_system - INFO - 程序正在退出...
+2025-07-18 23:29:52,093 - trading_system - INFO - 使用REST API数据源
+2025-07-18 23:29:52,093 - trading_system - INFO - 程序正在运行，按Ctrl+C退出...
+2025-07-18 23:29:52,093 - trading_system - INFO - 开始处理交易对: BTCUSDT
+2025-07-18 23:29:52,093 - trading_system - INFO - 开始处理交易对: ETHUSDT
+2025-07-18 23:29:52,094 - trading_system - ERROR - 获取BTCUSDT的K线数据失败: name 'Config' is not defined
+2025-07-18 23:29:52,094 - trading_system - ERROR - 获取ETHUSDT的K线数据失败: name 'Config' is not defined
+2025-07-18 23:29:54,093 - trading_system - INFO - 开始处理交易对: BTCUSDT
+2025-07-18 23:29:54,093 - trading_system - INFO - 开始处理交易对: ETHUSDT
+2025-07-18 23:29:54,093 - trading_system - ERROR - 获取BTCUSDT的K线数据失败: name 'Config' is not defined
+2025-07-18 23:29:54,093 - trading_system - ERROR - 获取ETHUSDT的K线数据失败: name 'Config' is not defined
+2025-07-18 23:29:56,014 - trading_system - INFO - 程序正在退出...
+2025-07-18 23:30:32,712 - trading_system - INFO - 使用REST API数据源
+2025-07-18 23:30:32,713 - trading_system - INFO - 程序正在运行，按Ctrl+C退出...
+2025-07-18 23:30:32,713 - trading_system - INFO - 开始处理交易对: BTCUSDT
+2025-07-18 23:30:32,713 - trading_system - INFO - 开始处理交易对: ETHUSDT
+2025-07-18 23:30:32,935 - trading_system - INFO - 成功加载106条BTCUSDT的K线数据
+2025-07-18 23:30:32,942 - trading_system - INFO - 成功加载106条ETHUSDT的K线数据
+2025-07-18 23:30:33,240 - trading_system - INFO - BTCUSDT当前RSI: 42.50
+2025-07-18 23:30:33,352 - trading_system - INFO - ETHUSDT当前RSI: 35.84
+2025-07-18 23:30:34,713 - trading_system - INFO - 开始处理交易对: BTCUSDT
+2025-07-18 23:30:34,713 - trading_system - INFO - 开始处理交易对: ETHUSDT
+2025-07-18 23:30:34,817 - trading_system - INFO - 成功加载106条BTCUSDT的K线数据
+2025-07-18 23:30:34,870 - trading_system - INFO - 成功加载106条ETHUSDT的K线数据
+2025-07-18 23:30:35,019 - trading_system - INFO - BTCUSDT当前RSI: 42.50
+2025-07-18 23:30:35,065 - trading_system - INFO - ETHUSDT当前RSI: 35.84
+2025-07-18 23:30:35,958 - trading_system - INFO - 程序正在退出...
+2025-07-18 23:31:25,189 - trading_system - INFO - 使用REST API数据源
+2025-07-18 23:31:25,190 - trading_system - INFO - 程序正在运行，按Ctrl+C退出...
+2025-07-18 23:31:25,190 - trading_system - INFO - 开始处理交易对: ACHUSDT
+2025-07-18 23:31:25,298 - trading_system - INFO - 成功加载106条ACHUSDT的K线数据
+2025-07-18 23:31:25,399 - trading_system - INFO - ACHUSDT当前RSI: 24.01
+2025-07-18 23:31:27,190 - trading_system - INFO - 开始处理交易对: ACHUSDT
+2025-07-18 23:31:27,391 - trading_system - INFO - 成功加载106条ACHUSDT的K线数据
+2025-07-18 23:31:27,597 - trading_system - INFO - ACHUSDT当前RSI: 24.01
+2025-07-18 23:31:29,190 - trading_system - INFO - 开始处理交易对: ACHUSDT
+2025-07-18 23:31:29,295 - trading_system - INFO - 成功加载106条ACHUSDT的K线数据
+2025-07-18 23:31:29,590 - trading_system - INFO - ACHUSDT当前RSI: 26.19
+2025-07-18 23:31:31,189 - trading_system - INFO - 开始处理交易对: ACHUSDT
+2025-07-18 23:31:31,289 - trading_system - INFO - 成功加载106条ACHUSDT的K线数据
+2025-07-18 23:31:31,486 - trading_system - INFO - ACHUSDT当前RSI: 26.19
+2025-07-18 23:31:33,188 - trading_system - INFO - 开始处理交易对: ACHUSDT
+2025-07-18 23:31:33,303 - trading_system - INFO - 成功加载106条ACHUSDT的K线数据
+2025-07-18 23:31:33,513 - trading_system - INFO - ACHUSDT当前RSI: 26.19
+2025-07-18 23:31:33,674 - trading_system - INFO - 程序正在退出...
+2025-07-18 23:31:53,421 - trading_system - INFO - 使用REST API数据源
+2025-07-18 23:31:53,422 - trading_system - INFO - 程序正在运行，按Ctrl+C退出...
+2025-07-18 23:31:53,423 - trading_system - INFO - 开始处理交易对: ACHUSDT
+2025-07-18 23:31:53,563 - trading_system - INFO - 成功加载106条ACHUSDT的K线数据
+2025-07-18 23:31:53,985 - trading_system - INFO - ACHUSDT当前RSI: 29.04
+2025-07-18 23:31:55,423 - trading_system - INFO - 开始处理交易对: ACHUSDT
+2025-07-18 23:31:55,523 - trading_system - INFO - 成功加载106条ACHUSDT的K线数据
+2025-07-18 23:31:55,809 - trading_system - INFO - ACHUSDT当前RSI: 29.04
+2025-07-18 23:31:57,422 - trading_system - INFO - 开始处理交易对: ACHUSDT
+2025-07-18 23:31:57,523 - trading_system - INFO - 成功加载106条ACHUSDT的K线数据
+2025-07-18 23:31:57,811 - trading_system - INFO - ACHUSDT当前RSI: 29.04
+2025-07-18 23:31:59,014 - trading_system - INFO - 程序正在退出...
+2025-07-18 23:33:48,332 - trading_system - INFO - 使用REST API数据源
+2025-07-18 23:33:48,333 - trading_system - INFO - 程序正在运行，按Ctrl+C退出...
+2025-07-18 23:33:48,334 - trading_system - INFO - 开始处理交易对: ACHUSDT
+2025-07-18 23:33:48,440 - trading_system - INFO - 成功加载106条ACHUSDT的K线数据
+2025-07-18 23:33:48,541 - trading_system - INFO - ACHUSDT当前RSI: 31.80
+2025-07-18 23:33:50,334 - trading_system - INFO - 开始处理交易对: ACHUSDT
+2025-07-18 23:33:50,450 - trading_system - INFO - 成功加载106条ACHUSDT的K线数据
+2025-07-18 23:33:50,551 - trading_system - INFO - ACHUSDT当前RSI: 31.80
+2025-07-18 23:33:51,838 - trading_system - INFO - 程序正在退出...
