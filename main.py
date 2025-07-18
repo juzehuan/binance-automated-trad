@@ -11,14 +11,9 @@ import numpy as np
 import concurrent.futures
 from concurrent.futures import ThreadPoolExecutor
 import sys
-import matplotlib.pyplot as plt
-from matplotlib.gridspec import GridSpec
-# 设置matplotlib支持中文显示
-plt.rcParams["font.family"] = ["SimHei", "Microsoft YaHei", "SimSun", "KaiTi"]
-plt.rcParams['axes.unicode_minus'] = False  # 解决负号显示问题
 
-# 启用matplotlib交互模式
-plt.ion()
+
+
 
 
 # 配置日志系统
@@ -231,62 +226,6 @@ def fetch_kline_data(symbol, interval):
 
 
 
-# 全局图形对象引用
-chart_fig = None
-chart_axes = []
-
-
-def plot_multi_symbol_chart(symbol_data_map):
-    global chart_fig, chart_axes
-    num_symbols = len(symbol_data_map)
-
-    # 如果图形不存在或交易对数量变化，创建新图形
-    if chart_fig is None or len(chart_axes) != num_symbols * 2:
-        chart_fig = plt.figure(figsize=(12, 4 * num_symbols))
-        chart_axes = []
-        gs = GridSpec(num_symbols * 2, 1, height_ratios=[3, 1] * num_symbols)
-
-        for i in range(num_symbols):
-            ax1 = chart_fig.add_subplot(gs[i*2])
-            ax2 = chart_fig.add_subplot(gs[i*2+1])
-            chart_axes.extend([ax1, ax2])
-    else:
-        # 清除现有图表
-        for ax in chart_axes:
-            ax.clear()
-
-    # 为每个交易对绘制图表
-    for i, (symbol, (df, rsi_values)) in enumerate(symbol_data_map.items()):
-        ax1 = chart_axes[i*2]
-        ax2 = chart_axes[i*2+1]
-
-        # 绘制K线图
-        ax1.plot(df['timestamp'], df['close'], 'b-', linewidth=2)
-        ax1.set_title(f'{symbol} K线图')
-        ax1.set_ylabel('价格')
-        ax1.grid(True)
-
-        # 绘制RSI
-        ax2.plot(df['timestamp'], rsi_values, 'r-', linewidth=2)
-        ax2.axhline(y=70, color='g', linestyle='--')
-        ax2.axhline(y=30, color='g', linestyle='--')
-        ax2.set_title(f'{symbol} RSI指标')
-        ax2.set_xlabel('时间')
-        ax2.set_ylabel('RSI值')
-        ax2.set_ylim(0, 100)
-        ax2.grid(True)
-
-    # 调整布局并显示
-    plt.tight_layout()
-    # 在交互模式下不需要调用plt.show()
-    plt.draw()
-    plt.pause(0.01)  # 更短的暂停时间，提高响应性
-
-
-def plot_kline_rsi(symbol, df, rsi_values):
-    # 保持原有函数接口，以便兼容现有代码
-    plot_multi_symbol_chart({symbol: (df, rsi_values)})
-
 # 定义信号处理函数，用于优雅退出
 def signal_handler(sig, frame):
     logger.info('程序已退出')
@@ -340,23 +279,8 @@ def main():
             # 提交所有交易对的处理任务
             futures = {executor.submit(process_symbol, symbol): symbol for symbol in Config.SYMBOLS}
 
-            # 收集所有交易对的数据
-            symbol_data_map = {}
-            for future in concurrent.futures.as_completed(futures):
-                symbol = futures[future]
-                try:
-                    df, rsi_series = future.result()
-                    if df is not None and rsi_series is not None:
-                        symbol_data_map[symbol] = (df, rsi_series)
-                except Exception as e:
-                    logger.error(f"处理{symbol}时出错: {e}")
-
-            # 如果有数据且配置允许，绘制多交易对图表
-            if symbol_data_map and Config.SHOW_CHARTS:
-                plot_multi_symbol_chart(symbol_data_map)
-
-            # 等待指定的刷新间隔
-            time.sleep(refresh_interval)
+            # 等待刷新间隔
+            time.sleep(refresh_interval - 0.001)  # 减去动画暂停时间以保持总间隔一致
 
 if __name__ == '__main__':
     main()
