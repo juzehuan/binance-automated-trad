@@ -13,12 +13,15 @@ class TradingConfig:
 
     # 交易对配置
     SYMBOLS: list[str] = field(default_factory=lambda: ['ACHUSDT'])
+    SIMULATION_MODE: bool = field(default_factory=lambda: True)
+    SIMULATED_BALANCE: float = field(default_factory=lambda: 10000.0)  # 模拟USDT余额
+    TAKE_PROFIT_PERCENT: float = field(default_factory=lambda: 2.0)  # 止盈百分比(%)
     INTERVAL: str = '15m'  # K线周期
 
     # RSI指标配置
     RSI_PERIOD: int = 6
-    OVERBOUGHT: int = 95
-    OVERSOLD: int = 60
+    OVERBOUGHT: int = 25 # 超买
+    OVERSOLD: int = 22 # 超卖
 
     # 交易配置
     TESTNET: bool = False
@@ -39,6 +42,8 @@ class TradingConfig:
 
     # 日志配置
     LOG_FILE: str = 'trading.log'
+    SIMULATION_LOG_FILE: str = 'simulation_trading.log'
+    REAL_LOG_FILE: str = 'real_trading.log'
     LOG_LEVEL: str = 'INFO'
 
     @property

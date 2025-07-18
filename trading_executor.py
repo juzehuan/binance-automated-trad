@@ -24,7 +24,34 @@ class TradingExecutor:
             return None
 
     def place_short_order(self, symbol, quantity, state):
-        """下空单"""
+        """下空单（支持模拟模式）"""
+        if self.config.SIMULATION_MODE:
+            # 模拟做空订单
+            close_price = self.get_latest_price(symbol)
+            if close_price is None:
+                logger.error(f"[{symbol}] 模拟下单失败: 无法获取最新价格")
+                return None
+
+            # 模拟订单信息
+            simulated_order = {
+                'symbol': symbol,
+                'side': 'SELL',
+                'type': 'MARKET',
+                'quantity': quantity,
+                'fills': [{'price': close_price, 'qty': quantity}]
+            }
+
+            state.in_position = True
+            state.last_short_price = close_price
+            # 设置止盈价格（做空时止盈价格低于开仓价格）
+            state.take_profit_price = close_price * (1 - self.config.TAKE_PROFIT_PERCENT / 100)
+            profit_percent = self.config.TAKE_PROFIT_PERCENT
+
+            logger.info(f"[{symbol}] [模拟] 做空订单已执行: {simulated_order}")
+            logger.info(f"[{symbol}] [模拟] 买入价格: {close_price}, 止盈价格: {state.take_profit_price}, 止盈获利百分比: {profit_percent}%")
+            return simulated_order
+
+        # 真实交易逻辑
         try:
             order = self.client.futures_create_order(
                 symbol=symbol,
@@ -43,26 +70,153 @@ class TradingExecutor:
             logger.error(f"[{symbol}] 做空订单执行失败: {e}")
             return None
 
-    def place_sell_order(self, symbol, quantity, state):
-        """平空单"""
-        try:
-            order = self.client.futures_create_order(
-                symbol=symbol,
-                side=self.client.SIDE_SELL,
-                type=self.client.ORDER_TYPE_MARKET,
-                quantity=quantity
-            )
-            logger.info(f"[{symbol}] 卖出订单已执行: {order}")
+    def place_long_order(self, symbol, quantity, state):
+        """下多单（支持模拟模式）"""
+        if self.config.SIMULATION_MODE:
+            # 模拟做多订单
+            close_price = self.get_latest_price(symbol)
+            if close_price is None:
+                logger.error(f"[{symbol}] 模拟下单失败: 无法获取最新价格")
+                return None
+
+            # 模拟订单信息
+            simulated_order = {
+                'symbol': symbol,
+                'side': 'BUY',
+                'type': 'MARKET',
+                'quantity': quantity,
+                'fills': [{'price': close_price, 'qty': quantity}]
+            }
+
+            state.in_position = True
+            state.last_long_price = close_price
+            # 设置止盈价格（做多时止盈价格高于开仓价格）
+            state.take_profit_price = close_price * (1 + self.config.TAKE_PROFIT_PERCENT / 100)
+            profit_percent = self.config.TAKE_PROFIT_PERCENT
+
+            logger.info(f"[{symbol}] [模拟] 做多订单已执行: {simulated_order}")
+            logger.info(f"[{symbol}] [模拟] 买入价格: {close_price}, 止盈价格: {state.take_profit_price}, 止盈获利百分比: {profit_percent}%")
+            return simulated_order
+        else:
+            # 真实交易逻辑
+            try:
+                order = self.client.futures_create_order(
+                    symbol=symbol,
+                    side=self.client.SIDE_BUY,
+                    type=self.client.ORDER_TYPE_MARKET,
+                    quantity=quantity
+                )
+                logger.info(f"[{symbol}] 做多订单已执行: {order}")
+                state.in_position = True
+                state.last_long_price = float(order['fills'][0]['price'])
+                # 设置止盈价格（做多时止盈价格高于开仓价格）
+                state.take_profit_price = state.last_long_price * (1 + self.config.TAKE_PROFIT_PERCENT / 100)
+                logger.info(f"[{symbol}] 设置止盈价格: {state.take_profit_price}")
+                return order
+            except Exception as e:
+                logger.error(f"[{symbol}] 做多订单执行失败: {e}")
+                return None
+
+
+    def close_short_order(self, symbol, quantity, state):
+        """平空单（支持模拟平仓）"""
+        if self.config.SIMULATION_MODE:
+            # 模拟平空订单（买入）
+            close_price = self.get_latest_price(symbol)
+            if close_price is None:
+                logger.error(f"[{symbol}] 模拟平仓失败: 无法获取最新价格")
+                return None
+
+            # 计算利润（做空时利润 = (开仓价 - 平仓价) * 数量）
+            profit = (state.last_short_price - close_price) * quantity
+            profit_percent = ((state.last_short_price - close_price) / state.last_short_price) * 100
+
+            # 模拟订单信息
+            simulated_order = {
+                'symbol': symbol,
+                'side': 'BUY',
+                'type': 'MARKET',
+                'quantity': quantity,
+                'fills': [{'price': close_price, 'qty': quantity}]
+            }
+
             state.in_position = False
             state.last_short_price = 0
             state.take_profit_price = 0
-            return order
-        except Exception as e:
-            logger.error(f"[{symbol}] 卖出订单执行失败: {e}")
-            return None
+            logger.info(f"[{symbol}] [模拟] 平仓订单已执行: {simulated_order}")
+            logger.info(f"[{symbol}] [模拟] 平仓价格: {close_price}, 获利金额: {profit:.2f} USDT, 获利百分比: {profit_percent:.2f}%")
+            return simulated_order
+        else:
+            # 真实交易平空单（买入）
+            try:
+                order = self.client.futures_create_order(
+                    symbol=symbol,
+                    side=self.client.SIDE_BUY,
+                    type=self.client.ORDER_TYPE_MARKET,
+                    quantity=quantity
+                )
+                logger.info(f"[{symbol}] 平空订单已执行: {order}")
+                state.in_position = False
+                state.last_short_price = 0
+                state.take_profit_price = 0
+                return order
+            except Exception as e:
+                logger.error(f"[{symbol}] 平空订单执行失败: {e}")
+                return None
+
+    def close_long_order(self, symbol, quantity, state):
+        """平多单（支持模拟卖出）"""
+        if self.config.SIMULATION_MODE:
+            # 模拟平多订单（卖出）
+            close_price = self.get_latest_price(symbol)
+            if close_price is None:
+                logger.error(f"[{symbol}] 模拟卖出失败: 无法获取最新价格")
+                return None
+
+            # 计算利润
+            profit = (close_price - state.last_long_price) * quantity
+            profit_percent = ((close_price - state.last_long_price) / state.last_long_price) * 100
+
+            # 模拟订单信息
+            simulated_order = {
+                'symbol': symbol,
+                'side': 'SELL',
+                'type': 'MARKET',
+                'quantity': quantity,
+                'fills': [{'price': close_price, 'qty': quantity}]
+            }
+
+            state.in_position = False
+            state.last_long_price = 0
+            state.take_profit_price = 0
+
+            logger.info(f"[{symbol}] [模拟] 卖出订单已执行: {simulated_order}")
+            logger.info(f"[{symbol}] [模拟] 卖出价格: {close_price}, 获利金额: {profit:.2f} USDT, 获利百分比: {profit_percent:.2f}%")
+            return simulated_order
+        else:
+            # 真实交易逻辑
+            try:
+                order = self.client.futures_create_order(
+                    symbol=symbol,
+                    side=self.client.SIDE_SELL,
+                    type=self.client.ORDER_TYPE_MARKET,
+                    quantity=quantity
+                )
+                logger.info(f"[{symbol}] 平多订单已执行: {order}")
+                state.in_position = False
+                state.last_long_price = 0
+                state.take_profit_price = 0
+                return order
+            except Exception as e:
+                logger.error(f"[{symbol}] 平多订单执行失败: {e}")
+                return None
+
 
     def get_available_balance(self, asset):
-        """获取合约账户可用余额"""
+        """获取合约账户可用余额（支持模拟模式）"""
+        if self.config.SIMULATION_MODE and asset == 'USDT':
+            logger.info(f"[模拟] 获取{asset}可用余额: {self.config.SIMULATED_BALANCE:.4f}")
+            return self.config.SIMULATED_BALANCE
         try:
             # 获取合约账户余额
             balances = self.client.futures_account_balance()
@@ -99,23 +253,26 @@ class TradingExecutor:
         if close_price is None:
             return
         logger.info(f"[{symbol}] 最新价格: {close_price}, RSI: {rsi_value}")
-        if rsi_value >= self.config.OVERSOLD and not state.in_position:
-            logger.info(f"[{symbol}] RSI低于超卖阈值({self.config.OVERSOLD}), 准备做空...")
-            # 这里简化处理，实际交易中需要计算合适的交易量
-            # 计算四分之一仓位
-            # 使用USDT作为基础货币计算买入数量
-            usdt_balance = self.get_available_balance("USDT")
-            if close_price <= 0:
-                logger.error(f"[{symbol}] 无效价格: {close_price}")
-                return
-            buy_quantity = (usdt_balance / close_price) * 0.25  # 四分之一USDT仓位
-            if buy_quantity <= 0:
-                logger.warning(f"[{symbol}] 可用余额不足，无法下单")
-                return
-            self.place_short_order(symbol, buy_quantity, state)
-            state.position_size = buy_quantity  # 记录仓位大小
-        # 检查止盈条件
-        elif state.in_position and close_price >= state.take_profit_price:
-            logger.info(f"[{symbol}] 价格达到止盈点({state.take_profit_price}), 准备平仓...")
-            # 全仓卖出
-            self.place_sell_order(symbol, state.position_size, state)
+        # 统一交易条件判断（模拟与真实交易共用同一套逻辑）
+        if not state.in_position:
+            # RSI大于等于超买阈值时做空
+            if rsi_value >= self.config.OVERBOUGHT:
+                logger.info(f"[{symbol}] RSI大于等于超买阈值({self.config.OVERBOUGHT}), 执行做空操作")
+                usdt_balance = self.get_available_balance("USDT")
+                if close_price <= 0:
+                    logger.error(f"[{symbol}] 无效价格: {close_price}")
+                    return
+                sell_quantity = (usdt_balance / close_price) * 0.25  # 四分之一USDT仓位
+                if sell_quantity > 0:
+                    self.place_short_order(symbol, sell_quantity, state)
+                    state.position_size = sell_quantity  # 记录仓位大小
+        else:
+            # RSI小于等于超卖阈值或达到止盈价格时平仓
+            if rsi_value <= self.config.OVERSOLD or close_price >= state.take_profit_price:
+                if rsi_value <= self.config.OVERSOLD:
+                    logger.info(f"[{symbol}] RSI小于等于超卖阈值({self.config.OVERSOLD}), 执行平仓操作")
+                else:
+                    logger.info(f"[{symbol}] 价格达到止盈点({state.take_profit_price}), 准备平仓...")
+                if hasattr(state, 'position_size') and state.position_size > 0:
+                    self.close_short_order(symbol, state.position_size, state)
+                    state.position_size = 0

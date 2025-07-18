@@ -37,15 +37,38 @@ console_handler.setLevel(getattr(logging, config.LOG_LEVEL))
 console_handler.setFormatter(formatter)
 console_handler.addFilter(TradingFilter())
 
-# 文件处理器 (支持轮转)
-file_handler = RotatingFileHandler(
-    config.LOG_FILE,
+# 模拟交易日志处理器
+simulation_file_handler = RotatingFileHandler(
+    config.SIMULATION_LOG_FILE,
     maxBytes=5 * 1024 * 1024,  # 5MB
-    backupCount=5,  # 保留5个备份文件
+    backupCount=5,
     encoding='utf-8'
 )
-file_handler.setLevel(logging.DEBUG)
-file_handler.setFormatter(formatter)
+simulation_file_handler.setLevel(logging.DEBUG)
+simulation_file_handler.setFormatter(formatter)
+
+# 真实交易日志处理器
+real_file_handler = RotatingFileHandler(
+    config.REAL_LOG_FILE,
+    maxBytes=5 * 1024 * 1024,  # 5MB
+    backupCount=5,
+    encoding='utf-8'
+)
+real_file_handler.setLevel(logging.DEBUG)
+real_file_handler.setFormatter(formatter)
+
+# 模拟交易日志过滤器
+class SimulationLogFilter(logging.Filter):
+    def filter(self, record):
+        return '[模拟]' in record.getMessage()
+
+# 真实交易日志过滤器
+class RealLogFilter(logging.Filter):
+    def filter(self, record):
+        return '[模拟]' not in record.getMessage() and ('买入' in record.getMessage() or '卖出' in record.getMessage() or '做空' in record.getMessage())
+
+simulation_file_handler.addFilter(SimulationLogFilter())
+real_file_handler.addFilter(RealLogFilter())
 
 # 移除默认处理器
 if logger.handlers:
@@ -53,7 +76,8 @@ if logger.handlers:
 
 # 添加处理器
 logger.addHandler(console_handler)
-logger.addHandler(file_handler)
+logger.addHandler(simulation_file_handler)
+logger.addHandler(real_file_handler)
 
 # 状态跟踪
 class TradingState:
