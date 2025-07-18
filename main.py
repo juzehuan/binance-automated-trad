@@ -84,7 +84,7 @@ state_map = {symbol: TradingState() for symbol in Config.SYMBOLS}
 
 # 初始化变量
 client=None # 客户端
-refresh_interval = 5  # 刷新间隔(秒)
+refresh_interval = 2  # 刷新间隔(秒)，缩短以提高实时性
 
 def set_leverage(symbol, leverage):
     global client
@@ -107,14 +107,9 @@ def calculate_rsi(data, period=14):
     gains = deltas.where(deltas > 0, 0)
     losses = -deltas.where(deltas < 0, 0)
 
-    # 计算平均收益和损失
-    avg_gain = gains.rolling(window=period, min_periods=period).mean()
-    avg_loss = losses.rolling(window=period, min_periods=period).mean()
-
-    # 处理前n个数据点后的平均收益和损失
-    for i in range(period, len(avg_gain)):
-        avg_gain.iloc[i] = (avg_gain.iloc[i - 1] * (period - 1) + gains.iloc[i]) / period
-        avg_loss.iloc[i] = (avg_loss.iloc[i - 1] * (period - 1) + losses.iloc[i]) / period
+    # 计算平均收益和损失（使用指数移动平均）
+    avg_gain = gains.ewm(alpha=1/period, min_periods=period).mean()
+    avg_loss = losses.ewm(alpha=1/period, min_periods=period).mean()
 
     # 计算RSI
     rs = avg_gain / avg_loss
