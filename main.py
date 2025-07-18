@@ -19,10 +19,17 @@ logger.setLevel(logging.DEBUG)
 # 创建格式化器
 formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
+# 自定义过滤器：只允许包含买入或卖出关键词的日志
+class TradingFilter(logging.Filter):
+    def filter(self, record):
+        message = record.getMessage()
+        return '买入' in message or '卖出' in message or '做空' or 'RSI' in message
+
 # 控制台处理器
 console_handler = logging.StreamHandler(sys.stdout)
 console_handler.setLevel(logging.INFO)
 console_handler.setFormatter(formatter)
+console_handler.addFilter(TradingFilter())
 
 # 文件处理器 (支持轮转)
 file_handler = RotatingFileHandler(
@@ -55,7 +62,7 @@ proxies = {
 
 # 配置参数
 class Config:
-    SYMBOLS = ["PUMPUSDT", "CRVUSDT", "FARTCOINUSDT", "ACHUSDT", "ONDOUSDT"]   # 多个交易对
+    SYMBOLS = ["CRVUSDT", "ACHUSDT", "ONDOUSDT"]   # 多个交易对
     INTERVAL = '15m'  # K线周期
     RSI_PERIOD = 6  # RSI计算周期
     OVERBOUGHT = 90  # 超买阈值
@@ -203,7 +210,7 @@ def fetch_kline_data(symbol, interval):
         klines = client.get_klines(
             symbol=symbol,
             interval=interval,
-            limit=Config.RSI_PERIOD + 10  # 获取足够计算RSI的数据
+            limit=Config.RSI_PERIOD + 100  # 获取足够计算RSI的数据
         )
         # 转换为DataFrame
         df = pd.DataFrame(klines, columns=['timestamp', 'open', 'high', 'low', 'close', 'volume', 'close_time', 'quote_asset_volume', 'number_of_trades', 'taker_buy_base_asset_volume', 'taker_buy_quote_asset_volume', 'ignore'])
@@ -221,7 +228,7 @@ def process_kline_data(symbol, df):
 
     # 更新K线数据
     state.klines = df.to_dict('records')
-    logger.info(f"[{symbol}] 更新了{len(state.klines)}条K线数据")
+    # logger.info(f"[{symbol}] 更新了{len(state.klines)}条K线数据")
 
     # 当有足够数据时计算RSI
     if len(state.klines) >= Config.RSI_PERIOD:

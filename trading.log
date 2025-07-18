@@ -1,0 +1,1427 @@
+2025-07-18 14:57:12,659 - trading_system - ERROR - 设置杠杆失败: APIError(code=-2015): Invalid API-key, IP, or permissions for action
+2025-07-18 14:57:12,748 - trading_system - ERROR - 设置杠杆失败: APIError(code=-2015): Invalid API-key, IP, or permissions for action
+2025-07-18 14:57:12,831 - trading_system - ERROR - 设置杠杆失败: APIError(code=-2015): Invalid API-key, IP, or permissions for action
+2025-07-18 14:57:12,915 - trading_system - ERROR - 设置杠杆失败: APIError(code=-2015): Invalid API-key, IP, or permissions for action
+2025-07-18 14:57:12,999 - trading_system - ERROR - 设置杠杆失败: APIError(code=-2015): Invalid API-key, IP, or permissions for action
+2025-07-18 14:57:12,999 - trading_system - INFO - 程序正在运行，按Ctrl+C退出...
+2025-07-18 14:57:13,076 - trading_system - ERROR - 获取K线数据失败: APIError(code=-1121): Invalid symbol.
+2025-07-18 14:57:13,156 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 14:57:13,159 - trading_system - INFO - [ONDOUSDT] 当前RSI: 56.12, 价格: 1.0791
+2025-07-18 14:57:13,242 - trading_system - ERROR - 获取K线数据失败: APIError(code=-1121): Invalid symbol.
+2025-07-18 14:57:13,797 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 14:57:13,799 - trading_system - INFO - [CRVUSDT] 当前RSI: 37.68, 价格: 1.0269
+2025-07-18 14:57:14,445 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 14:57:14,446 - trading_system - INFO - [ACHUSDT] 当前RSI: 58.69, 价格: 0.02399
+2025-07-18 14:57:19,524 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 14:57:19,526 - trading_system - INFO - [ACHUSDT] 当前RSI: 58.69, 价格: 0.02399
+2025-07-18 14:57:19,541 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 14:57:19,541 - trading_system - ERROR - 获取K线数据失败: APIError(code=-1121): Invalid symbol.
+2025-07-18 14:57:19,543 - trading_system - INFO - [ONDOUSDT] 当前RSI: 56.12, 价格: 1.0791
+2025-07-18 14:57:19,546 - trading_system - ERROR - 获取K线数据失败: APIError(code=-1121): Invalid symbol.
+2025-07-18 14:57:19,549 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 14:57:19,550 - trading_system - INFO - [CRVUSDT] 当前RSI: 37.68, 价格: 1.0269
+2025-07-18 14:57:24,653 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 14:57:24,655 - trading_system - INFO - [ONDOUSDT] 当前RSI: 56.12, 价格: 1.0791
+2025-07-18 14:57:24,657 - trading_system - ERROR - 获取K线数据失败: APIError(code=-1121): Invalid symbol.
+2025-07-18 14:57:24,658 - trading_system - ERROR - 获取K线数据失败: APIError(code=-1121): Invalid symbol.
+2025-07-18 14:57:24,659 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 14:57:24,660 - trading_system - INFO - [ACHUSDT] 当前RSI: 58.69, 价格: 0.02399
+2025-07-18 14:57:24,667 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 14:57:24,669 - trading_system - INFO - [CRVUSDT] 当前RSI: 37.68, 价格: 1.0269
+2025-07-18 14:57:29,870 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 14:57:29,872 - trading_system - INFO - [ACHUSDT] 当前RSI: 58.69, 价格: 0.02399
+2025-07-18 14:57:29,929 - trading_system - ERROR - 获取K线数据失败: APIError(code=-1121): Invalid symbol.
+2025-07-18 14:57:29,940 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 14:57:29,941 - trading_system - INFO - [ONDOUSDT] 当前RSI: 55.67, 价格: 1.0787
+2025-07-18 14:57:30,024 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 14:57:30,026 - trading_system - INFO - [CRVUSDT] 当前RSI: 37.23, 价格: 1.0264
+2025-07-18 14:57:30,268 - trading_system - ERROR - 获取K线数据失败: APIError(code=-1121): Invalid symbol.
+2025-07-18 14:57:35,321 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 14:57:35,323 - trading_system - INFO - [ACHUSDT] 当前RSI: 58.69, 价格: 0.02399
+2025-07-18 14:57:35,347 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 14:57:35,349 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 14:57:35,350 - trading_system - INFO - [ONDOUSDT] 当前RSI: 55.67, 价格: 1.0787
+2025-07-18 14:57:35,351 - trading_system - INFO - [CRVUSDT] 当前RSI: 37.23, 价格: 1.0264
+2025-07-18 14:57:35,352 - trading_system - ERROR - 获取K线数据失败: APIError(code=-1121): Invalid symbol.
+2025-07-18 14:57:35,691 - trading_system - ERROR - 获取K线数据失败: APIError(code=-1121): Invalid symbol.
+2025-07-18 14:57:40,746 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 14:57:40,747 - trading_system - INFO - [ACHUSDT] 当前RSI: 58.69, 价格: 0.02399
+2025-07-18 14:57:40,767 - trading_system - ERROR - 获取K线数据失败: APIError(code=-1121): Invalid symbol.
+2025-07-18 14:57:40,773 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 14:57:40,774 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 14:57:40,774 - trading_system - ERROR - 获取K线数据失败: APIError(code=-1121): Invalid symbol.
+2025-07-18 14:57:40,776 - trading_system - INFO - [CRVUSDT] 当前RSI: 37.23, 价格: 1.0264
+2025-07-18 14:57:40,777 - trading_system - INFO - [ONDOUSDT] 当前RSI: 55.67, 价格: 1.0787
+2025-07-18 14:57:45,845 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 14:57:45,846 - trading_system - INFO - [CRVUSDT] 当前RSI: 37.23, 价格: 1.0264
+2025-07-18 14:57:45,858 - trading_system - ERROR - 获取K线数据失败: APIError(code=-1121): Invalid symbol.
+2025-07-18 14:57:45,858 - trading_system - ERROR - 获取K线数据失败: APIError(code=-1121): Invalid symbol.
+2025-07-18 14:57:45,864 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 14:57:45,866 - trading_system - INFO - [ONDOUSDT] 当前RSI: 55.67, 价格: 1.0787
+2025-07-18 14:57:45,871 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 14:57:45,873 - trading_system - INFO - [ACHUSDT] 当前RSI: 58.69, 价格: 0.02399
+2025-07-18 14:57:50,973 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 14:57:50,975 - trading_system - INFO - [CRVUSDT] 当前RSI: 37.23, 价格: 1.0264
+2025-07-18 14:57:50,977 - trading_system - ERROR - 获取K线数据失败: APIError(code=-1121): Invalid symbol.
+2025-07-18 14:57:50,982 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 14:57:50,983 - trading_system - INFO - [ACHUSDT] 当前RSI: 58.69, 价格: 0.02399
+2025-07-18 14:57:50,984 - trading_system - ERROR - 获取K线数据失败: APIError(code=-1121): Invalid symbol.
+2025-07-18 14:57:51,612 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 14:57:51,613 - trading_system - INFO - [ONDOUSDT] 当前RSI: 55.67, 价格: 1.0787
+2025-07-18 14:57:56,913 - trading_system - ERROR - 获取K线数据失败: APIError(code=-1121): Invalid symbol.
+2025-07-18 14:57:57,053 - trading_system - ERROR - 获取K线数据失败: APIError(code=-1121): Invalid symbol.
+2025-07-18 14:57:57,055 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 14:57:57,057 - trading_system - INFO - [CRVUSDT] 当前RSI: 36.11, 价格: 1.0251
+2025-07-18 14:57:57,060 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 14:57:57,061 - trading_system - INFO - [ACHUSDT] 当前RSI: 58.69, 价格: 0.02399
+2025-07-18 14:57:57,063 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 14:57:57,064 - trading_system - INFO - [ONDOUSDT] 当前RSI: 55.67, 价格: 1.0787
+2025-07-18 14:58:07,715 - trading_system - ERROR - 设置杠杆失败: APIError(code=-2015): Invalid API-key, IP, or permissions for action
+2025-07-18 14:58:07,814 - trading_system - ERROR - 设置杠杆失败: APIError(code=-2015): Invalid API-key, IP, or permissions for action
+2025-07-18 14:58:07,913 - trading_system - ERROR - 设置杠杆失败: APIError(code=-2015): Invalid API-key, IP, or permissions for action
+2025-07-18 14:58:07,913 - trading_system - INFO - 程序正在运行，按Ctrl+C退出...
+2025-07-18 14:58:08,030 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 14:58:08,032 - trading_system - INFO - [CRVUSDT] 当前RSI: 36.11, 价格: 1.0251
+2025-07-18 14:58:08,173 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 14:58:08,175 - trading_system - INFO - [ACHUSDT] 当前RSI: 58.69, 价格: 0.02399
+2025-07-18 14:58:08,253 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 14:58:08,255 - trading_system - INFO - [ONDOUSDT] 当前RSI: 55.67, 价格: 1.0787
+2025-07-18 14:58:13,449 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 14:58:13,450 - trading_system - INFO - [ACHUSDT] 当前RSI: 58.69, 价格: 0.02399
+2025-07-18 14:58:13,463 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 14:58:13,464 - trading_system - INFO - [CRVUSDT] 当前RSI: 36.11, 价格: 1.0251
+2025-07-18 14:58:13,540 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 14:58:13,541 - trading_system - INFO - [ONDOUSDT] 当前RSI: 56.12, 价格: 1.0791
+2025-07-18 14:58:18,812 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 14:58:18,813 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 14:58:18,815 - trading_system - INFO - [CRVUSDT] 当前RSI: 36.27, 价格: 1.0253
+2025-07-18 14:58:18,816 - trading_system - INFO - [ACHUSDT] 当前RSI: 58.69, 价格: 0.02399
+2025-07-18 14:58:18,828 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 14:58:18,830 - trading_system - INFO - [ONDOUSDT] 当前RSI: 56.12, 价格: 1.0791
+2025-07-18 14:58:23,934 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 14:58:23,936 - trading_system - INFO - [ACHUSDT] 当前RSI: 58.69, 价格: 0.02399
+2025-07-18 14:58:23,938 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 14:58:23,939 - trading_system - INFO - [ONDOUSDT] 当前RSI: 55.32, 价格: 1.0784
+2025-07-18 14:58:24,421 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 14:58:24,423 - trading_system - INFO - [CRVUSDT] 当前RSI: 36.27, 价格: 1.0253
+2025-07-18 14:58:29,478 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 14:58:29,480 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 14:58:29,481 - trading_system - INFO - [ONDOUSDT] 当前RSI: 55.32, 价格: 1.0784
+2025-07-18 14:58:29,482 - trading_system - INFO - [ACHUSDT] 当前RSI: 58.69, 价格: 0.02399
+2025-07-18 14:58:29,541 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 14:58:29,542 - trading_system - INFO - [CRVUSDT] 当前RSI: 36.02, 价格: 1.025
+2025-07-18 14:58:34,597 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 14:58:34,598 - trading_system - INFO - [ONDOUSDT] 当前RSI: 55.32, 价格: 1.0784
+2025-07-18 14:58:34,646 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 14:58:34,648 - trading_system - INFO - [ACHUSDT] 当前RSI: 58.69, 价格: 0.02399
+2025-07-18 14:58:34,669 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 14:58:34,671 - trading_system - INFO - [CRVUSDT] 当前RSI: 36.02, 价格: 1.025
+2025-07-18 14:58:39,858 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 14:58:39,860 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 14:58:39,861 - trading_system - INFO - [ONDOUSDT] 当前RSI: 55.67, 价格: 1.0787
+2025-07-18 14:58:39,863 - trading_system - INFO - [CRVUSDT] 当前RSI: 36.02, 价格: 1.025
+2025-07-18 14:58:39,873 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 14:58:39,875 - trading_system - INFO - [ACHUSDT] 当前RSI: 58.69, 价格: 0.02399
+2025-07-18 14:58:44,966 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 14:58:44,968 - trading_system - INFO - [CRVUSDT] 当前RSI: 36.02, 价格: 1.025
+2025-07-18 14:58:44,974 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 14:58:44,976 - trading_system - INFO - [ACHUSDT] 当前RSI: 58.69, 价格: 0.02399
+2025-07-18 14:58:44,990 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 14:58:44,991 - trading_system - INFO - [ONDOUSDT] 当前RSI: 55.67, 价格: 1.0787
+2025-07-18 14:58:50,107 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 14:58:50,109 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 14:58:50,110 - trading_system - INFO - [ONDOUSDT] 当前RSI: 55.78, 价格: 1.0788
+2025-07-18 14:58:50,111 - trading_system - INFO - [ACHUSDT] 当前RSI: 58.69, 价格: 0.02399
+2025-07-18 14:58:50,114 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 14:58:50,115 - trading_system - INFO - [CRVUSDT] 当前RSI: 36.02, 价格: 1.025
+2025-07-18 14:58:55,211 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 14:58:55,212 - trading_system - INFO - [ONDOUSDT] 当前RSI: 55.89, 价格: 1.0789
+2025-07-18 14:58:55,227 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 14:58:55,229 - trading_system - INFO - [ACHUSDT] 当前RSI: 58.69, 价格: 0.02399
+2025-07-18 14:58:55,272 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 14:58:55,273 - trading_system - INFO - [CRVUSDT] 当前RSI: 36.02, 价格: 1.025
+2025-07-18 14:59:00,332 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 14:59:00,334 - trading_system - INFO - [ACHUSDT] 当前RSI: 58.69, 价格: 0.02399
+2025-07-18 14:59:00,405 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 14:59:00,407 - trading_system - INFO - [CRVUSDT] 当前RSI: 35.85, 价格: 1.0248
+2025-07-18 14:59:00,428 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 14:59:00,431 - trading_system - INFO - [ONDOUSDT] 当前RSI: 55.89, 价格: 1.0789
+2025-07-18 14:59:05,711 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 14:59:05,713 - trading_system - INFO - [CRVUSDT] 当前RSI: 35.85, 价格: 1.0248
+2025-07-18 14:59:05,727 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 14:59:05,730 - trading_system - INFO - [ONDOUSDT] 当前RSI: 56.01, 价格: 1.079
+2025-07-18 14:59:05,843 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 14:59:05,845 - trading_system - INFO - [ACHUSDT] 当前RSI: 58.69, 价格: 0.02399
+2025-07-18 14:59:10,965 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 14:59:10,968 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 14:59:10,971 - trading_system - INFO - [CRVUSDT] 当前RSI: 35.85, 价格: 1.0248
+2025-07-18 14:59:10,972 - trading_system - INFO - [ACHUSDT] 当前RSI: 56.43, 价格: 0.02396
+2025-07-18 14:59:10,991 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 14:59:10,994 - trading_system - INFO - [ONDOUSDT] 当前RSI: 56.01, 价格: 1.079
+2025-07-18 14:59:16,093 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 14:59:16,096 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 14:59:16,099 - trading_system - INFO - [ONDOUSDT] 当前RSI: 56.01, 价格: 1.079
+2025-07-18 14:59:16,100 - trading_system - INFO - [ACHUSDT] 当前RSI: 56.43, 价格: 0.02396
+2025-07-18 14:59:16,109 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 14:59:16,111 - trading_system - INFO - [CRVUSDT] 当前RSI: 35.53, 价格: 1.0244
+2025-07-18 14:59:21,166 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 14:59:21,168 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 14:59:21,171 - trading_system - INFO - [CRVUSDT] 当前RSI: 35.53, 价格: 1.0244
+2025-07-18 14:59:21,172 - trading_system - INFO - [ACHUSDT] 当前RSI: 56.43, 价格: 0.02396
+2025-07-18 14:59:21,229 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 14:59:21,231 - trading_system - INFO - [ONDOUSDT] 当前RSI: 56.01, 价格: 1.079
+2025-07-18 14:59:26,287 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 14:59:26,290 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 14:59:26,292 - trading_system - INFO - [ONDOUSDT] 当前RSI: 56.01, 价格: 1.079
+2025-07-18 14:59:26,293 - trading_system - INFO - [CRVUSDT] 当前RSI: 35.12, 价格: 1.0239
+2025-07-18 14:59:26,354 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 14:59:26,356 - trading_system - INFO - [ACHUSDT] 当前RSI: 56.43, 价格: 0.02396
+2025-07-18 14:59:31,414 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 14:59:31,417 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 14:59:31,418 - trading_system - INFO - [ONDOUSDT] 当前RSI: 56.01, 价格: 1.079
+2025-07-18 14:59:31,420 - trading_system - INFO - [ACHUSDT] 当前RSI: 55.62, 价格: 0.02395
+2025-07-18 14:59:31,462 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 14:59:31,464 - trading_system - INFO - [CRVUSDT] 当前RSI: 34.58, 价格: 1.0232
+2025-07-18 14:59:36,735 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 14:59:36,737 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 14:59:36,739 - trading_system - INFO - [ONDOUSDT] 当前RSI: 56.34, 价格: 1.0793
+2025-07-18 14:59:36,741 - trading_system - INFO - [ACHUSDT] 当前RSI: 55.62, 价格: 0.02395
+2025-07-18 14:59:36,751 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 14:59:36,753 - trading_system - INFO - [CRVUSDT] 当前RSI: 34.58, 价格: 1.0232
+2025-07-18 14:59:41,810 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 14:59:41,812 - trading_system - INFO - [ACHUSDT] 当前RSI: 55.62, 价格: 0.02395
+2025-07-18 14:59:42,244 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 14:59:42,246 - trading_system - INFO - [ONDOUSDT] 当前RSI: 56.34, 价格: 1.0793
+2025-07-18 14:59:42,281 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 14:59:42,284 - trading_system - INFO - [CRVUSDT] 当前RSI: 34.58, 价格: 1.0232
+2025-07-18 14:59:47,377 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 14:59:47,379 - trading_system - INFO - [ONDOUSDT] 当前RSI: 56.34, 价格: 1.0793
+2025-07-18 14:59:47,393 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 14:59:47,395 - trading_system - INFO - [CRVUSDT] 当前RSI: 34.58, 价格: 1.0232
+2025-07-18 14:59:47,732 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 14:59:47,734 - trading_system - INFO - [ACHUSDT] 当前RSI: 55.62, 价格: 0.02395
+2025-07-18 14:59:52,804 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 14:59:52,806 - trading_system - INFO - [CRVUSDT] 当前RSI: 34.58, 价格: 1.0232
+2025-07-18 14:59:52,812 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 14:59:52,814 - trading_system - INFO - [ONDOUSDT] 当前RSI: 56.34, 价格: 1.0793
+2025-07-18 14:59:52,829 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 14:59:52,830 - trading_system - INFO - [ACHUSDT] 当前RSI: 55.62, 价格: 0.02395
+2025-07-18 14:59:57,924 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 14:59:57,926 - trading_system - INFO - [ONDOUSDT] 当前RSI: 56.34, 价格: 1.0793
+2025-07-18 14:59:57,935 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 14:59:57,937 - trading_system - INFO - [ACHUSDT] 当前RSI: 55.62, 价格: 0.02395
+2025-07-18 14:59:57,958 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 14:59:57,961 - trading_system - INFO - [CRVUSDT] 当前RSI: 34.58, 价格: 1.0232
+2025-07-18 15:00:03,065 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:00:03,067 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:00:03,069 - trading_system - INFO - [ONDOUSDT] 当前RSI: 56.34, 价格: 1.0793
+2025-07-18 15:00:03,070 - trading_system - INFO - [ACHUSDT] 当前RSI: 53.72, 价格: 0.02395
+2025-07-18 15:00:03,141 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:00:03,143 - trading_system - INFO - [CRVUSDT] 当前RSI: 34.58, 价格: 1.0232
+2025-07-18 15:00:08,260 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:00:08,262 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:00:08,265 - trading_system - INFO - [CRVUSDT] 当前RSI: 31.96, 价格: 1.0232
+2025-07-18 15:00:08,266 - trading_system - INFO - [ONDOUSDT] 当前RSI: 56.69, 价格: 1.0793
+2025-07-18 15:00:08,740 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:00:08,743 - trading_system - INFO - [ACHUSDT] 当前RSI: 53.72, 价格: 0.02395
+2025-07-18 15:00:13,799 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:00:13,802 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:00:13,803 - trading_system - INFO - [ACHUSDT] 当前RSI: 53.72, 价格: 0.02395
+2025-07-18 15:00:13,805 - trading_system - INFO - [ONDOUSDT] 当前RSI: 56.69, 价格: 1.0793
+2025-07-18 15:00:13,859 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:00:13,862 - trading_system - INFO - [CRVUSDT] 当前RSI: 31.96, 价格: 1.0232
+2025-07-18 15:00:18,918 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:00:18,921 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:00:18,923 - trading_system - INFO - [ONDOUSDT] 当前RSI: 56.69, 价格: 1.0793
+2025-07-18 15:00:18,925 - trading_system - INFO - [CRVUSDT] 当前RSI: 35.09, 价格: 1.025
+2025-07-18 15:00:19,011 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:00:19,013 - trading_system - INFO - [ACHUSDT] 当前RSI: 53.72, 价格: 0.02395
+2025-07-18 15:00:24,091 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:00:24,095 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:00:24,096 - trading_system - INFO - [ACHUSDT] 当前RSI: 53.72, 价格: 0.02395
+2025-07-18 15:00:24,098 - trading_system - INFO - [ONDOUSDT] 当前RSI: 56.69, 价格: 1.0793
+2025-07-18 15:00:24,178 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:00:24,181 - trading_system - INFO - [CRVUSDT] 当前RSI: 35.09, 价格: 1.025
+2025-07-18 15:00:29,234 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:00:29,238 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:00:29,240 - trading_system - INFO - [ONDOUSDT] 当前RSI: 56.69, 价格: 1.0793
+2025-07-18 15:00:29,241 - trading_system - INFO - [CRVUSDT] 当前RSI: 35.09, 价格: 1.025
+2025-07-18 15:00:29,284 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:00:29,287 - trading_system - INFO - [ACHUSDT] 当前RSI: 53.72, 价格: 0.02395
+2025-07-18 15:00:34,343 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:00:34,346 - trading_system - INFO - [CRVUSDT] 当前RSI: 35.09, 价格: 1.025
+2025-07-18 15:00:34,418 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:00:34,420 - trading_system - INFO - [ONDOUSDT] 当前RSI: 56.69, 价格: 1.0793
+2025-07-18 15:00:34,527 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:00:34,529 - trading_system - INFO - [ACHUSDT] 当前RSI: 53.72, 价格: 0.02395
+2025-07-18 15:00:39,604 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:00:39,606 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:00:39,607 - trading_system - INFO - [ONDOUSDT] 当前RSI: 56.69, 价格: 1.0793
+2025-07-18 15:00:39,609 - trading_system - INFO - [ACHUSDT] 当前RSI: 53.72, 价格: 0.02395
+2025-07-18 15:00:39,644 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:00:39,646 - trading_system - INFO - [CRVUSDT] 当前RSI: 35.09, 价格: 1.025
+2025-07-18 15:00:44,765 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:00:44,767 - trading_system - INFO - [ONDOUSDT] 当前RSI: 56.69, 价格: 1.0793
+2025-07-18 15:00:44,813 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:00:44,815 - trading_system - INFO - [ACHUSDT] 当前RSI: 53.72, 价格: 0.02395
+2025-07-18 15:00:44,898 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:00:44,900 - trading_system - INFO - [CRVUSDT] 当前RSI: 35.09, 价格: 1.025
+2025-07-18 15:00:50,088 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:00:50,090 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:00:50,092 - trading_system - INFO - [CRVUSDT] 当前RSI: 35.09, 价格: 1.025
+2025-07-18 15:00:50,094 - trading_system - INFO - [ONDOUSDT] 当前RSI: 56.69, 价格: 1.0793
+2025-07-18 15:00:50,183 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:00:50,186 - trading_system - INFO - [ACHUSDT] 当前RSI: 53.72, 价格: 0.02395
+2025-07-18 15:00:55,297 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:00:55,299 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:00:55,302 - trading_system - INFO - [ACHUSDT] 当前RSI: 53.72, 价格: 0.02395
+2025-07-18 15:00:55,303 - trading_system - INFO - [ONDOUSDT] 当前RSI: 56.69, 价格: 1.0793
+2025-07-18 15:00:55,336 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:00:55,338 - trading_system - INFO - [CRVUSDT] 当前RSI: 35.09, 价格: 1.025
+2025-07-18 15:01:00,494 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:01:00,497 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:01:00,498 - trading_system - INFO - [CRVUSDT] 当前RSI: 31.79, 价格: 1.023
+2025-07-18 15:01:00,500 - trading_system - INFO - [ACHUSDT] 当前RSI: 52.51, 价格: 0.02394
+2025-07-18 15:01:00,578 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:01:00,580 - trading_system - INFO - [ONDOUSDT] 当前RSI: 56.69, 价格: 1.0793
+2025-07-18 15:01:05,844 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:01:05,847 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:01:05,850 - trading_system - INFO - [ONDOUSDT] 当前RSI: 56.69, 价格: 1.0793
+2025-07-18 15:01:05,852 - trading_system - INFO - [ACHUSDT] 当前RSI: 52.51, 价格: 0.02394
+2025-07-18 15:01:05,940 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:01:05,942 - trading_system - INFO - [CRVUSDT] 当前RSI: 31.54, 价格: 1.0227
+2025-07-18 15:01:11,053 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:01:11,056 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:01:11,059 - trading_system - INFO - [ACHUSDT] 当前RSI: 52.51, 价格: 0.02394
+2025-07-18 15:01:11,060 - trading_system - INFO - [ONDOUSDT] 当前RSI: 56.69, 价格: 1.0793
+2025-07-18 15:01:11,138 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:01:11,140 - trading_system - INFO - [CRVUSDT] 当前RSI: 31.54, 价格: 1.0227
+2025-07-18 15:01:16,195 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:01:16,197 - trading_system - INFO - [CRVUSDT] 当前RSI: 31.54, 价格: 1.0227
+2025-07-18 15:01:16,198 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:01:16,200 - trading_system - INFO - [ONDOUSDT] 当前RSI: 56.69, 价格: 1.0793
+2025-07-18 15:01:16,247 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:01:16,248 - trading_system - INFO - [ACHUSDT] 当前RSI: 52.51, 价格: 0.02394
+2025-07-18 15:01:21,328 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:01:21,330 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:01:21,331 - trading_system - INFO - [ONDOUSDT] 当前RSI: 56.69, 价格: 1.0793
+2025-07-18 15:01:21,332 - trading_system - INFO - [ACHUSDT] 当前RSI: 52.51, 价格: 0.02394
+2025-07-18 15:01:21,458 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:01:21,460 - trading_system - INFO - [CRVUSDT] 当前RSI: 31.54, 价格: 1.0227
+2025-07-18 15:01:26,574 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:01:26,576 - trading_system - INFO - [ACHUSDT] 当前RSI: 52.51, 价格: 0.02394
+2025-07-18 15:01:26,596 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:01:26,598 - trading_system - INFO - [ONDOUSDT] 当前RSI: 56.69, 价格: 1.0793
+2025-07-18 15:01:26,619 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:01:26,621 - trading_system - INFO - [CRVUSDT] 当前RSI: 31.54, 价格: 1.0227
+2025-07-18 15:01:31,844 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:01:31,846 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:01:31,847 - trading_system - INFO - [ACHUSDT] 当前RSI: 52.51, 价格: 0.02394
+2025-07-18 15:01:31,848 - trading_system - INFO - [CRVUSDT] 当前RSI: 31.54, 价格: 1.0227
+2025-07-18 15:01:31,944 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:01:31,945 - trading_system - INFO - [ONDOUSDT] 当前RSI: 56.69, 价格: 1.0793
+2025-07-18 15:01:37,005 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:01:37,007 - trading_system - INFO - [ACHUSDT] 当前RSI: 52.51, 价格: 0.02394
+2025-07-18 15:01:37,201 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:01:37,203 - trading_system - INFO - [ONDOUSDT] 当前RSI: 54.10, 价格: 1.0777
+2025-07-18 15:01:37,575 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:01:37,577 - trading_system - INFO - [CRVUSDT] 当前RSI: 31.54, 价格: 1.0227
+2025-07-18 15:01:42,634 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:01:42,636 - trading_system - INFO - [ONDOUSDT] 当前RSI: 54.10, 价格: 1.0777
+2025-07-18 15:01:42,678 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:01:42,680 - trading_system - INFO - [ACHUSDT] 当前RSI: 52.51, 价格: 0.02394
+2025-07-18 15:01:42,940 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:01:42,942 - trading_system - INFO - [CRVUSDT] 当前RSI: 31.79, 价格: 1.023
+2025-07-18 15:01:48,009 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:01:48,010 - trading_system - INFO - [ACHUSDT] 当前RSI: 52.51, 价格: 0.02394
+2025-07-18 15:01:48,028 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:01:48,030 - trading_system - INFO - [ONDOUSDT] 当前RSI: 54.10, 价格: 1.0777
+2025-07-18 15:01:48,098 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:01:48,099 - trading_system - INFO - [CRVUSDT] 当前RSI: 31.79, 价格: 1.023
+2025-07-18 15:01:53,922 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:01:53,924 - trading_system - INFO - [ONDOUSDT] 当前RSI: 54.10, 价格: 1.0777
+2025-07-18 15:01:53,938 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:01:53,940 - trading_system - INFO - [CRVUSDT] 当前RSI: 31.79, 价格: 1.023
+2025-07-18 15:01:54,241 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:01:54,244 - trading_system - INFO - [ACHUSDT] 当前RSI: 52.51, 价格: 0.02394
+2025-07-18 15:01:59,521 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:01:59,523 - trading_system - INFO - [ACHUSDT] 当前RSI: 52.51, 价格: 0.02394
+2025-07-18 15:01:59,538 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:01:59,540 - trading_system - INFO - [ONDOUSDT] 当前RSI: 54.10, 价格: 1.0777
+2025-07-18 15:02:00,012 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:02:00,013 - trading_system - INFO - [CRVUSDT] 当前RSI: 31.88, 价格: 1.0231
+2025-07-18 15:02:05,132 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:02:05,134 - trading_system - INFO - [CRVUSDT] 当前RSI: 31.88, 价格: 1.0231
+2025-07-18 15:02:05,202 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:02:05,204 - trading_system - INFO - [ACHUSDT] 当前RSI: 52.51, 价格: 0.02394
+2025-07-18 15:02:05,233 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:02:05,235 - trading_system - INFO - [ONDOUSDT] 当前RSI: 54.10, 价格: 1.0777
+2025-07-18 15:02:10,348 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:02:10,350 - trading_system - INFO - [ACHUSDT] 当前RSI: 52.51, 价格: 0.02394
+2025-07-18 15:02:10,418 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:02:10,420 - trading_system - INFO - [CRVUSDT] 当前RSI: 31.88, 价格: 1.0231
+2025-07-18 15:02:10,722 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:02:10,723 - trading_system - INFO - [ONDOUSDT] 当前RSI: 54.10, 价格: 1.0777
+2025-07-18 15:02:15,846 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:02:15,848 - trading_system - INFO - [CRVUSDT] 当前RSI: 31.88, 价格: 1.0231
+2025-07-18 15:02:15,921 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:02:15,923 - trading_system - INFO - [ONDOUSDT] 当前RSI: 54.10, 价格: 1.0777
+2025-07-18 15:02:16,032 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:02:16,034 - trading_system - INFO - [ACHUSDT] 当前RSI: 52.51, 价格: 0.02394
+2025-07-18 15:02:21,122 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:02:21,124 - trading_system - INFO - [ONDOUSDT] 当前RSI: 54.10, 价格: 1.0777
+2025-07-18 15:02:21,206 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:02:21,207 - trading_system - INFO - [ACHUSDT] 当前RSI: 52.51, 价格: 0.02394
+2025-07-18 15:02:21,232 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:02:21,234 - trading_system - INFO - [CRVUSDT] 当前RSI: 31.88, 价格: 1.0231
+2025-07-18 15:02:26,331 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:02:26,333 - trading_system - INFO - [ACHUSDT] 当前RSI: 55.75, 价格: 0.02397
+2025-07-18 15:02:26,357 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:02:26,359 - trading_system - INFO - [CRVUSDT] 当前RSI: 31.88, 价格: 1.0231
+2025-07-18 15:02:26,393 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:02:26,395 - trading_system - INFO - [ONDOUSDT] 当前RSI: 54.10, 价格: 1.0777
+2025-07-18 15:02:31,523 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:02:31,525 - trading_system - INFO - [ONDOUSDT] 当前RSI: 53.33, 价格: 1.0772
+2025-07-18 15:02:31,601 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:02:31,603 - trading_system - INFO - [ACHUSDT] 当前RSI: 55.75, 价格: 0.02397
+2025-07-18 15:02:31,618 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:02:31,620 - trading_system - INFO - [CRVUSDT] 当前RSI: 32.50, 价格: 1.0235
+2025-07-18 15:02:36,676 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:02:36,678 - trading_system - INFO - [CRVUSDT] 当前RSI: 32.50, 价格: 1.0235
+2025-07-18 15:02:36,722 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:02:36,724 - trading_system - INFO - [ONDOUSDT] 当前RSI: 53.33, 价格: 1.0772
+2025-07-18 15:02:36,898 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:02:36,900 - trading_system - INFO - [ACHUSDT] 当前RSI: 55.75, 价格: 0.02397
+2025-07-18 15:02:42,407 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:02:42,409 - trading_system - INFO - [ACHUSDT] 当前RSI: 55.75, 价格: 0.02397
+2025-07-18 15:02:42,482 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:02:42,484 - trading_system - INFO - [ONDOUSDT] 当前RSI: 53.33, 价格: 1.0772
+2025-07-18 15:02:42,498 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:02:42,500 - trading_system - INFO - [CRVUSDT] 当前RSI: 32.50, 价格: 1.0235
+2025-07-18 15:02:47,616 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:02:47,617 - trading_system - INFO - [ONDOUSDT] 当前RSI: 53.33, 价格: 1.0772
+2025-07-18 15:02:47,682 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:02:47,684 - trading_system - INFO - [ACHUSDT] 当前RSI: 55.75, 价格: 0.02397
+2025-07-18 15:02:47,698 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:02:47,700 - trading_system - INFO - [CRVUSDT] 当前RSI: 32.68, 价格: 1.0236
+2025-07-18 15:02:52,754 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:02:52,756 - trading_system - INFO - [ACHUSDT] 当前RSI: 55.75, 价格: 0.02397
+2025-07-18 15:02:52,826 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:02:52,827 - trading_system - INFO - [ONDOUSDT] 当前RSI: 53.33, 价格: 1.0772
+2025-07-18 15:02:53,170 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:02:53,172 - trading_system - INFO - [CRVUSDT] 当前RSI: 32.68, 价格: 1.0236
+2025-07-18 15:02:58,251 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:02:58,252 - trading_system - INFO - [ONDOUSDT] 当前RSI: 53.33, 价格: 1.0772
+2025-07-18 15:02:58,327 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:02:58,328 - trading_system - INFO - [CRVUSDT] 当前RSI: 32.68, 价格: 1.0236
+2025-07-18 15:02:58,337 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:02:58,339 - trading_system - INFO - [ACHUSDT] 当前RSI: 55.75, 价格: 0.02397
+2025-07-18 15:03:04,084 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:03:04,086 - trading_system - INFO - [ACHUSDT] 当前RSI: 55.75, 价格: 0.02397
+2025-07-18 15:03:04,161 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:03:04,163 - trading_system - INFO - [CRVUSDT] 当前RSI: 32.68, 价格: 1.0236
+2025-07-18 15:03:04,177 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:03:04,179 - trading_system - INFO - [ONDOUSDT] 当前RSI: 53.33, 价格: 1.0772
+2025-07-18 15:03:09,231 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:03:09,233 - trading_system - INFO - [ONDOUSDT] 当前RSI: 53.33, 价格: 1.0772
+2025-07-18 15:03:09,457 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:03:09,458 - trading_system - INFO - [ACHUSDT] 当前RSI: 55.75, 价格: 0.02397
+2025-07-18 15:03:09,681 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:03:09,683 - trading_system - INFO - [CRVUSDT] 当前RSI: 32.68, 价格: 1.0236
+2025-07-18 15:03:14,757 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:03:14,758 - trading_system - INFO - [ONDOUSDT] 当前RSI: 53.33, 价格: 1.0772
+2025-07-18 15:03:14,817 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:03:14,818 - trading_system - INFO - [CRVUSDT] 当前RSI: 32.68, 价格: 1.0236
+2025-07-18 15:03:14,880 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:03:14,882 - trading_system - INFO - [ACHUSDT] 当前RSI: 55.75, 价格: 0.02397
+2025-07-18 15:03:19,953 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:03:19,955 - trading_system - INFO - [ACHUSDT] 当前RSI: 55.75, 价格: 0.02397
+2025-07-18 15:03:20,017 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:03:20,018 - trading_system - INFO - [CRVUSDT] 当前RSI: 32.68, 价格: 1.0236
+2025-07-18 15:03:20,402 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:03:20,403 - trading_system - INFO - [ONDOUSDT] 当前RSI: 53.33, 价格: 1.0772
+2025-07-18 15:03:25,523 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:03:25,525 - trading_system - INFO - [CRVUSDT] 当前RSI: 32.68, 价格: 1.0236
+2025-07-18 15:03:25,681 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:03:25,683 - trading_system - INFO - [ACHUSDT] 当前RSI: 55.75, 价格: 0.02397
+2025-07-18 15:03:25,698 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:03:25,700 - trading_system - INFO - [ONDOUSDT] 当前RSI: 55.04, 价格: 1.0783
+2025-07-18 15:03:30,889 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:03:30,891 - trading_system - INFO - [ACHUSDT] 当前RSI: 55.75, 价格: 0.02397
+2025-07-18 15:03:30,904 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:03:30,906 - trading_system - INFO - [CRVUSDT] 当前RSI: 32.68, 价格: 1.0236
+2025-07-18 15:03:30,909 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:03:30,910 - trading_system - INFO - [ONDOUSDT] 当前RSI: 55.04, 价格: 1.0783
+2025-07-18 15:03:36,001 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:03:36,002 - trading_system - INFO - [CRVUSDT] 当前RSI: 32.68, 价格: 1.0236
+2025-07-18 15:03:36,034 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:03:36,036 - trading_system - INFO - [ACHUSDT] 当前RSI: 57.60, 价格: 0.02399
+2025-07-18 15:03:36,053 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:03:36,055 - trading_system - INFO - [ONDOUSDT] 当前RSI: 55.04, 价格: 1.0783
+2025-07-18 15:03:41,122 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:03:41,124 - trading_system - INFO - [ACHUSDT] 当前RSI: 57.60, 价格: 0.02399
+2025-07-18 15:03:41,137 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:03:41,138 - trading_system - INFO - [ONDOUSDT] 当前RSI: 55.04, 价格: 1.0783
+2025-07-18 15:03:41,698 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:03:41,700 - trading_system - INFO - [CRVUSDT] 当前RSI: 32.68, 价格: 1.0236
+2025-07-18 15:03:46,895 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:03:46,896 - trading_system - INFO - [ACHUSDT] 当前RSI: 57.60, 价格: 0.02399
+2025-07-18 15:03:46,964 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:03:46,966 - trading_system - INFO - [ONDOUSDT] 当前RSI: 55.04, 价格: 1.0783
+2025-07-18 15:03:46,977 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:03:46,979 - trading_system - INFO - [CRVUSDT] 当前RSI: 32.68, 价格: 1.0236
+2025-07-18 15:03:52,033 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:03:52,035 - trading_system - INFO - [ACHUSDT] 当前RSI: 57.60, 价格: 0.02399
+2025-07-18 15:03:52,057 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:03:52,059 - trading_system - INFO - [CRVUSDT] 当前RSI: 32.68, 价格: 1.0236
+2025-07-18 15:03:52,110 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:03:52,111 - trading_system - INFO - [ONDOUSDT] 当前RSI: 55.36, 价格: 1.0785
+2025-07-18 15:03:57,168 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:03:57,170 - trading_system - INFO - [ONDOUSDT] 当前RSI: 55.36, 价格: 1.0785
+2025-07-18 15:03:57,230 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:03:57,231 - trading_system - INFO - [ACHUSDT] 当前RSI: 57.60, 价格: 0.02399
+2025-07-18 15:03:57,243 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:03:57,245 - trading_system - INFO - [CRVUSDT] 当前RSI: 33.21, 价格: 1.0239
+2025-07-18 15:04:02,398 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:04:02,400 - trading_system - INFO - [ACHUSDT] 当前RSI: 57.60, 价格: 0.02399
+2025-07-18 15:04:02,442 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:04:02,444 - trading_system - INFO - [ONDOUSDT] 当前RSI: 55.36, 价格: 1.0785
+2025-07-18 15:04:02,454 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:04:02,456 - trading_system - INFO - [CRVUSDT] 当前RSI: 33.21, 价格: 1.0239
+2025-07-18 15:04:07,685 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:04:07,687 - trading_system - INFO - [ONDOUSDT] 当前RSI: 56.95, 价格: 1.0795
+2025-07-18 15:04:07,698 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:04:07,700 - trading_system - INFO - [CRVUSDT] 当前RSI: 34.42, 价格: 1.0246
+2025-07-18 15:04:07,777 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:04:07,779 - trading_system - INFO - [ACHUSDT] 当前RSI: 59.31, 价格: 0.02401
+2025-07-18 15:04:12,835 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:04:12,837 - trading_system - INFO - [ACHUSDT] 当前RSI: 59.31, 价格: 0.02401
+2025-07-18 15:04:12,880 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:04:12,882 - trading_system - INFO - [ONDOUSDT] 当前RSI: 56.95, 价格: 1.0795
+2025-07-18 15:04:12,908 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:04:12,910 - trading_system - INFO - [CRVUSDT] 当前RSI: 34.42, 价格: 1.0246
+2025-07-18 15:04:18,018 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:04:18,020 - trading_system - INFO - [ONDOUSDT] 当前RSI: 56.95, 价格: 1.0795
+2025-07-18 15:04:18,081 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:04:18,083 - trading_system - INFO - [ACHUSDT] 当前RSI: 59.31, 价格: 0.02401
+2025-07-18 15:04:18,097 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:04:18,099 - trading_system - INFO - [CRVUSDT] 当前RSI: 34.42, 价格: 1.0246
+2025-07-18 15:04:23,216 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:04:23,218 - trading_system - INFO - [ACHUSDT] 当前RSI: 59.31, 价格: 0.02401
+2025-07-18 15:04:23,281 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:04:23,282 - trading_system - INFO - [ONDOUSDT] 当前RSI: 57.58, 价格: 1.08
+2025-07-18 15:04:23,297 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:04:23,298 - trading_system - INFO - [CRVUSDT] 当前RSI: 34.42, 价格: 1.0246
+2025-07-18 15:04:28,640 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:04:28,643 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:04:28,644 - trading_system - INFO - [ACHUSDT] 当前RSI: 59.31, 价格: 0.02401
+2025-07-18 15:04:28,646 - trading_system - INFO - [ONDOUSDT] 当前RSI: 57.58, 价格: 1.08
+2025-07-18 15:04:28,736 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:04:28,737 - trading_system - INFO - [CRVUSDT] 当前RSI: 34.42, 价格: 1.0246
+2025-07-18 15:04:33,852 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:04:33,853 - trading_system - INFO - [ONDOUSDT] 当前RSI: 57.58, 价格: 1.08
+2025-07-18 15:04:33,870 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:04:33,872 - trading_system - INFO - [CRVUSDT] 当前RSI: 34.25, 价格: 1.0245
+2025-07-18 15:04:33,937 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:04:33,939 - trading_system - INFO - [ACHUSDT] 当前RSI: 59.31, 价格: 0.02401
+2025-07-18 15:04:38,992 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:04:38,994 - trading_system - INFO - [ONDOUSDT] 当前RSI: 57.58, 价格: 1.08
+2025-07-18 15:04:39,010 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:04:39,012 - trading_system - INFO - [ACHUSDT] 当前RSI: 59.31, 价格: 0.02401
+2025-07-18 15:04:39,051 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:04:39,053 - trading_system - INFO - [CRVUSDT] 当前RSI: 34.25, 价格: 1.0245
+2025-07-18 15:04:44,107 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:04:44,108 - trading_system - INFO - [ONDOUSDT] 当前RSI: 57.58, 价格: 1.08
+2025-07-18 15:04:44,122 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:04:44,124 - trading_system - INFO - [CRVUSDT] 当前RSI: 34.25, 价格: 1.0245
+2025-07-18 15:04:44,164 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:04:44,166 - trading_system - INFO - [ACHUSDT] 当前RSI: 60.89, 价格: 0.02403
+2025-07-18 15:04:49,228 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:04:49,230 - trading_system - INFO - [ONDOUSDT] 当前RSI: 57.58, 价格: 1.08
+2025-07-18 15:04:49,234 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:04:49,235 - trading_system - INFO - [ACHUSDT] 当前RSI: 60.89, 价格: 0.02403
+2025-07-18 15:04:49,776 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:04:49,778 - trading_system - INFO - [CRVUSDT] 当前RSI: 34.59, 价格: 1.0247
+2025-07-18 15:04:54,832 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:04:54,833 - trading_system - INFO - [ACHUSDT] 当前RSI: 60.89, 价格: 0.02403
+2025-07-18 15:04:54,848 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:04:54,850 - trading_system - INFO - [ONDOUSDT] 当前RSI: 58.67, 价格: 1.0809
+2025-07-18 15:04:54,907 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:04:54,909 - trading_system - INFO - [CRVUSDT] 当前RSI: 34.59, 价格: 1.0247
+2025-07-18 15:05:00,165 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:05:00,166 - trading_system - INFO - [ACHUSDT] 当前RSI: 61.63, 价格: 0.02404
+2025-07-18 15:05:00,239 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:05:00,240 - trading_system - INFO - [CRVUSDT] 当前RSI: 34.93, 价格: 1.0249
+2025-07-18 15:05:00,256 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:05:00,257 - trading_system - INFO - [ONDOUSDT] 当前RSI: 58.67, 价格: 1.0809
+2025-07-18 15:05:05,313 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:05:05,315 - trading_system - INFO - [CRVUSDT] 当前RSI: 34.93, 价格: 1.0249
+2025-07-18 15:05:05,334 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:05:05,336 - trading_system - INFO - [ONDOUSDT] 当前RSI: 58.67, 价格: 1.0809
+2025-07-18 15:05:05,387 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:05:05,389 - trading_system - INFO - [ACHUSDT] 当前RSI: 61.63, 价格: 0.02404
+2025-07-18 15:05:10,482 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:05:10,484 - trading_system - INFO - [ONDOUSDT] 当前RSI: 59.49, 价格: 1.0816
+2025-07-18 15:05:10,560 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:05:10,562 - trading_system - INFO - [ACHUSDT] 当前RSI: 61.63, 价格: 0.02404
+2025-07-18 15:05:10,576 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:05:10,578 - trading_system - INFO - [CRVUSDT] 当前RSI: 34.93, 价格: 1.0249
+2025-07-18 15:05:15,631 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:05:15,633 - trading_system - INFO - [ONDOUSDT] 当前RSI: 59.49, 价格: 1.0816
+2025-07-18 15:05:15,656 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:05:15,658 - trading_system - INFO - [ACHUSDT] 当前RSI: 61.63, 价格: 0.02404
+2025-07-18 15:05:15,689 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:05:15,691 - trading_system - INFO - [CRVUSDT] 当前RSI: 35.42, 价格: 1.0252
+2025-07-18 15:05:21,363 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:05:21,365 - trading_system - INFO - [ACHUSDT] 当前RSI: 61.63, 价格: 0.02404
+2025-07-18 15:05:21,404 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:05:21,406 - trading_system - INFO - [ONDOUSDT] 当前RSI: 59.71, 价格: 1.0818
+2025-07-18 15:05:21,841 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:05:21,842 - trading_system - INFO - [CRVUSDT] 当前RSI: 35.42, 价格: 1.0252
+2025-07-18 15:05:26,896 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:05:26,897 - trading_system - INFO - [ACHUSDT] 当前RSI: 60.89, 价格: 0.02403
+2025-07-18 15:05:26,920 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:05:26,922 - trading_system - INFO - [CRVUSDT] 当前RSI: 35.42, 价格: 1.0252
+2025-07-18 15:05:26,976 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:05:26,978 - trading_system - INFO - [ONDOUSDT] 当前RSI: 59.71, 价格: 1.0818
+2025-07-18 15:05:32,033 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:05:32,034 - trading_system - INFO - [ONDOUSDT] 当前RSI: 60.16, 价格: 1.0822
+2025-07-18 15:05:32,084 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:05:32,085 - trading_system - INFO - [ACHUSDT] 当前RSI: 60.89, 价格: 0.02403
+2025-07-18 15:05:32,133 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:05:32,135 - trading_system - INFO - [CRVUSDT] 当前RSI: 35.59, 价格: 1.0253
+2025-07-18 15:05:37,208 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:05:37,209 - trading_system - INFO - [CRVUSDT] 当前RSI: 35.59, 价格: 1.0253
+2025-07-18 15:05:37,252 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:05:37,253 - trading_system - INFO - [ACHUSDT] 当前RSI: 60.89, 价格: 0.02403
+2025-07-18 15:05:37,616 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:05:37,617 - trading_system - INFO - [ONDOUSDT] 当前RSI: 59.14, 价格: 1.0813
+2025-07-18 15:05:42,963 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:05:42,965 - trading_system - INFO - [ACHUSDT] 当前RSI: 60.89, 价格: 0.02403
+2025-07-18 15:05:43,055 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:05:43,057 - trading_system - INFO - [CRVUSDT] 当前RSI: 35.59, 价格: 1.0253
+2025-07-18 15:05:43,279 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:05:43,280 - trading_system - INFO - [ONDOUSDT] 当前RSI: 59.14, 价格: 1.0813
+2025-07-18 15:05:48,569 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:05:48,571 - trading_system - INFO - [CRVUSDT] 当前RSI: 35.59, 价格: 1.0253
+2025-07-18 15:05:48,640 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:05:48,642 - trading_system - INFO - [ACHUSDT] 当前RSI: 60.89, 价格: 0.02403
+2025-07-18 15:05:48,656 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:05:48,657 - trading_system - INFO - [ONDOUSDT] 当前RSI: 59.14, 价格: 1.0813
+2025-07-18 15:05:54,014 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:05:54,015 - trading_system - INFO - [ACHUSDT] 当前RSI: 60.89, 价格: 0.02403
+2025-07-18 15:05:54,080 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:05:54,081 - trading_system - INFO - [ONDOUSDT] 当前RSI: 59.14, 价格: 1.0813
+2025-07-18 15:05:54,095 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:05:54,097 - trading_system - INFO - [CRVUSDT] 当前RSI: 35.59, 价格: 1.0253
+2025-07-18 15:05:59,207 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:05:59,209 - trading_system - INFO - [ONDOUSDT] 当前RSI: 59.14, 价格: 1.0813
+2025-07-18 15:05:59,265 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:05:59,266 - trading_system - INFO - [CRVUSDT] 当前RSI: 35.75, 价格: 1.0254
+2025-07-18 15:05:59,280 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:05:59,282 - trading_system - INFO - [ACHUSDT] 当前RSI: 56.70, 价格: 0.02398
+2025-07-18 15:06:04,401 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:06:04,402 - trading_system - INFO - [ONDOUSDT] 当前RSI: 54.57, 价格: 1.078
+2025-07-18 15:06:04,480 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:06:04,482 - trading_system - INFO - [CRVUSDT] 当前RSI: 35.75, 价格: 1.0254
+2025-07-18 15:06:04,657 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:06:04,658 - trading_system - INFO - [ACHUSDT] 当前RSI: 56.70, 价格: 0.02398
+2025-07-18 15:06:09,716 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:06:09,717 - trading_system - INFO - [ACHUSDT] 当前RSI: 56.70, 价格: 0.02398
+2025-07-18 15:06:09,839 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:06:09,841 - trading_system - INFO - [CRVUSDT] 当前RSI: 35.75, 价格: 1.0254
+2025-07-18 15:06:10,655 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:06:10,657 - trading_system - INFO - [ONDOUSDT] 当前RSI: 54.88, 价格: 1.0782
+2025-07-18 15:06:15,761 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:06:15,763 - trading_system - INFO - [ACHUSDT] 当前RSI: 56.70, 价格: 0.02398
+2025-07-18 15:06:15,839 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:06:15,841 - trading_system - INFO - [CRVUSDT] 当前RSI: 35.75, 价格: 1.0254
+2025-07-18 15:06:15,855 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:06:15,857 - trading_system - INFO - [ONDOUSDT] 当前RSI: 54.88, 价格: 1.0782
+2025-07-18 15:06:20,976 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:06:20,978 - trading_system - INFO - [ACHUSDT] 当前RSI: 56.70, 价格: 0.02398
+2025-07-18 15:06:21,040 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:06:21,042 - trading_system - INFO - [CRVUSDT] 当前RSI: 35.75, 价格: 1.0254
+2025-07-18 15:06:21,536 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:06:21,538 - trading_system - INFO - [ONDOUSDT] 当前RSI: 54.88, 价格: 1.0782
+2025-07-18 15:06:26,731 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:06:26,732 - trading_system - INFO - [ACHUSDT] 当前RSI: 56.70, 价格: 0.02398
+2025-07-18 15:06:26,798 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:06:26,800 - trading_system - INFO - [CRVUSDT] 当前RSI: 35.75, 价格: 1.0254
+2025-07-18 15:06:26,976 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:06:26,977 - trading_system - INFO - [ONDOUSDT] 当前RSI: 54.88, 价格: 1.0782
+2025-07-18 15:06:32,087 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:06:32,089 - trading_system - INFO - [ONDOUSDT] 当前RSI: 54.88, 价格: 1.0782
+2025-07-18 15:06:32,160 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:06:32,162 - trading_system - INFO - [ACHUSDT] 当前RSI: 56.70, 价格: 0.02398
+2025-07-18 15:06:32,177 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:06:32,179 - trading_system - INFO - [CRVUSDT] 当前RSI: 35.75, 价格: 1.0254
+2025-07-18 15:06:37,281 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:06:37,283 - trading_system - INFO - [ONDOUSDT] 当前RSI: 49.30, 价格: 1.0743
+2025-07-18 15:06:37,358 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:06:37,360 - trading_system - INFO - [ACHUSDT] 当前RSI: 56.70, 价格: 0.02398
+2025-07-18 15:06:37,376 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:06:37,378 - trading_system - INFO - [CRVUSDT] 当前RSI: 35.75, 价格: 1.0254
+2025-07-18 15:06:42,561 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:06:42,562 - trading_system - INFO - [ACHUSDT] 当前RSI: 58.48, 价格: 0.024
+2025-07-18 15:06:42,639 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:06:42,640 - trading_system - INFO - [ONDOUSDT] 当前RSI: 49.30, 价格: 1.0743
+2025-07-18 15:06:42,656 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:06:42,658 - trading_system - INFO - [CRVUSDT] 当前RSI: 35.75, 价格: 1.0254
+2025-07-18 15:06:47,850 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:06:47,852 - trading_system - INFO - [ONDOUSDT] 当前RSI: 49.30, 价格: 1.0743
+2025-07-18 15:06:47,919 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:06:47,920 - trading_system - INFO - [CRVUSDT] 当前RSI: 35.75, 价格: 1.0254
+2025-07-18 15:06:47,934 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:06:47,936 - trading_system - INFO - [ACHUSDT] 当前RSI: 58.48, 价格: 0.024
+2025-07-18 15:06:53,118 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:06:53,120 - trading_system - INFO - [CRVUSDT] 当前RSI: 35.75, 价格: 1.0254
+2025-07-18 15:06:53,138 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:06:53,139 - trading_system - INFO - [ONDOUSDT] 当前RSI: 51.17, 价格: 1.0757
+2025-07-18 15:06:53,438 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:06:53,440 - trading_system - INFO - [ACHUSDT] 当前RSI: 58.48, 价格: 0.024
+2025-07-18 15:06:58,534 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:06:58,536 - trading_system - INFO - [ACHUSDT] 当前RSI: 58.48, 价格: 0.024
+2025-07-18 15:06:58,655 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:06:58,657 - trading_system - INFO - [ONDOUSDT] 当前RSI: 51.17, 价格: 1.0757
+2025-07-18 15:06:58,889 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:06:58,891 - trading_system - INFO - [CRVUSDT] 当前RSI: 33.21, 价格: 1.0239
+2025-07-18 15:07:03,998 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:07:04,000 - trading_system - INFO - [CRVUSDT] 当前RSI: 33.21, 价格: 1.0239
+2025-07-18 15:07:04,098 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:07:04,099 - trading_system - INFO - [ACHUSDT] 当前RSI: 58.48, 价格: 0.024
+2025-07-18 15:07:04,400 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:07:04,402 - trading_system - INFO - [ONDOUSDT] 当前RSI: 51.17, 价格: 1.0757
+2025-07-18 15:07:09,518 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:07:09,520 - trading_system - INFO - [ACHUSDT] 当前RSI: 58.48, 价格: 0.024
+2025-07-18 15:07:09,562 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:07:09,564 - trading_system - INFO - [CRVUSDT] 当前RSI: 33.21, 价格: 1.0239
+2025-07-18 15:07:09,872 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:07:09,873 - trading_system - INFO - [ONDOUSDT] 当前RSI: 52.01, 价格: 1.0763
+2025-07-18 15:07:15,201 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:07:15,202 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:07:15,204 - trading_system - INFO - [ACHUSDT] 当前RSI: 58.48, 价格: 0.024
+2025-07-18 15:07:15,205 - trading_system - INFO - [CRVUSDT] 当前RSI: 33.21, 价格: 1.0239
+2025-07-18 15:07:15,214 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:07:15,216 - trading_system - INFO - [ONDOUSDT] 当前RSI: 52.01, 价格: 1.0763
+2025-07-18 15:07:20,479 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:07:20,481 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:07:20,483 - trading_system - INFO - [ONDOUSDT] 当前RSI: 52.01, 价格: 1.0763
+2025-07-18 15:07:20,484 - trading_system - INFO - [ACHUSDT] 当前RSI: 58.48, 价格: 0.024
+2025-07-18 15:07:20,496 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:07:20,498 - trading_system - INFO - [CRVUSDT] 当前RSI: 33.21, 价格: 1.0239
+2025-07-18 15:07:25,641 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:07:25,642 - trading_system - INFO - [ACHUSDT] 当前RSI: 60.12, 价格: 0.02402
+2025-07-18 15:07:25,696 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:07:25,697 - trading_system - INFO - [ONDOUSDT] 当前RSI: 52.01, 价格: 1.0763
+2025-07-18 15:07:26,000 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:07:26,002 - trading_system - INFO - [CRVUSDT] 当前RSI: 33.21, 价格: 1.0239
+2025-07-18 15:07:31,076 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:07:31,077 - trading_system - INFO - [ONDOUSDT] 当前RSI: 52.01, 价格: 1.0763
+2025-07-18 15:07:31,089 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:07:31,090 - trading_system - INFO - [CRVUSDT] 当前RSI: 33.74, 价格: 1.0242
+2025-07-18 15:07:31,135 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:07:31,137 - trading_system - INFO - [ACHUSDT] 当前RSI: 60.12, 价格: 0.02402
+2025-07-18 15:07:36,238 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:07:36,239 - trading_system - INFO - [CRVUSDT] 当前RSI: 33.74, 价格: 1.0242
+2025-07-18 15:07:36,414 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:07:36,416 - trading_system - INFO - [ACHUSDT] 当前RSI: 60.12, 价格: 0.02402
+2025-07-18 15:07:36,637 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:07:36,639 - trading_system - INFO - [ONDOUSDT] 当前RSI: 52.01, 价格: 1.0763
+2025-07-18 15:07:41,758 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:07:41,760 - trading_system - INFO - [ACHUSDT] 当前RSI: 60.89, 价格: 0.02403
+2025-07-18 15:07:41,854 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:07:41,856 - trading_system - INFO - [CRVUSDT] 当前RSI: 33.74, 价格: 1.0242
+2025-07-18 15:07:41,857 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:07:41,859 - trading_system - INFO - [ONDOUSDT] 当前RSI: 52.01, 价格: 1.0763
+2025-07-18 15:07:46,993 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:07:46,995 - trading_system - INFO - [ACHUSDT] 当前RSI: 60.89, 价格: 0.02403
+2025-07-18 15:07:47,007 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:07:47,009 - trading_system - INFO - [CRVUSDT] 当前RSI: 33.74, 价格: 1.0242
+2025-07-18 15:07:47,055 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:07:47,056 - trading_system - INFO - [ONDOUSDT] 当前RSI: 52.01, 价格: 1.0763
+2025-07-18 15:07:52,242 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:07:52,243 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:07:52,245 - trading_system - INFO - [ACHUSDT] 当前RSI: 61.63, 价格: 0.02404
+2025-07-18 15:07:52,246 - trading_system - INFO - [ONDOUSDT] 当前RSI: 52.01, 价格: 1.0763
+2025-07-18 15:07:52,258 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:07:52,259 - trading_system - INFO - [CRVUSDT] 当前RSI: 33.74, 价格: 1.0242
+2025-07-18 15:07:57,331 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:07:57,334 - trading_system - INFO - [ACHUSDT] 当前RSI: 61.63, 价格: 0.02404
+2025-07-18 15:07:57,458 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:07:57,460 - trading_system - INFO - [ONDOUSDT] 当前RSI: 53.33, 价格: 1.0772
+2025-07-18 15:07:57,758 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:07:57,760 - trading_system - INFO - [CRVUSDT] 当前RSI: 33.74, 价格: 1.0242
+2025-07-18 15:08:02,833 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:08:02,835 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:08:02,839 - trading_system - INFO - [ONDOUSDT] 当前RSI: 53.33, 价格: 1.0772
+2025-07-18 15:08:02,840 - trading_system - INFO - [CRVUSDT] 当前RSI: 33.74, 价格: 1.0242
+2025-07-18 15:08:03,332 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:08:03,334 - trading_system - INFO - [ACHUSDT] 当前RSI: 61.63, 价格: 0.02404
+2025-07-18 15:08:08,479 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:08:08,480 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:08:08,481 - trading_system - INFO - [ACHUSDT] 当前RSI: 61.63, 价格: 0.02404
+2025-07-18 15:08:08,483 - trading_system - INFO - [ONDOUSDT] 当前RSI: 53.33, 价格: 1.0772
+2025-07-18 15:08:08,495 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:08:08,496 - trading_system - INFO - [CRVUSDT] 当前RSI: 34.76, 价格: 1.0248
+2025-07-18 15:08:13,566 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:08:13,568 - trading_system - INFO - [ONDOUSDT] 当前RSI: 53.33, 价格: 1.0772
+2025-07-18 15:08:13,611 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:08:13,613 - trading_system - INFO - [ACHUSDT] 当前RSI: 61.63, 价格: 0.02404
+2025-07-18 15:08:13,696 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:08:13,697 - trading_system - INFO - [CRVUSDT] 当前RSI: 34.76, 价格: 1.0248
+2025-07-18 15:08:18,764 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:08:18,766 - trading_system - INFO - [ACHUSDT] 当前RSI: 61.63, 价格: 0.02404
+2025-07-18 15:08:18,768 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:08:18,769 - trading_system - INFO - [ONDOUSDT] 当前RSI: 53.79, 价格: 1.0775
+2025-07-18 15:08:18,822 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:08:18,823 - trading_system - INFO - [CRVUSDT] 当前RSI: 34.76, 价格: 1.0248
+2025-07-18 15:08:23,901 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:08:23,903 - trading_system - INFO - [ONDOUSDT] 当前RSI: 53.79, 价格: 1.0775
+2025-07-18 15:08:23,905 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:08:23,906 - trading_system - INFO - [ACHUSDT] 当前RSI: 63.70, 价格: 0.02407
+2025-07-18 15:08:23,939 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:08:23,941 - trading_system - INFO - [CRVUSDT] 当前RSI: 34.76, 价格: 1.0248
+2025-07-18 15:08:29,008 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:08:29,010 - trading_system - INFO - [ACHUSDT] 当前RSI: 63.70, 价格: 0.02407
+2025-07-18 15:08:29,055 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:08:29,056 - trading_system - INFO - [CRVUSDT] 当前RSI: 35.09, 价格: 1.025
+2025-07-18 15:08:29,391 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:08:29,393 - trading_system - INFO - [ONDOUSDT] 当前RSI: 55.04, 价格: 1.0783
+2025-07-18 15:08:34,797 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:08:34,800 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:08:34,801 - trading_system - INFO - [ONDOUSDT] 当前RSI: 55.04, 价格: 1.0783
+2025-07-18 15:08:34,803 - trading_system - INFO - [CRVUSDT] 当前RSI: 35.09, 价格: 1.025
+2025-07-18 15:08:34,816 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:08:34,817 - trading_system - INFO - [ACHUSDT] 当前RSI: 63.70, 价格: 0.02407
+2025-07-18 15:08:39,892 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:08:39,894 - trading_system - INFO - [ACHUSDT] 当前RSI: 63.70, 价格: 0.02407
+2025-07-18 15:08:39,896 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:08:39,897 - trading_system - INFO - [CRVUSDT] 当前RSI: 35.09, 价格: 1.025
+2025-07-18 15:08:39,952 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:08:39,953 - trading_system - INFO - [ONDOUSDT] 当前RSI: 55.69, 价格: 1.0787
+2025-07-18 15:08:45,064 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:08:45,066 - trading_system - INFO - [ACHUSDT] 当前RSI: 63.70, 价格: 0.02407
+2025-07-18 15:08:45,117 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:08:45,119 - trading_system - INFO - [ONDOUSDT] 当前RSI: 55.69, 价格: 1.0787
+2025-07-18 15:08:45,134 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:08:45,135 - trading_system - INFO - [CRVUSDT] 当前RSI: 42.32, 价格: 1.0299
+2025-07-18 15:08:50,325 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:08:50,327 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:08:50,328 - trading_system - INFO - [ACHUSDT] 当前RSI: 63.70, 价格: 0.02407
+2025-07-18 15:08:50,330 - trading_system - INFO - [ONDOUSDT] 当前RSI: 55.69, 价格: 1.0787
+2025-07-18 15:08:50,335 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:08:50,337 - trading_system - INFO - [CRVUSDT] 当前RSI: 42.32, 价格: 1.0299
+2025-07-18 15:08:55,518 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:08:55,520 - trading_system - INFO - [ONDOUSDT] 当前RSI: 55.69, 价格: 1.0787
+2025-07-18 15:08:55,535 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:08:55,537 - trading_system - INFO - [CRVUSDT] 当前RSI: 42.32, 价格: 1.0299
+2025-07-18 15:08:55,678 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:08:55,680 - trading_system - INFO - [ACHUSDT] 当前RSI: 63.70, 价格: 0.02407
+2025-07-18 15:09:00,746 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:09:00,747 - trading_system - INFO - [ACHUSDT] 当前RSI: 63.70, 价格: 0.02407
+2025-07-18 15:09:00,757 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:09:00,758 - trading_system - INFO - [ONDOUSDT] 当前RSI: 56.82, 价格: 1.0794
+2025-07-18 15:09:00,796 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:09:00,797 - trading_system - INFO - [CRVUSDT] 当前RSI: 42.32, 价格: 1.0299
+2025-07-18 15:09:05,866 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:09:05,868 - trading_system - INFO - [ONDOUSDT] 当前RSI: 56.82, 价格: 1.0794
+2025-07-18 15:09:05,871 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:09:05,872 - trading_system - INFO - [ACHUSDT] 当前RSI: 63.70, 价格: 0.02407
+2025-07-18 15:09:05,911 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:09:05,913 - trading_system - INFO - [CRVUSDT] 当前RSI: 42.96, 价格: 1.0304
+2025-07-18 15:09:10,986 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:09:10,988 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:09:10,990 - trading_system - INFO - [ONDOUSDT] 当前RSI: 56.82, 价格: 1.0794
+2025-07-18 15:09:10,991 - trading_system - INFO - [ACHUSDT] 当前RSI: 63.70, 价格: 0.02407
+2025-07-18 15:09:11,054 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:09:11,055 - trading_system - INFO - [CRVUSDT] 当前RSI: 42.96, 价格: 1.0304
+2025-07-18 15:09:16,124 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:09:16,126 - trading_system - INFO - [ACHUSDT] 当前RSI: 64.34, 价格: 0.02408
+2025-07-18 15:09:16,158 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:09:16,160 - trading_system - INFO - [CRVUSDT] 当前RSI: 42.96, 价格: 1.0304
+2025-07-18 15:09:16,202 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:09:16,203 - trading_system - INFO - [ONDOUSDT] 当前RSI: 56.82, 价格: 1.0794
+2025-07-18 15:09:21,438 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:09:21,440 - trading_system - INFO - [ACHUSDT] 当前RSI: 64.34, 价格: 0.02408
+2025-07-18 15:09:21,454 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:09:21,457 - trading_system - INFO - [ONDOUSDT] 当前RSI: 56.82, 价格: 1.0794
+2025-07-18 15:09:21,838 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:09:21,839 - trading_system - INFO - [CRVUSDT] 当前RSI: 42.96, 价格: 1.0304
+2025-07-18 15:09:27,067 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:09:27,069 - trading_system - INFO - [ACHUSDT] 当前RSI: 64.34, 价格: 0.02408
+2025-07-18 15:09:27,119 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:09:27,121 - trading_system - INFO - [CRVUSDT] 当前RSI: 43.09, 价格: 1.0305
+2025-07-18 15:09:27,133 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:09:27,135 - trading_system - INFO - [ONDOUSDT] 当前RSI: 56.82, 价格: 1.0794
+2025-07-18 15:09:32,210 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:09:32,212 - trading_system - INFO - [ACHUSDT] 当前RSI: 64.34, 价格: 0.02408
+2025-07-18 15:09:32,266 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:09:32,268 - trading_system - INFO - [ONDOUSDT] 当前RSI: 56.02, 价格: 1.0789
+2025-07-18 15:09:32,270 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:09:32,271 - trading_system - INFO - [CRVUSDT] 当前RSI: 43.09, 价格: 1.0305
+2025-07-18 15:09:37,386 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:09:37,388 - trading_system - INFO - [CRVUSDT] 当前RSI: 43.60, 价格: 1.0309
+2025-07-18 15:09:37,438 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:09:37,439 - trading_system - INFO - [ONDOUSDT] 当前RSI: 56.19, 价格: 1.079
+2025-07-18 15:09:37,454 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:09:37,455 - trading_system - INFO - [ACHUSDT] 当前RSI: 64.34, 价格: 0.02408
+2025-07-18 15:09:42,879 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:09:42,879 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:09:42,881 - trading_system - INFO - [ONDOUSDT] 当前RSI: 56.69, 价格: 1.0793
+2025-07-18 15:09:42,882 - trading_system - INFO - [ACHUSDT] 当前RSI: 64.34, 价格: 0.02408
+2025-07-18 15:09:42,894 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:09:42,896 - trading_system - INFO - [CRVUSDT] 当前RSI: 43.60, 价格: 1.0309
+2025-07-18 15:09:48,076 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:09:48,078 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:09:48,080 - trading_system - INFO - [ACHUSDT] 当前RSI: 64.34, 价格: 0.02408
+2025-07-18 15:09:48,082 - trading_system - INFO - [ONDOUSDT] 当前RSI: 56.69, 价格: 1.0793
+2025-07-18 15:09:48,574 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:09:48,576 - trading_system - INFO - [CRVUSDT] 当前RSI: 43.85, 价格: 1.0311
+2025-07-18 15:09:53,944 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:09:53,945 - trading_system - INFO - [ACHUSDT] 当前RSI: 62.35, 价格: 0.02405
+2025-07-18 15:09:53,997 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:09:53,999 - trading_system - INFO - [CRVUSDT] 当前RSI: 43.85, 价格: 1.0311
+2025-07-18 15:09:54,013 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:09:54,014 - trading_system - INFO - [ONDOUSDT] 当前RSI: 54.57, 价格: 1.078
+2025-07-18 15:09:59,133 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:09:59,136 - trading_system - INFO - [ONDOUSDT] 当前RSI: 54.57, 价格: 1.078
+2025-07-18 15:09:59,198 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:09:59,199 - trading_system - INFO - [ACHUSDT] 当前RSI: 62.35, 价格: 0.02405
+2025-07-18 15:09:59,214 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:09:59,216 - trading_system - INFO - [CRVUSDT] 当前RSI: 43.85, 价格: 1.0311
+2025-07-18 15:10:04,414 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:10:04,415 - trading_system - INFO - [CRVUSDT] 当前RSI: 43.85, 价格: 1.0311
+2025-07-18 15:10:04,418 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:10:04,419 - trading_system - INFO - [ONDOUSDT] 当前RSI: 54.57, 价格: 1.078
+2025-07-18 15:10:04,483 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:10:04,485 - trading_system - INFO - [ACHUSDT] 当前RSI: 62.35, 价格: 0.02405
+2025-07-18 15:10:09,698 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:10:09,700 - trading_system - INFO - [CRVUSDT] 当前RSI: 43.85, 价格: 1.0311
+2025-07-18 15:10:09,758 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:10:09,760 - trading_system - INFO - [ONDOUSDT] 当前RSI: 54.57, 价格: 1.078
+2025-07-18 15:10:09,774 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:10:09,776 - trading_system - INFO - [ACHUSDT] 当前RSI: 61.63, 价格: 0.02404
+2025-07-18 15:10:14,972 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:10:14,974 - trading_system - INFO - [ACHUSDT] 当前RSI: 61.63, 价格: 0.02404
+2025-07-18 15:10:15,038 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:10:15,040 - trading_system - INFO - [ONDOUSDT] 当前RSI: 54.57, 价格: 1.078
+2025-07-18 15:10:15,053 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:10:15,055 - trading_system - INFO - [CRVUSDT] 当前RSI: 44.09, 价格: 1.0313
+2025-07-18 15:10:20,347 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:10:20,348 - trading_system - INFO - [ONDOUSDT] 当前RSI: 54.57, 价格: 1.078
+2025-07-18 15:10:20,404 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:10:20,406 - trading_system - INFO - [ACHUSDT] 当前RSI: 61.63, 价格: 0.02404
+2025-07-18 15:10:20,412 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:10:20,415 - trading_system - INFO - [CRVUSDT] 当前RSI: 46.22, 价格: 1.0331
+2025-07-18 15:10:25,489 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:10:25,490 - trading_system - INFO - [ONDOUSDT] 当前RSI: 54.57, 价格: 1.078
+2025-07-18 15:10:25,548 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:10:25,549 - trading_system - INFO - [CRVUSDT] 当前RSI: 46.22, 价格: 1.0331
+2025-07-18 15:10:25,584 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:10:25,586 - trading_system - INFO - [ACHUSDT] 当前RSI: 61.63, 价格: 0.02404
+2025-07-18 15:10:30,654 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:10:30,656 - trading_system - INFO - [ONDOUSDT] 当前RSI: 54.57, 价格: 1.078
+2025-07-18 15:10:30,701 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:10:30,702 - trading_system - INFO - [CRVUSDT] 当前RSI: 46.22, 价格: 1.0331
+2025-07-18 15:10:31,054 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:10:31,055 - trading_system - INFO - [ACHUSDT] 当前RSI: 61.63, 价格: 0.02404
+2025-07-18 15:10:36,397 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:10:36,398 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:10:36,401 - trading_system - INFO - [ONDOUSDT] 当前RSI: 54.57, 价格: 1.078
+2025-07-18 15:10:36,402 - trading_system - INFO - [ACHUSDT] 当前RSI: 61.63, 价格: 0.02404
+2025-07-18 15:10:36,413 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:10:36,415 - trading_system - INFO - [CRVUSDT] 当前RSI: 46.22, 价格: 1.0331
+2025-07-18 15:10:41,489 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:10:41,492 - trading_system - INFO - [ONDOUSDT] 当前RSI: 53.49, 价格: 1.0773
+2025-07-18 15:10:41,510 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:10:41,512 - trading_system - INFO - [CRVUSDT] 当前RSI: 46.22, 价格: 1.0331
+2025-07-18 15:10:41,620 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:10:41,621 - trading_system - INFO - [ACHUSDT] 当前RSI: 61.63, 价格: 0.02404
+2025-07-18 15:10:46,717 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:10:46,720 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:10:46,721 - trading_system - INFO - [ONDOUSDT] 当前RSI: 53.49, 价格: 1.0773
+2025-07-18 15:10:46,723 - trading_system - INFO - [CRVUSDT] 当前RSI: 46.79, 价格: 1.0336
+2025-07-18 15:10:46,766 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:10:46,767 - trading_system - INFO - [ACHUSDT] 当前RSI: 61.63, 价格: 0.02404
+2025-07-18 15:10:51,861 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:10:51,863 - trading_system - INFO - [ONDOUSDT] 当前RSI: 53.49, 价格: 1.0773
+2025-07-18 15:10:51,870 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:10:51,872 - trading_system - INFO - [ACHUSDT] 当前RSI: 61.63, 价格: 0.02404
+2025-07-18 15:10:51,888 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:10:51,891 - trading_system - INFO - [CRVUSDT] 当前RSI: 46.79, 价格: 1.0336
+2025-07-18 15:10:56,978 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:10:56,981 - trading_system - INFO - [ACHUSDT] 当前RSI: 61.63, 价格: 0.02404
+2025-07-18 15:10:57,006 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:10:57,008 - trading_system - INFO - [CRVUSDT] 当前RSI: 46.79, 价格: 1.0336
+2025-07-18 15:10:57,362 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:10:57,364 - trading_system - INFO - [ONDOUSDT] 当前RSI: 53.49, 价格: 1.0773
+2025-07-18 15:11:02,441 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:11:02,444 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:11:02,446 - trading_system - INFO - [ONDOUSDT] 当前RSI: 53.49, 价格: 1.0773
+2025-07-18 15:11:02,447 - trading_system - INFO - [CRVUSDT] 当前RSI: 46.79, 价格: 1.0336
+2025-07-18 15:11:02,482 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:11:02,485 - trading_system - INFO - [ACHUSDT] 当前RSI: 61.63, 价格: 0.02404
+2025-07-18 15:11:08,499 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:11:08,502 - trading_system - INFO - [ONDOUSDT] 当前RSI: 53.49, 价格: 1.0773
+2025-07-18 15:11:08,557 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:11:08,559 - trading_system - INFO - [CRVUSDT] 当前RSI: 46.79, 价格: 1.0336
+2025-07-18 15:11:08,573 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:11:08,575 - trading_system - INFO - [ACHUSDT] 当前RSI: 61.63, 价格: 0.02404
+2025-07-18 15:11:13,652 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:11:13,654 - trading_system - INFO - [ACHUSDT] 当前RSI: 61.63, 价格: 0.02404
+2025-07-18 15:11:13,656 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:11:13,658 - trading_system - INFO - [CRVUSDT] 当前RSI: 46.79, 价格: 1.0336
+2025-07-18 15:11:13,706 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:11:13,708 - trading_system - INFO - [ONDOUSDT] 当前RSI: 53.49, 价格: 1.0773
+2025-07-18 15:11:18,781 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:11:18,782 - trading_system - INFO - [ONDOUSDT] 当前RSI: 50.35, 价格: 1.0751
+2025-07-18 15:11:18,822 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:11:18,824 - trading_system - INFO - [CRVUSDT] 当前RSI: 46.79, 价格: 1.0336
+2025-07-18 15:11:19,149 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:11:19,151 - trading_system - INFO - [ACHUSDT] 当前RSI: 61.63, 价格: 0.02404
+2025-07-18 15:11:24,398 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:11:24,400 - trading_system - INFO - [ONDOUSDT] 当前RSI: 50.35, 价格: 1.0751
+2025-07-18 15:11:24,494 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:11:24,496 - trading_system - INFO - [CRVUSDT] 当前RSI: 46.79, 价格: 1.0336
+2025-07-18 15:11:24,717 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:11:24,719 - trading_system - INFO - [ACHUSDT] 当前RSI: 61.63, 价格: 0.02404
+2025-07-18 15:11:29,799 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:11:29,801 - trading_system - INFO - [ONDOUSDT] 当前RSI: 50.35, 价格: 1.0751
+2025-07-18 15:11:29,852 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:11:29,856 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:11:29,857 - trading_system - INFO - [ACHUSDT] 当前RSI: 61.63, 价格: 0.02404
+2025-07-18 15:11:29,858 - trading_system - INFO - [CRVUSDT] 当前RSI: 46.79, 价格: 1.0336
+2025-07-18 15:11:35,050 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:11:35,051 - trading_system - INFO - [ACHUSDT] 当前RSI: 61.63, 价格: 0.02404
+2025-07-18 15:11:35,116 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:11:35,118 - trading_system - INFO - [CRVUSDT] 当前RSI: 46.79, 价格: 1.0336
+2025-07-18 15:11:35,374 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:11:35,376 - trading_system - INFO - [ONDOUSDT] 当前RSI: 50.35, 价格: 1.0751
+2025-07-18 15:11:40,476 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:11:40,478 - trading_system - INFO - [CRVUSDT] 当前RSI: 46.79, 价格: 1.0336
+2025-07-18 15:11:40,506 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:11:40,508 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:11:40,511 - trading_system - INFO - [ACHUSDT] 当前RSI: 61.63, 价格: 0.02404
+2025-07-18 15:11:40,512 - trading_system - INFO - [ONDOUSDT] 当前RSI: 50.35, 价格: 1.0751
+2025-07-18 15:11:45,583 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:11:45,585 - trading_system - INFO - [ONDOUSDT] 当前RSI: 50.35, 价格: 1.0751
+2025-07-18 15:11:45,608 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:11:45,610 - trading_system - INFO - [ACHUSDT] 当前RSI: 61.63, 价格: 0.02404
+2025-07-18 15:11:45,624 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:11:45,626 - trading_system - INFO - [CRVUSDT] 当前RSI: 46.79, 价格: 1.0336
+2025-07-18 15:11:50,697 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:11:50,698 - trading_system - INFO - [ONDOUSDT] 当前RSI: 50.35, 价格: 1.0751
+2025-07-18 15:11:50,702 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:11:50,705 - trading_system - INFO - [ACHUSDT] 当前RSI: 61.63, 价格: 0.02404
+2025-07-18 15:11:50,739 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:11:50,741 - trading_system - INFO - [CRVUSDT] 当前RSI: 46.79, 价格: 1.0336
+2025-07-18 15:11:55,918 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:11:55,920 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:11:55,922 - trading_system - INFO - [ONDOUSDT] 当前RSI: 49.43, 价格: 1.0744
+2025-07-18 15:11:55,925 - trading_system - INFO - [ACHUSDT] 当前RSI: 61.63, 价格: 0.02404
+2025-07-18 15:11:55,933 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:11:55,936 - trading_system - INFO - [CRVUSDT] 当前RSI: 48.51, 价格: 1.0352
+2025-07-18 15:12:01,060 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:12:01,062 - trading_system - INFO - [ACHUSDT] 当前RSI: 61.63, 价格: 0.02404
+2025-07-18 15:12:01,064 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:12:01,067 - trading_system - INFO - [ONDOUSDT] 当前RSI: 49.43, 价格: 1.0744
+2025-07-18 15:12:01,575 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:12:01,577 - trading_system - INFO - [CRVUSDT] 当前RSI: 48.51, 价格: 1.0352
+2025-07-18 15:12:07,276 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:12:07,279 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:12:07,281 - trading_system - INFO - [ACHUSDT] 当前RSI: 61.63, 价格: 0.02404
+2025-07-18 15:12:07,283 - trading_system - INFO - [ONDOUSDT] 当前RSI: 49.43, 价格: 1.0744
+2025-07-18 15:12:07,294 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:12:07,296 - trading_system - INFO - [CRVUSDT] 当前RSI: 48.51, 价格: 1.0352
+2025-07-18 15:12:12,380 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:12:12,382 - trading_system - INFO - [ONDOUSDT] 当前RSI: 50.22, 价格: 1.075
+2025-07-18 15:12:12,420 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:12:12,422 - trading_system - INFO - [ACHUSDT] 当前RSI: 60.12, 价格: 0.02402
+2025-07-18 15:12:12,426 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:12:12,429 - trading_system - INFO - [CRVUSDT] 当前RSI: 48.51, 价格: 1.0352
+2025-07-18 15:12:17,534 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:12:17,536 - trading_system - INFO - [ONDOUSDT] 当前RSI: 50.22, 价格: 1.075
+2025-07-18 15:12:17,548 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:12:17,550 - trading_system - INFO - [CRVUSDT] 当前RSI: 52.46, 价格: 1.0393
+2025-07-18 15:12:17,565 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:12:17,567 - trading_system - INFO - [ACHUSDT] 当前RSI: 58.48, 价格: 0.024
+2025-07-18 15:12:22,646 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:12:22,648 - trading_system - INFO - [ACHUSDT] 当前RSI: 58.48, 价格: 0.024
+2025-07-18 15:12:22,652 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:12:22,654 - trading_system - INFO - [ONDOUSDT] 当前RSI: 50.22, 价格: 1.075
+2025-07-18 15:12:23,213 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:12:23,215 - trading_system - INFO - [CRVUSDT] 当前RSI: 52.46, 价格: 1.0393
+2025-07-18 15:12:28,957 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:12:28,961 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:12:28,963 - trading_system - INFO - [ACHUSDT] 当前RSI: 58.48, 价格: 0.024
+2025-07-18 15:12:28,964 - trading_system - INFO - [ONDOUSDT] 当前RSI: 50.76, 价格: 1.0754
+2025-07-18 15:12:28,974 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:12:28,975 - trading_system - INFO - [CRVUSDT] 当前RSI: 52.46, 价格: 1.0393
+2025-07-18 15:12:34,236 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:12:34,238 - trading_system - INFO - [ACHUSDT] 当前RSI: 52.51, 价格: 0.02394
+2025-07-18 15:12:34,252 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:12:34,254 - trading_system - INFO - [ONDOUSDT] 当前RSI: 51.17, 价格: 1.0757
+2025-07-18 15:12:34,573 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:12:34,575 - trading_system - INFO - [CRVUSDT] 当前RSI: 52.46, 价格: 1.0393
+2025-07-18 15:12:39,653 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:12:39,655 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:12:39,657 - trading_system - INFO - [ONDOUSDT] 当前RSI: 52.45, 价格: 1.0766
+2025-07-18 15:12:39,658 - trading_system - INFO - [CRVUSDT] 当前RSI: 52.46, 价格: 1.0393
+2025-07-18 15:12:40,129 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:12:40,131 - trading_system - INFO - [ACHUSDT] 当前RSI: 52.51, 价格: 0.02394
+2025-07-18 15:12:45,219 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:12:45,221 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:12:45,223 - trading_system - INFO - [ONDOUSDT] 当前RSI: 52.74, 价格: 1.0768
+2025-07-18 15:12:45,224 - trading_system - INFO - [ACHUSDT] 当前RSI: 51.36, 价格: 0.02393
+2025-07-18 15:12:45,248 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:12:45,249 - trading_system - INFO - [CRVUSDT] 当前RSI: 52.46, 价格: 1.0393
+2025-07-18 15:12:50,338 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:12:50,340 - trading_system - INFO - [ACHUSDT] 当前RSI: 51.36, 价格: 0.02393
+2025-07-18 15:12:50,395 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:12:50,397 - trading_system - INFO - [CRVUSDT] 当前RSI: 52.46, 价格: 1.0393
+2025-07-18 15:12:50,412 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:12:50,413 - trading_system - INFO - [ONDOUSDT] 当前RSI: 52.74, 价格: 1.0768
+2025-07-18 15:13:15,971 - trading_system - ERROR - 设置杠杆失败: APIError(code=-2015): Invalid API-key, IP, or permissions for action
+2025-07-18 15:13:16,064 - trading_system - ERROR - 设置杠杆失败: APIError(code=-2015): Invalid API-key, IP, or permissions for action
+2025-07-18 15:13:16,163 - trading_system - ERROR - 设置杠杆失败: APIError(code=-2015): Invalid API-key, IP, or permissions for action
+2025-07-18 15:13:16,163 - trading_system - INFO - 程序正在运行，按Ctrl+C退出...
+2025-07-18 15:13:16,269 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:13:16,271 - trading_system - INFO - [CRVUSDT] 当前RSI: 50.71, 价格: 1.0374
+2025-07-18 15:13:16,498 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:13:16,500 - trading_system - INFO - [ACHUSDT] 当前RSI: 50.26, 价格: 0.02392
+2025-07-18 15:13:17,314 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:13:17,315 - trading_system - INFO - [ONDOUSDT] 当前RSI: 53.33, 价格: 1.0772
+2025-07-18 15:13:22,396 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:13:22,397 - trading_system - INFO - [ONDOUSDT] 当前RSI: 53.33, 价格: 1.0772
+2025-07-18 15:13:22,516 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:13:22,518 - trading_system - INFO - [CRVUSDT] 当前RSI: 50.71, 价格: 1.0374
+2025-07-18 15:13:22,857 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:13:22,859 - trading_system - INFO - [ACHUSDT] 当前RSI: 50.26, 价格: 0.02392
+2025-07-18 15:13:27,951 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:13:27,953 - trading_system - INFO - [ONDOUSDT] 当前RSI: 53.33, 价格: 1.0772
+2025-07-18 15:13:27,955 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:13:27,957 - trading_system - INFO - [CRVUSDT] 当前RSI: 50.71, 价格: 1.0374
+2025-07-18 15:13:28,092 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:13:28,094 - trading_system - INFO - [ACHUSDT] 当前RSI: 50.26, 价格: 0.02392
+2025-07-18 15:13:33,239 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:13:33,240 - trading_system - INFO - [ONDOUSDT] 当前RSI: 53.33, 价格: 1.0772
+2025-07-18 15:13:33,248 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:13:33,249 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:13:33,251 - trading_system - INFO - [CRVUSDT] 当前RSI: 49.64, 价格: 1.0363
+2025-07-18 15:13:33,252 - trading_system - INFO - [ACHUSDT] 当前RSI: 49.21, 价格: 0.02391
+2025-07-18 15:13:38,346 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:13:38,347 - trading_system - INFO - [ONDOUSDT] 当前RSI: 53.33, 价格: 1.0772
+2025-07-18 15:13:38,355 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:13:38,357 - trading_system - INFO - [ACHUSDT] 当前RSI: 49.21, 价格: 0.02391
+2025-07-18 15:13:38,899 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:13:38,900 - trading_system - INFO - [CRVUSDT] 当前RSI: 49.64, 价格: 1.0363
+2025-07-18 15:13:43,981 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:13:43,982 - trading_system - INFO - [CRVUSDT] 当前RSI: 49.64, 价格: 1.0363
+2025-07-18 15:13:44,025 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:13:44,026 - trading_system - INFO - [ONDOUSDT] 当前RSI: 53.33, 价格: 1.0772
+2025-07-18 15:13:44,033 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:13:44,034 - trading_system - INFO - [ACHUSDT] 当前RSI: 48.20, 价格: 0.0239
+2025-07-18 15:13:49,114 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:13:49,116 - trading_system - INFO - [ONDOUSDT] 当前RSI: 53.33, 价格: 1.0772
+2025-07-18 15:13:49,129 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:13:49,132 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:13:49,133 - trading_system - INFO - [ACHUSDT] 当前RSI: 48.20, 价格: 0.0239
+2025-07-18 15:13:49,135 - trading_system - INFO - [CRVUSDT] 当前RSI: 49.64, 价格: 1.0363
+2025-07-18 15:13:54,331 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:13:54,333 - trading_system - INFO - [ACHUSDT] 当前RSI: 48.20, 价格: 0.0239
+2025-07-18 15:13:54,342 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:13:54,343 - trading_system - INFO - [ONDOUSDT] 当前RSI: 53.33, 价格: 1.0772
+2025-07-18 15:13:54,900 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:13:54,902 - trading_system - INFO - [CRVUSDT] 当前RSI: 49.54, 价格: 1.0362
+2025-07-18 15:14:00,020 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:14:00,022 - trading_system - INFO - [ACHUSDT] 当前RSI: 48.20, 价格: 0.0239
+2025-07-18 15:14:00,024 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:14:00,025 - trading_system - INFO - [ONDOUSDT] 当前RSI: 53.33, 价格: 1.0772
+2025-07-18 15:14:00,034 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:14:00,036 - trading_system - INFO - [CRVUSDT] 当前RSI: 49.54, 价格: 1.0362
+2025-07-18 15:14:05,121 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:14:05,123 - trading_system - INFO - [ACHUSDT] 当前RSI: 48.20, 价格: 0.0239
+2025-07-18 15:14:05,138 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:14:05,140 - trading_system - INFO - [ONDOUSDT] 当前RSI: 52.16, 价格: 1.0764
+2025-07-18 15:14:07,461 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:14:07,462 - trading_system - INFO - [CRVUSDT] 当前RSI: 49.54, 价格: 1.0362
+2025-07-18 15:14:12,547 - trading_system - INFO - [ACHUSDT] 更新了16条K线数据
+2025-07-18 15:14:12,549 - trading_system - INFO - [ACHUSDT] 当前RSI: 43.70, 价格: 0.02385
+2025-07-18 15:14:12,552 - trading_system - INFO - [CRVUSDT] 更新了16条K线数据
+2025-07-18 15:14:12,553 - trading_system - INFO - [CRVUSDT] 当前RSI: 49.54, 价格: 1.0362
+2025-07-18 15:14:12,558 - trading_system - INFO - [ONDOUSDT] 更新了16条K线数据
+2025-07-18 15:14:12,560 - trading_system - INFO - [ONDOUSDT] 当前RSI: 52.16, 价格: 1.0764
+2025-07-18 15:14:20,020 - trading_system - ERROR - 设置杠杆失败: APIError(code=-2015): Invalid API-key, IP, or permissions for action
+2025-07-18 15:14:20,106 - trading_system - ERROR - 设置杠杆失败: APIError(code=-2015): Invalid API-key, IP, or permissions for action
+2025-07-18 15:14:20,190 - trading_system - ERROR - 设置杠杆失败: APIError(code=-2015): Invalid API-key, IP, or permissions for action
+2025-07-18 15:14:20,190 - trading_system - INFO - 程序正在运行，按Ctrl+C退出...
+2025-07-18 15:14:20,280 - trading_system - INFO - [CRVUSDT] 当前RSI: 49.54, 价格: 1.0362
+2025-07-18 15:14:20,496 - trading_system - INFO - [ACHUSDT] 当前RSI: 43.70, 价格: 0.02385
+2025-07-18 15:14:20,506 - trading_system - INFO - [ONDOUSDT] 当前RSI: 52.16, 价格: 1.0764
+2025-07-18 15:14:25,677 - trading_system - INFO - [ACHUSDT] 当前RSI: 43.70, 价格: 0.02385
+2025-07-18 15:14:25,696 - trading_system - INFO - [ONDOUSDT] 当前RSI: 51.17, 价格: 1.0757
+2025-07-18 15:14:25,853 - trading_system - INFO - [CRVUSDT] 当前RSI: 47.88, 价格: 1.0346
+2025-07-18 15:14:30,978 - trading_system - INFO - [ONDOUSDT] 当前RSI: 51.17, 价格: 1.0757
+2025-07-18 15:14:30,998 - trading_system - INFO - [ACHUSDT] 当前RSI: 43.70, 价格: 0.02385
+2025-07-18 15:14:31,001 - trading_system - INFO - [CRVUSDT] 当前RSI: 47.88, 价格: 1.0346
+2025-07-18 15:14:36,055 - trading_system - INFO - [CRVUSDT] 当前RSI: 47.88, 价格: 1.0346
+2025-07-18 15:14:36,072 - trading_system - INFO - [ONDOUSDT] 当前RSI: 51.17, 价格: 1.0757
+2025-07-18 15:14:36,091 - trading_system - INFO - [ACHUSDT] 当前RSI: 42.90, 价格: 0.02384
+2025-07-18 15:14:41,155 - trading_system - INFO - [ACHUSDT] 当前RSI: 42.90, 价格: 0.02384
+2025-07-18 15:14:41,169 - trading_system - INFO - [CRVUSDT] 当前RSI: 48.20, 价格: 1.0349
+2025-07-18 15:14:41,214 - trading_system - INFO - [ONDOUSDT] 当前RSI: 51.17, 价格: 1.0757
+2025-07-18 15:14:46,269 - trading_system - INFO - [ONDOUSDT] 当前RSI: 51.17, 价格: 1.0757
+2025-07-18 15:14:46,287 - trading_system - INFO - [CRVUSDT] 当前RSI: 48.20, 价格: 1.0349
+2025-07-18 15:14:46,302 - trading_system - INFO - [ACHUSDT] 当前RSI: 42.90, 价格: 0.02384
+2025-07-18 15:14:51,357 - trading_system - INFO - [ONDOUSDT] 当前RSI: 50.76, 价格: 1.0754
+2025-07-18 15:14:51,376 - trading_system - INFO - [ACHUSDT] 当前RSI: 42.90, 价格: 0.02384
+2025-07-18 15:14:51,394 - trading_system - INFO - [CRVUSDT] 当前RSI: 48.20, 价格: 1.0349
+2025-07-18 15:14:56,894 - trading_system - INFO - [ACHUSDT] 当前RSI: 42.90, 价格: 0.02384
+2025-07-18 15:14:56,912 - trading_system - INFO - [ONDOUSDT] 当前RSI: 50.76, 价格: 1.0754
+2025-07-18 15:14:56,915 - trading_system - INFO - [CRVUSDT] 当前RSI: 48.20, 价格: 1.0349
+2025-07-18 15:15:01,981 - trading_system - INFO - [ONDOUSDT] 当前RSI: 50.76, 价格: 1.0754
+2025-07-18 15:15:01,999 - trading_system - INFO - [ACHUSDT] 当前RSI: 42.90, 价格: 0.02384
+2025-07-18 15:15:02,115 - trading_system - INFO - [CRVUSDT] 当前RSI: 48.20, 价格: 1.0349
+2025-07-18 15:15:07,205 - trading_system - INFO - [ONDOUSDT] 当前RSI: 47.69, 价格: 1.0744
+2025-07-18 15:15:07,220 - trading_system - INFO - [CRVUSDT] 当前RSI: 42.26, 价格: 1.0349
+2025-07-18 15:15:07,224 - trading_system - INFO - [ACHUSDT] 当前RSI: 41.09, 价格: 0.02384
+2025-07-18 15:15:12,326 - trading_system - INFO - [ACHUSDT] 当前RSI: 41.09, 价格: 0.02384
+2025-07-18 15:15:12,343 - trading_system - INFO - [ONDOUSDT] 当前RSI: 47.69, 价格: 1.0744
+2025-07-18 15:15:12,348 - trading_system - INFO - [CRVUSDT] 当前RSI: 42.26, 价格: 1.0349
+2025-07-18 15:15:17,632 - trading_system - INFO - [CRVUSDT] 当前RSI: 42.26, 价格: 1.0349
+2025-07-18 15:15:17,760 - trading_system - INFO - [ACHUSDT] 当前RSI: 41.09, 价格: 0.02384
+2025-07-18 15:15:17,779 - trading_system - INFO - [ONDOUSDT] 当前RSI: 47.69, 价格: 1.0744
+2025-07-18 15:15:22,959 - trading_system - INFO - [ACHUSDT] 当前RSI: 41.09, 价格: 0.02384
+2025-07-18 15:15:22,978 - trading_system - INFO - [ONDOUSDT] 当前RSI: 48.03, 价格: 1.0746
+2025-07-18 15:15:22,979 - trading_system - INFO - [CRVUSDT] 当前RSI: 42.26, 价格: 1.0349
+2025-07-18 15:15:28,087 - trading_system - INFO - [ACHUSDT] 当前RSI: 41.09, 价格: 0.02384
+2025-07-18 15:15:28,108 - trading_system - INFO - [CRVUSDT] 当前RSI: 42.26, 价格: 1.0349
+2025-07-18 15:15:28,109 - trading_system - INFO - [ONDOUSDT] 当前RSI: 48.03, 价格: 1.0746
+2025-07-18 15:15:33,182 - trading_system - INFO - [CRVUSDT] 当前RSI: 42.26, 价格: 1.0349
+2025-07-18 15:15:33,222 - trading_system - INFO - [ACHUSDT] 当前RSI: 41.09, 价格: 0.02384
+2025-07-18 15:15:33,301 - trading_system - INFO - [ONDOUSDT] 当前RSI: 48.03, 价格: 1.0746
+2025-07-18 15:15:38,396 - trading_system - INFO - [CRVUSDT] 当前RSI: 42.26, 价格: 1.0349
+2025-07-18 15:15:38,415 - trading_system - INFO - [ONDOUSDT] 当前RSI: 47.54, 价格: 1.0743
+2025-07-18 15:15:38,425 - trading_system - INFO - [ACHUSDT] 当前RSI: 41.09, 价格: 0.02384
+2025-07-18 15:15:43,480 - trading_system - INFO - [ONDOUSDT] 当前RSI: 47.54, 价格: 1.0743
+2025-07-18 15:15:43,499 - trading_system - INFO - [CRVUSDT] 当前RSI: 35.26, 价格: 1.0273
+2025-07-18 15:15:43,513 - trading_system - INFO - [ACHUSDT] 当前RSI: 38.50, 价格: 0.02381
+2025-07-18 15:15:48,565 - trading_system - INFO - [ONDOUSDT] 当前RSI: 47.54, 价格: 1.0743
+2025-07-18 15:15:48,587 - trading_system - INFO - [CRVUSDT] 当前RSI: 35.26, 价格: 1.0273
+2025-07-18 15:15:48,661 - trading_system - INFO - [ACHUSDT] 当前RSI: 38.50, 价格: 0.02381
+2025-07-18 15:15:53,715 - trading_system - INFO - [ACHUSDT] 当前RSI: 38.50, 价格: 0.02381
+2025-07-18 15:15:53,731 - trading_system - INFO - [ONDOUSDT] 当前RSI: 46.51, 价格: 1.0736
+2025-07-18 15:15:53,749 - trading_system - INFO - [CRVUSDT] 当前RSI: 35.26, 价格: 1.0273
+2025-07-18 15:15:58,840 - trading_system - INFO - [ONDOUSDT] 当前RSI: 46.51, 价格: 1.0736
+2025-07-18 15:15:58,913 - trading_system - INFO - [CRVUSDT] 当前RSI: 35.26, 价格: 1.0273
+2025-07-18 15:15:59,194 - trading_system - INFO - [ACHUSDT] 当前RSI: 38.50, 价格: 0.02381
+2025-07-18 15:16:04,249 - trading_system - INFO - [ONDOUSDT] 当前RSI: 46.22, 价格: 1.0734
+2025-07-18 15:16:04,267 - trading_system - INFO - [CRVUSDT] 当前RSI: 35.26, 价格: 1.0273
+2025-07-18 15:16:04,732 - trading_system - INFO - [ACHUSDT] 当前RSI: 38.50, 价格: 0.02381
+2025-07-18 15:16:09,787 - trading_system - INFO - [CRVUSDT] 当前RSI: 35.26, 价格: 1.0273
+2025-07-18 15:16:09,804 - trading_system - INFO - [ACHUSDT] 当前RSI: 38.50, 价格: 0.02381
+2025-07-18 15:16:09,852 - trading_system - INFO - [ONDOUSDT] 当前RSI: 45.52, 价格: 1.0729
+2025-07-18 15:16:15,120 - trading_system - INFO - [ONDOUSDT] 当前RSI: 45.52, 价格: 1.0729
+2025-07-18 15:16:15,138 - trading_system - INFO - [ACHUSDT] 当前RSI: 38.50, 价格: 0.02381
+2025-07-18 15:16:15,308 - trading_system - INFO - [CRVUSDT] 当前RSI: 33.37, 价格: 1.0247
+2025-07-18 15:16:20,634 - trading_system - INFO - [ONDOUSDT] 当前RSI: 45.52, 价格: 1.0729
+2025-07-18 15:16:20,654 - trading_system - INFO - [CRVUSDT] 当前RSI: 33.37, 价格: 1.0247
+2025-07-18 15:16:20,657 - trading_system - INFO - [ACHUSDT] 当前RSI: 38.50, 价格: 0.02381
+2025-07-18 15:16:25,765 - trading_system - INFO - [CRVUSDT] 当前RSI: 33.37, 价格: 1.0247
+2025-07-18 15:16:25,783 - trading_system - INFO - [ACHUSDT] 当前RSI: 38.50, 价格: 0.02381
+2025-07-18 15:16:25,786 - trading_system - INFO - [ONDOUSDT] 当前RSI: 45.52, 价格: 1.0729
+2025-07-18 15:16:30,884 - trading_system - INFO - [ACHUSDT] 当前RSI: 38.50, 价格: 0.02381
+2025-07-18 15:16:30,905 - trading_system - INFO - [CRVUSDT] 当前RSI: 33.37, 价格: 1.0247
+2025-07-18 15:16:31,355 - trading_system - INFO - [ONDOUSDT] 当前RSI: 45.52, 价格: 1.0729
+2025-07-18 15:16:36,408 - trading_system - INFO - [ACHUSDT] 当前RSI: 38.50, 价格: 0.02381
+2025-07-18 15:16:36,426 - trading_system - INFO - [ONDOUSDT] 当前RSI: 45.52, 价格: 1.0729
+2025-07-18 15:16:36,441 - trading_system - INFO - [CRVUSDT] 当前RSI: 33.37, 价格: 1.0247
+2025-07-18 15:16:41,597 - trading_system - INFO - [CRVUSDT] 当前RSI: 33.37, 价格: 1.0247
+2025-07-18 15:16:41,615 - trading_system - INFO - [ACHUSDT] 当前RSI: 38.50, 价格: 0.02381
+2025-07-18 15:16:41,773 - trading_system - INFO - [ONDOUSDT] 当前RSI: 45.52, 价格: 1.0729
+2025-07-18 15:16:46,826 - trading_system - INFO - [CRVUSDT] 当前RSI: 32.90, 价格: 1.024
+2025-07-18 15:16:46,847 - trading_system - INFO - [ONDOUSDT] 当前RSI: 45.52, 价格: 1.0729
+2025-07-18 15:16:46,961 - trading_system - INFO - [ACHUSDT] 当前RSI: 38.50, 价格: 0.02381
+2025-07-18 15:16:52,088 - trading_system - INFO - [ONDOUSDT] 当前RSI: 43.53, 价格: 1.0714
+2025-07-18 15:16:52,098 - trading_system - INFO - [ACHUSDT] 当前RSI: 40.19, 价格: 0.02383
+2025-07-18 15:16:52,172 - trading_system - INFO - [CRVUSDT] 当前RSI: 32.90, 价格: 1.024
+2025-07-18 15:16:57,226 - trading_system - INFO - [ACHUSDT] 当前RSI: 40.19, 价格: 0.02383
+2025-07-18 15:16:57,246 - trading_system - INFO - [CRVUSDT] 当前RSI: 32.90, 价格: 1.024
+2025-07-18 15:16:57,312 - trading_system - INFO - [ONDOUSDT] 当前RSI: 43.53, 价格: 1.0714
+2025-07-18 15:17:02,371 - trading_system - INFO - [ONDOUSDT] 当前RSI: 43.53, 价格: 1.0714
+2025-07-18 15:17:02,388 - trading_system - INFO - [ACHUSDT] 当前RSI: 40.19, 价格: 0.02383
+2025-07-18 15:17:02,425 - trading_system - INFO - [CRVUSDT] 当前RSI: 32.63, 价格: 1.0236
+2025-07-18 15:17:07,515 - trading_system - INFO - [ACHUSDT] 当前RSI: 40.19, 价格: 0.02383
+2025-07-18 15:17:07,533 - trading_system - INFO - [ONDOUSDT] 当前RSI: 43.53, 价格: 1.0714
+2025-07-18 15:17:07,611 - trading_system - INFO - [CRVUSDT] 当前RSI: 32.63, 价格: 1.0236
+2025-07-18 15:17:12,797 - trading_system - INFO - [ONDOUSDT] 当前RSI: 42.07, 价格: 1.0702
+2025-07-18 15:17:12,820 - trading_system - INFO - [ACHUSDT] 当前RSI: 41.09, 价格: 0.02384
+2025-07-18 15:17:13,371 - trading_system - INFO - [CRVUSDT] 当前RSI: 32.63, 价格: 1.0236
+2025-07-18 15:17:18,425 - trading_system - INFO - [CRVUSDT] 当前RSI: 32.63, 价格: 1.0236
+2025-07-18 15:17:18,443 - trading_system - INFO - [ONDOUSDT] 当前RSI: 42.07, 价格: 1.0702
+2025-07-18 15:17:18,550 - trading_system - INFO - [ACHUSDT] 当前RSI: 42.38, 价格: 0.02385
+2025-07-18 15:17:23,614 - trading_system - INFO - [ONDOUSDT] 当前RSI: 42.07, 价格: 1.0702
+2025-07-18 15:17:23,633 - trading_system - INFO - [ACHUSDT] 当前RSI: 42.38, 价格: 0.02385
+2025-07-18 15:17:23,691 - trading_system - INFO - [CRVUSDT] 当前RSI: 32.63, 价格: 1.0236
+2025-07-18 15:17:28,745 - trading_system - INFO - [ACHUSDT] 当前RSI: 42.38, 价格: 0.02385
+2025-07-18 15:17:28,763 - trading_system - INFO - [ONDOUSDT] 当前RSI: 42.07, 价格: 1.0702
+2025-07-18 15:17:28,972 - trading_system - INFO - [CRVUSDT] 当前RSI: 32.63, 价格: 1.0236
+2025-07-18 15:17:34,155 - trading_system - INFO - [ACHUSDT] 当前RSI: 42.38, 价格: 0.02385
+2025-07-18 15:17:34,175 - trading_system - INFO - [ONDOUSDT] 当前RSI: 40.80, 价格: 1.0691
+2025-07-18 15:17:34,261 - trading_system - INFO - [CRVUSDT] 当前RSI: 32.63, 价格: 1.0236
+2025-07-18 15:17:39,445 - trading_system - INFO - [ONDOUSDT] 当前RSI: 40.80, 价格: 1.0691
+2025-07-18 15:17:39,463 - trading_system - INFO - [CRVUSDT] 当前RSI: 32.63, 价格: 1.0236
+2025-07-18 15:17:39,611 - trading_system - INFO - [ACHUSDT] 当前RSI: 42.38, 价格: 0.02385
+2025-07-18 15:17:44,722 - trading_system - INFO - [ACHUSDT] 当前RSI: 42.38, 价格: 0.02385
+2025-07-18 15:17:44,739 - trading_system - INFO - [ONDOUSDT] 当前RSI: 40.69, 价格: 1.069
+2025-07-18 15:17:45,291 - trading_system - INFO - [CRVUSDT] 当前RSI: 32.63, 价格: 1.0236
+2025-07-18 15:17:50,489 - trading_system - INFO - [ACHUSDT] 当前RSI: 45.94, 价格: 0.02388
+2025-07-18 15:17:50,497 - trading_system - INFO - [CRVUSDT] 当前RSI: 32.63, 价格: 1.0236
+2025-07-18 15:17:50,571 - trading_system - INFO - [ONDOUSDT] 当前RSI: 40.36, 价格: 1.0687
+2025-07-18 15:17:55,625 - trading_system - INFO - [ONDOUSDT] 当前RSI: 40.36, 价格: 1.0687
+2025-07-18 15:17:55,642 - trading_system - INFO - [ACHUSDT] 当前RSI: 45.94, 价格: 0.02388
+2025-07-18 15:17:55,734 - trading_system - INFO - [CRVUSDT] 当前RSI: 32.63, 价格: 1.0236
+2025-07-18 15:18:00,884 - trading_system - INFO - [ACHUSDT] 当前RSI: 45.94, 价格: 0.02388
+2025-07-18 15:18:00,901 - trading_system - INFO - [ONDOUSDT] 当前RSI: 40.92, 价格: 1.0692
+2025-07-18 15:18:00,971 - trading_system - INFO - [CRVUSDT] 当前RSI: 32.63, 价格: 1.0236
+2025-07-18 15:18:06,097 - trading_system - INFO - [ACHUSDT] 当前RSI: 45.94, 价格: 0.02388
+2025-07-18 15:18:06,179 - trading_system - INFO - [ONDOUSDT] 当前RSI: 40.92, 价格: 1.0692
+2025-07-18 15:18:06,812 - trading_system - INFO - [CRVUSDT] 当前RSI: 32.63, 价格: 1.0236
+2025-07-18 15:18:11,929 - trading_system - INFO - [ACHUSDT] 当前RSI: 45.94, 价格: 0.02388
+2025-07-18 15:18:11,943 - trading_system - INFO - [ONDOUSDT] 当前RSI: 41.48, 价格: 1.0697
+2025-07-18 15:18:12,011 - trading_system - INFO - [CRVUSDT] 当前RSI: 32.18, 价格: 1.0229
+2025-07-18 15:18:17,065 - trading_system - INFO - [ACHUSDT] 当前RSI: 45.94, 价格: 0.02388
+2025-07-18 15:18:17,083 - trading_system - INFO - [CRVUSDT] 当前RSI: 32.31, 价格: 1.0231
+2025-07-18 15:18:17,147 - trading_system - INFO - [ONDOUSDT] 当前RSI: 41.48, 价格: 1.0697
+2025-07-18 15:18:22,201 - trading_system - INFO - [ONDOUSDT] 当前RSI: 41.48, 价格: 1.0697
+2025-07-18 15:18:22,219 - trading_system - INFO - [ACHUSDT] 当前RSI: 47.03, 价格: 0.02389
+2025-07-18 15:18:22,280 - trading_system - INFO - [CRVUSDT] 当前RSI: 32.31, 价格: 1.0231
+2025-07-18 15:18:27,433 - trading_system - INFO - [ONDOUSDT] 当前RSI: 41.48, 价格: 1.0697
+2025-07-18 15:18:27,529 - trading_system - INFO - [ACHUSDT] 当前RSI: 47.03, 价格: 0.02389
+2025-07-18 15:18:27,610 - trading_system - INFO - [CRVUSDT] 当前RSI: 32.31, 价格: 1.0231
+2025-07-18 15:18:32,664 - trading_system - INFO - [ACHUSDT] 当前RSI: 47.03, 价格: 0.02389
+2025-07-18 15:18:32,683 - trading_system - INFO - [CRVUSDT] 当前RSI: 32.50, 价格: 1.0234
+2025-07-18 15:18:32,743 - trading_system - INFO - [ONDOUSDT] 当前RSI: 41.48, 价格: 1.0697
+2025-07-18 15:18:37,796 - trading_system - INFO - [ACHUSDT] 当前RSI: 47.03, 价格: 0.02389
+2025-07-18 15:18:37,816 - trading_system - INFO - [CRVUSDT] 当前RSI: 32.50, 价格: 1.0234
+2025-07-18 15:18:38,010 - trading_system - INFO - [ONDOUSDT] 当前RSI: 42.30, 价格: 1.0704
+2025-07-18 15:18:43,064 - trading_system - INFO - [ACHUSDT] 当前RSI: 47.03, 价格: 0.02389
+2025-07-18 15:18:43,088 - trading_system - INFO - [ONDOUSDT] 当前RSI: 42.30, 价格: 1.0704
+2025-07-18 15:18:43,129 - trading_system - INFO - [CRVUSDT] 当前RSI: 32.90, 价格: 1.024
+2025-07-18 15:18:48,241 - trading_system - INFO - [ONDOUSDT] 当前RSI: 42.30, 价格: 1.0704
+2025-07-18 15:18:48,259 - trading_system - INFO - [CRVUSDT] 当前RSI: 32.90, 价格: 1.024
+2025-07-18 15:18:48,284 - trading_system - INFO - [ACHUSDT] 当前RSI: 47.03, 价格: 0.02389
+2025-07-18 15:18:53,451 - trading_system - INFO - [ONDOUSDT] 当前RSI: 42.30, 价格: 1.0704
+2025-07-18 15:18:53,454 - trading_system - INFO - [CRVUSDT] 当前RSI: 32.90, 价格: 1.024
+2025-07-18 15:18:53,592 - trading_system - INFO - [ACHUSDT] 当前RSI: 47.03, 价格: 0.02389
+2025-07-18 15:18:58,716 - trading_system - INFO - [ACHUSDT] 当前RSI: 47.03, 价格: 0.02389
+2025-07-18 15:18:58,734 - trading_system - INFO - [CRVUSDT] 当前RSI: 33.03, 价格: 1.0242
+2025-07-18 15:18:58,811 - trading_system - INFO - [ONDOUSDT] 当前RSI: 42.30, 价格: 1.0704
+2025-07-18 15:19:05,697 - trading_system - ERROR - 设置杠杆失败: APIError(code=-2015): Invalid API-key, IP, or permissions for action
+2025-07-18 15:19:05,783 - trading_system - ERROR - 设置杠杆失败: APIError(code=-2015): Invalid API-key, IP, or permissions for action
+2025-07-18 15:19:05,863 - trading_system - ERROR - 设置杠杆失败: APIError(code=-2015): Invalid API-key, IP, or permissions for action
+2025-07-18 15:19:05,864 - trading_system - INFO - 程序正在运行，按Ctrl+C退出...
+2025-07-18 15:19:06,018 - trading_system - INFO - [CRVUSDT] 当前RSI: 38.53, 价格: 1.0242
+2025-07-18 15:19:06,188 - trading_system - INFO - [ACHUSDT] 当前RSI: 49.42, 价格: 0.02389
+2025-07-18 15:19:06,280 - trading_system - INFO - [ONDOUSDT] 当前RSI: 44.83, 价格: 1.071
+2025-07-18 15:19:11,380 - trading_system - INFO - [ACHUSDT] 当前RSI: 49.42, 价格: 0.02389
+2025-07-18 15:19:11,393 - trading_system - INFO - [CRVUSDT] 当前RSI: 38.53, 价格: 1.0242
+2025-07-18 15:19:11,398 - trading_system - INFO - [ONDOUSDT] 当前RSI: 44.83, 价格: 1.071
+2025-07-18 15:19:16,517 - trading_system - INFO - [ONDOUSDT] 当前RSI: 43.97, 价格: 1.0703
+2025-07-18 15:19:16,589 - trading_system - INFO - [ACHUSDT] 当前RSI: 49.42, 价格: 0.02389
+2025-07-18 15:19:16,654 - trading_system - INFO - [CRVUSDT] 当前RSI: 38.53, 价格: 1.0242
+2025-07-18 15:19:21,855 - trading_system - INFO - [ACHUSDT] 当前RSI: 51.31, 价格: 0.02391
+2025-07-18 15:19:21,863 - trading_system - INFO - [CRVUSDT] 当前RSI: 37.87, 价格: 1.0233
+2025-07-18 15:19:22,296 - trading_system - INFO - [ONDOUSDT] 当前RSI: 43.97, 价格: 1.0703
+2025-07-18 15:19:27,381 - trading_system - INFO - [ACHUSDT] 当前RSI: 51.31, 价格: 0.02391
+2025-07-18 15:19:27,456 - trading_system - INFO - [ONDOUSDT] 当前RSI: 43.97, 价格: 1.0703
+2025-07-18 15:19:27,462 - trading_system - INFO - [CRVUSDT] 当前RSI: 37.87, 价格: 1.0233
+2025-07-18 15:19:32,586 - trading_system - INFO - [ACHUSDT] 当前RSI: 51.31, 价格: 0.02391
+2025-07-18 15:19:32,665 - trading_system - INFO - [ONDOUSDT] 当前RSI: 43.97, 价格: 1.0703
+2025-07-18 15:19:32,726 - trading_system - INFO - [CRVUSDT] 当前RSI: 37.87, 价格: 1.0233
+2025-07-18 15:19:37,820 - trading_system - INFO - [CRVUSDT] 当前RSI: 37.30, 价格: 1.0225
+2025-07-18 15:19:37,854 - trading_system - INFO - [ONDOUSDT] 当前RSI: 43.97, 价格: 1.0703
+2025-07-18 15:19:37,872 - trading_system - INFO - [ACHUSDT] 当前RSI: 51.31, 价格: 0.02391
+2025-07-18 15:19:42,987 - trading_system - INFO - [ONDOUSDT] 当前RSI: 43.97, 价格: 1.0703
+2025-07-18 15:19:42,993 - trading_system - INFO - [CRVUSDT] 当前RSI: 37.30, 价格: 1.0225
+2025-07-18 15:19:43,082 - trading_system - INFO - [ACHUSDT] 当前RSI: 51.31, 价格: 0.02391
+2025-07-18 15:19:48,184 - trading_system - INFO - [ACHUSDT] 当前RSI: 51.31, 价格: 0.02391
+2025-07-18 15:19:48,190 - trading_system - INFO - [ONDOUSDT] 当前RSI: 43.97, 价格: 1.0703
+2025-07-18 15:19:48,772 - trading_system - INFO - [CRVUSDT] 当前RSI: 37.30, 价格: 1.0225
+2025-07-18 15:19:53,937 - trading_system - INFO - [ACHUSDT] 当前RSI: 51.31, 价格: 0.02391
+2025-07-18 15:19:53,942 - trading_system - INFO - [CRVUSDT] 当前RSI: 37.30, 价格: 1.0225
+2025-07-18 15:19:54,163 - trading_system - INFO - [ONDOUSDT] 当前RSI: 43.97, 价格: 1.0703
+2025-07-18 15:19:59,244 - trading_system - INFO - [ONDOUSDT] 当前RSI: 43.97, 价格: 1.0703
+2025-07-18 15:19:59,293 - trading_system - INFO - [ACHUSDT] 当前RSI: 51.31, 价格: 0.02391
+2025-07-18 15:19:59,460 - trading_system - INFO - [CRVUSDT] 当前RSI: 37.30, 价格: 1.0225
+2025-07-18 15:20:04,559 - trading_system - INFO - [CRVUSDT] 当前RSI: 37.30, 价格: 1.0225
+2025-07-18 15:20:04,669 - trading_system - INFO - [ACHUSDT] 当前RSI: 51.31, 价格: 0.02391
+2025-07-18 15:20:04,892 - trading_system - INFO - [ONDOUSDT] 当前RSI: 43.97, 价格: 1.0703
+2025-07-18 15:20:10,015 - trading_system - INFO - [ONDOUSDT] 当前RSI: 43.97, 价格: 1.0703
+2025-07-18 15:20:10,025 - trading_system - INFO - [ACHUSDT] 当前RSI: 52.19, 价格: 0.02392
+2025-07-18 15:20:10,181 - trading_system - INFO - [CRVUSDT] 当前RSI: 37.30, 价格: 1.0225
+2025-07-18 15:20:15,276 - trading_system - INFO - [ACHUSDT] 当前RSI: 52.19, 价格: 0.02392
+2025-07-18 15:20:15,309 - trading_system - INFO - [ONDOUSDT] 当前RSI: 43.97, 价格: 1.0703
+2025-07-18 15:20:15,404 - trading_system - INFO - [CRVUSDT] 当前RSI: 37.30, 价格: 1.0225
+2025-07-18 15:20:20,508 - trading_system - INFO - [ACHUSDT] 当前RSI: 52.19, 价格: 0.02392
+2025-07-18 15:20:20,571 - trading_system - INFO - [ONDOUSDT] 当前RSI: 43.97, 价格: 1.0703
+2025-07-18 15:20:20,659 - trading_system - INFO - [CRVUSDT] 当前RSI: 37.30, 价格: 1.0225
+2025-07-18 15:20:27,210 - trading_system - INFO - [ONDOUSDT] 当前RSI: 40.20, 价格: 1.0669
+2025-07-18 15:20:27,319 - trading_system - INFO - [CRVUSDT] 当前RSI: 37.30, 价格: 1.0225
+2025-07-18 15:20:27,528 - trading_system - INFO - [ACHUSDT] 当前RSI: 46.32, 价格: 0.02386
+2025-07-18 15:20:32,664 - trading_system - INFO - [CRVUSDT] 当前RSI: 36.69, 价格: 1.0216
+2025-07-18 15:20:32,684 - trading_system - INFO - [ONDOUSDT] 当前RSI: 40.20, 价格: 1.0669
+2025-07-18 15:20:32,740 - trading_system - INFO - [ACHUSDT] 当前RSI: 46.32, 价格: 0.02386
+2025-07-18 15:20:37,933 - trading_system - INFO - [ONDOUSDT] 当前RSI: 40.20, 价格: 1.0669
+2025-07-18 15:20:37,963 - trading_system - INFO - [CRVUSDT] 当前RSI: 36.69, 价格: 1.0216
+2025-07-18 15:20:38,027 - trading_system - INFO - [ACHUSDT] 当前RSI: 46.32, 价格: 0.02386
+2025-07-18 15:20:43,143 - trading_system - INFO - [ACHUSDT] 当前RSI: 46.32, 价格: 0.02386
+2025-07-18 15:20:43,164 - trading_system - INFO - [CRVUSDT] 当前RSI: 36.69, 价格: 1.0216
+2025-07-18 15:20:43,298 - trading_system - INFO - [ONDOUSDT] 当前RSI: 40.20, 价格: 1.0669
+2025-07-18 15:20:48,584 - trading_system - INFO - [ACHUSDT] 当前RSI: 46.32, 价格: 0.02386
+2025-07-18 15:20:48,736 - trading_system - INFO - [ONDOUSDT] 当前RSI: 40.51, 价格: 1.0672
+2025-07-18 15:20:48,821 - trading_system - INFO - [CRVUSDT] 当前RSI: 36.69, 价格: 1.0216
+2025-07-18 15:20:54,254 - trading_system - INFO - [ONDOUSDT] 当前RSI: 40.51, 价格: 1.0672
+2025-07-18 15:20:54,345 - trading_system - INFO - [ACHUSDT] 当前RSI: 46.32, 价格: 0.02386
+2025-07-18 15:20:54,498 - trading_system - INFO - [CRVUSDT] 当前RSI: 36.69, 价格: 1.0216
+2025-07-18 15:20:59,783 - trading_system - INFO - [ONDOUSDT] 当前RSI: 40.51, 价格: 1.0672
+2025-07-18 15:21:00,102 - trading_system - INFO - [ACHUSDT] 当前RSI: 46.32, 价格: 0.02386
+2025-07-18 15:21:00,516 - trading_system - INFO - [CRVUSDT] 当前RSI: 36.75, 价格: 1.0217
+2025-07-18 15:21:05,630 - trading_system - INFO - [CRVUSDT] 当前RSI: 36.75, 价格: 1.0217
+2025-07-18 15:21:05,771 - trading_system - INFO - [ACHUSDT] 当前RSI: 46.32, 价格: 0.02386
+2025-07-18 15:21:05,779 - trading_system - INFO - [ONDOUSDT] 当前RSI: 40.51, 价格: 1.0672
+2025-07-18 15:21:10,910 - trading_system - INFO - [ONDOUSDT] 当前RSI: 40.40, 价格: 1.0671
+2025-07-18 15:21:11,051 - trading_system - INFO - [CRVUSDT] 当前RSI: 36.75, 价格: 1.0217
+2025-07-18 15:21:11,058 - trading_system - INFO - [ACHUSDT] 当前RSI: 46.32, 价格: 0.02386
+2025-07-18 15:21:16,437 - trading_system - INFO - [ACHUSDT] 当前RSI: 46.32, 价格: 0.02386
+2025-07-18 15:21:16,591 - trading_system - INFO - [ONDOUSDT] 当前RSI: 40.40, 价格: 1.0671
+2025-07-18 15:21:16,598 - trading_system - INFO - [CRVUSDT] 当前RSI: 36.75, 价格: 1.0217
+2025-07-18 15:21:21,705 - trading_system - INFO - [ACHUSDT] 当前RSI: 46.32, 价格: 0.02386
+2025-07-18 15:21:21,869 - trading_system - INFO - [ONDOUSDT] 当前RSI: 40.82, 价格: 1.0675
+2025-07-18 15:21:21,877 - trading_system - INFO - [CRVUSDT] 当前RSI: 36.75, 价格: 1.0217
+2025-07-18 15:21:26,993 - trading_system - INFO - [ONDOUSDT] 当前RSI: 40.82, 价格: 1.0675
+2025-07-18 15:21:27,072 - trading_system - INFO - [ACHUSDT] 当前RSI: 46.32, 价格: 0.02386
+2025-07-18 15:21:27,138 - trading_system - INFO - [CRVUSDT] 当前RSI: 36.75, 价格: 1.0217
+2025-07-18 15:21:32,270 - trading_system - INFO - [ONDOUSDT] 当前RSI: 40.61, 价格: 1.0673
+2025-07-18 15:21:32,430 - trading_system - INFO - [CRVUSDT] 当前RSI: 36.75, 价格: 1.0217
+2025-07-18 15:21:32,436 - trading_system - INFO - [ACHUSDT] 当前RSI: 46.32, 价格: 0.02386
+2025-07-18 15:21:37,543 - trading_system - INFO - [ACHUSDT] 当前RSI: 46.32, 价格: 0.02386
+2025-07-18 15:21:37,651 - trading_system - INFO - [CRVUSDT] 当前RSI: 36.82, 价格: 1.0218
+2025-07-18 15:21:37,699 - trading_system - INFO - [ONDOUSDT] 当前RSI: 40.40, 价格: 1.0671
+2025-07-18 15:21:42,970 - trading_system - INFO - [ACHUSDT] 当前RSI: 46.32, 价格: 0.02386
+2025-07-18 15:21:43,158 - trading_system - INFO - [ONDOUSDT] 当前RSI: 40.40, 价格: 1.0671
+2025-07-18 15:21:43,210 - trading_system - INFO - [CRVUSDT] 当前RSI: 36.82, 价格: 1.0218
+2025-07-18 15:21:49,497 - trading_system - ERROR - 设置杠杆失败: APIError(code=-2015): Invalid API-key, IP, or permissions for action
+2025-07-18 15:21:49,924 - trading_system - ERROR - 设置杠杆失败: APIError(code=-2015): Invalid API-key, IP, or permissions for action
+2025-07-18 15:21:50,015 - trading_system - ERROR - 设置杠杆失败: APIError(code=-2015): Invalid API-key, IP, or permissions for action
+2025-07-18 15:21:50,015 - trading_system - INFO - 程序正在运行，按Ctrl+C退出...
+2025-07-18 15:21:50,199 - trading_system - INFO - [CRVUSDT] 当前RSI: 54.94, 价格: 1.0218
+2025-07-18 15:21:50,836 - trading_system - INFO - [ACHUSDT] 当前RSI: 58.71, 价格: 0.02386
+2025-07-18 15:21:50,848 - trading_system - INFO - [ONDOUSDT] 当前RSI: 59.22, 价格: 1.0671
+2025-07-18 15:21:55,946 - trading_system - INFO - [ACHUSDT] 当前RSI: 58.71, 价格: 0.02386
+2025-07-18 15:21:55,956 - trading_system - INFO - [CRVUSDT] 当前RSI: 54.96, 价格: 1.0221
+2025-07-18 15:21:56,419 - trading_system - INFO - [ONDOUSDT] 当前RSI: 59.22, 价格: 1.0671
+2025-07-18 15:22:01,544 - trading_system - INFO - [CRVUSDT] 当前RSI: 54.96, 价格: 1.0221
+2025-07-18 15:22:01,551 - trading_system - INFO - [ONDOUSDT] 当前RSI: 59.22, 价格: 1.0671
+2025-07-18 15:22:01,642 - trading_system - INFO - [ACHUSDT] 当前RSI: 58.71, 价格: 0.02386
