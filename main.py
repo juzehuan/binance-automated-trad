@@ -1,24 +1,22 @@
 from binance.client import Client
-
-from dotenv import load_dotenv
-import os
 import logging
 from logging.handlers import RotatingFileHandler
 import signal
 import time
 import pandas as pd
-import numpy as np
 import concurrent.futures
 from concurrent.futures import ThreadPoolExecutor
 import sys
 
-
-
-
+# 导入自定义模块
+from config import Config
+from data_processor import DataProcessor
+from trading_executor import TradingExecutor
+from websocket_client import BinanceWebSocketClient
 
 # 配置日志系统
 logger = logging.getLogger('trading_system')
-logger.setLevel(logging.DEBUG)
+logger.setLevel(getattr(logging, Config.LOG_LEVEL))
 
 # 创建格式化器
 formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
@@ -27,17 +25,17 @@ formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(messag
 class TradingFilter(logging.Filter):
     def filter(self, record):
         message = record.getMessage()
-        return '买入' in message or '卖出' in message or '做空' or 'RSI' in message
+        return '买入' in message or '卖出' in message or '做空' in message or 'RSI' in message
 
 # 控制台处理器
 console_handler = logging.StreamHandler(sys.stdout)
-console_handler.setLevel(logging.INFO)
+console_handler.setLevel(getattr(logging, Config.LOG_LEVEL))
 console_handler.setFormatter(formatter)
 console_handler.addFilter(TradingFilter())
 
 # 文件处理器 (支持轮转)
 file_handler = RotatingFileHandler(
-    'trading.log',
+    Config.LOG_FILE,
     maxBytes=5 * 1024 * 1024,  # 5MB
     backupCount=5,  # 保留5个备份文件
     encoding='utf-8'
@@ -53,29 +51,6 @@ if logger.handlers:
 logger.addHandler(console_handler)
 logger.addHandler(file_handler)
 
-load_dotenv()
-api_key = os.getenv('TEST_API_KEY')
-api_secret = os.getenv('TEST_API_SECRET')
-
-proxies = {
-    'http': 'http://127.0.0.1:7890',
-    'https': 'http://127.0.0.1:7890'
-}
-
-
-
-# 配置参数
-class Config:
-    SYMBOLS = ["CRVUSDT", "ACHUSDT", "ONDOUSDT"]   # 多个交易对
-    INTERVAL = '15m'  # K线周期
-    RSI_PERIOD = 6  # RSI计算周期
-    OVERBOUGHT = 90  # 超买阈值
-    OVERSOLD = 5  # 超卖阈值
-    TESTNET = True  # 是否使用测试网络
-    LEVERAGE = 10  # 合约杠杆倍数
-    TAKE_PROFIT_PERCENT = 5  # 止盈百分比
-    SHOW_CHARTS = True  # 是否显示图表
-
 # 状态跟踪
 class TradingState:
     def __init__(self):
@@ -88,172 +63,139 @@ class TradingState:
 state_map = {symbol: TradingState() for symbol in Config.SYMBOLS}
 
 # 初始化变量
-client=None # 客户端
-refresh_interval = 2  # 刷新间隔(秒)，缩短以提高实时性
+client = None
 
-def set_leverage(symbol, leverage):
-    global client
-    try:
-        response = client.futures_change_leverage(
-            symbol=symbol,
-            leverage=leverage
-        )
-        logger.info(f"设置杠杆成功: {response}")
-        return response
-    except Exception as e:
-        logger.error(f"设置杠杆失败: {e}")
-        return None
-
-def calculate_rsi(data, period=14, return_all=False):
-    close_prices = data['close']
-    deltas = close_prices.diff()
-
-    # 分离涨跌幅
-    gains = deltas.where(deltas > 0, 0)
-    losses = -deltas.where(deltas < 0, 0)
-
-    # 计算平均收益和损失（使用指数移动平均）
-    avg_gain = gains.ewm(alpha=1/period, min_periods=period).mean()
-    avg_loss = losses.ewm(alpha=1/period, min_periods=period).mean()
-
-    # 计算RSI
-    rs = avg_gain / avg_loss
-    rsi = 100 - (100 / (1 + rs))
-
-    if return_all:
-        return rsi
-    else:
-        return rsi.iloc[-1] if not rsi.empty else 50
-
-def place_short_order(symbol, quantity):
-    global client, state
-    try:
-        order = client.futures_create_order(
-            symbol=symbol,
-            side=Client.SIDE_SELL,
-            type=Client.ORDER_TYPE_MARKET,
-            quantity=quantity
-        )
-        logger.info(f"做空订单已执行: {order}")
-        state.in_position = True
-        state.last_short_price = float(order['fills'][0]['price'])
-        # 设置止盈价格（做空时止盈价格低于开仓价格）
-        state.take_profit_price = state.last_short_price * (1 - Config.TAKE_PROFIT_PERCENT / 100)
-        logger.info(f"设置止盈价格: {state.take_profit_price}")
-        return order
-    except Exception as e:
-        logger.error(f"做空订单执行失败: {e}")
-        return None
-
-def place_sell_order(symbol, quantity):
-    global client, state
-    try:
-        order = client.futures_create_order(
-            symbol=symbol,
-            side=Client.SIDE_SELL,
-            type=Client.ORDER_TYPE_MARKET,
-            quantity=quantity
-        )
-        logger.info(f"卖出订单已执行: {order}")
-        state.in_position = False
-        state.last_buy_price = 0
-        state.take_profit_price = 0
-        return order
-    except Exception as e:
-        logger.error(f"卖出订单执行失败: {e}")
-        return None
-
-def handle_socket_message(msg):
-    global state
-    if msg['e'] == 'kline':
-        kline = msg['k']
-        # 添加日志查看kline['x']的值
-        logger.info(f"K线状态 - 闭合: {kline['x']}, 时间戳: {kline['T']}, 当前价格: {kline['c']}")
-        # 提取K线数据(实时计算，不等待K线闭合)
-        close_price = float(kline['c'])
-        timestamp = pd.to_datetime(kline['T'], unit='ms')
-
-        # 添加到K线列表
-        # 如果是新K线（闭合后），添加新记录；否则更新最后一条记录
-        if kline['x'] or not state.klines or state.klines[-1]['timestamp'] != timestamp:
-            state.klines.append({
-                'timestamp': timestamp,
-                'close': close_price
-            })
-        else:
-            state.klines[-1]['close'] = close_price
-
-        print(len(state.klines))
-        # 保持K线列表长度
-        if len(state.klines) > Config.RSI_PERIOD + 10:
-            state.klines.pop(0)
-
-        # 当有足够数据时计算RSI
-        if len(state.klines) >= Config.RSI_PERIOD:
-            df = pd.DataFrame(state.klines)
-            current_rsi = calculate_rsi(df, Config.RSI_PERIOD)
-            status = "(K线闭合)" if kline['x'] else "(实时计算)"
-            logger.info(f"当前RSI{status}: {current_rsi:.2f}, 价格: {close_price}")
-
-            # 检查买入条件
-            if current_rsi < Config.OVERSOLD and not state.in_position:
-                logger.info(f"RSI低于超卖阈值({Config.OVERSOLD}), 准备买入...")
-                # 这里简化处理，实际交易中需要计算合适的交易量
-                place_short_order(Config.SYMBOL, 0.001)
-
-            # 检查止盈条件
-            elif state.in_position and close_price >= state.take_profit_price:
-                logger.info(f"价格达到止盈点({state.take_profit_price}), 准备卖出...")
-                place_sell_order(Config.SYMBOL, 0.001)
-
-def fetch_kline_data(symbol, interval):
-    global client
-    try:
-        # 获取最新的K线数据
-        klines = client.get_klines(
-            symbol=symbol,
-            interval=interval,
-            limit=Config.RSI_PERIOD + 100  # 获取足够计算RSI的数据
-        )
-        # 转换为DataFrame
-        df = pd.DataFrame(klines, columns=['timestamp', 'open', 'high', 'low', 'close', 'volume', 'close_time', 'quote_asset_volume', 'number_of_trades', 'taker_buy_base_asset_volume', 'taker_buy_quote_asset_volume', 'ignore'])
-        df['timestamp'] = pd.to_datetime(df['timestamp'], unit='ms')
-        df['close'] = df['close'].astype(float)
-        return df[['timestamp', 'close']]
-    except Exception as e:
-        logger.error(f"获取K线数据失败: {e}")
-        return None
-
-
-
+def on_kline_data(kline_data):
+    """WebSocket K线数据回调函数"""
+    symbol = kline_data['s']
+    if symbol in state_map:
+        state = state_map[symbol]
+        df, rsi_value = DataProcessor.process_kline_data(kline_data, state)
+        if df is not None and rsi_value is not None:
+            close_price = df['close'].iloc[-1]
+            # 检查交易条件
+            trading_executor = TradingExecutor(client)
+            trading_executor.check_trading_conditions(symbol, close_price, rsi_value, state)
 # 定义信号处理函数，用于优雅退出
 def signal_handler(sig, frame):
-    logger.info('程序已退出')
+    logger.info('程序正在退出...')
+    if 'executor' in globals() and executor is not None:
+        executor.shutdown(wait=False)
     exit(0)
+
+def main():
+    global client
+
+    # 初始化Binance客户端
+    client = Client(Config.API_KEY, Config.API_SECRET, {'proxies': Config.PROXIES}, testnet=Config.TESTNET)
+    client.ping()  # 测试连接并自动同步时间
+
+    # 为每个交易对设置合约杠杆
+    trading_executor = TradingExecutor(client)
+    for symbol in Config.SYMBOLS:
+        trading_executor.set_leverage(symbol)
+
+    # 注册信号处理器
+    signal.signal(signal.SIGINT, signal_handler)
+    signal.signal(signal.SIGTERM, signal_handler)
+
+    # 根据配置选择数据源
+    if Config.DATA_SOURCE == 'websocket':
+        logger.info('使用WebSocket数据源')
+        ws_client = BinanceWebSocketClient(
+            symbols=Config.SYMBOLS,
+            interval=Config.INTERVAL,
+            testnet=Config.TESTNET,
+            proxies=Config.PROXIES
+        )
+        ws_client.start(on_kline_data)
+    else:
+        logger.info('使用REST API数据源')
+        # 创建线程池，最大线程数为交易对数量
+        max_workers = min(len(Config.SYMBOLS), 10)  # 限制最大线程数为10
+        with ThreadPoolExecutor(max_workers=max_workers) as executor:
+            logger.info('程序正在运行，按Ctrl+C退出...')
+            while True:
+                # 提交所有交易对的处理任务
+                futures = {executor.submit(process_symbol, symbol): symbol for symbol in Config.SYMBOLS}
+
+                # 等待刷新间隔
+                time.sleep(Config.REFRESH_INTERVAL - 0.001)
+
+if __name__ == '__main__':
+    main()
 def process_symbol(symbol):
-    # 处理单个交易对的数据获取和分析
-    df = fetch_kline_data(symbol, Config.INTERVAL)
-    if df is not None and not df.empty:
-        state = state_map[symbol]
-        state.klines = df.to_dict('records')
+    logger.info(f"开始处理交易对: {symbol}")
+    try:
+        # 初始化交易状态
+        state = TradingState()
+        state_map[symbol] = state
 
-        if len(state.klines) >= Config.RSI_PERIOD:
-            # 计算所有RSI值
-            rsi_series = calculate_rsi(df, Config.RSI_PERIOD, return_all=True)
-            current_rsi = rsi_series.iloc[-1]
-            close_price = df['close'].iloc[-1]
-            logger.info(f"[{symbol}] 当前RSI: {current_rsi:.2f}, 价格: {close_price}")
+        # 创建交易执行器
+        executor = TradingExecutor(client)
+        
+        # 设置杠杆
+        executor.set_leverage(symbol, Config.LEVERAGE)
 
-            # 检查交易条件
-            if current_rsi < Config.OVERSOLD and not state.in_position:
-                logger.info(f"[{symbol}] RSI低于超卖阈值({Config.OVERSOLD}), 准备买入...")
-                place_short_order(symbol, 0.001)
-            elif state.in_position and close_price >= state.take_profit_price:
-                logger.info(f"[{symbol}] 价格达到止盈点({state.take_profit_price}), 准备卖出...")
-                place_sell_order(symbol, 0.001)
+        # 获取K线数据
+        try:
+            klines = client.get_klines(
+                symbol=symbol,
+                interval=Config.KLINE_INTERVAL,
+                limit=Config.RSI_PERIOD + 100
+            )
+            
+            # 处理K线数据
+            df = pd.DataFrame(klines, columns=['timestamp', 'open', 'high', 'low', 'close', 'volume', 'close_time', 'quote_asset_volume', 'number_of_trades', 'taker_buy_base_asset_volume', 'taker_buy_quote_asset_volume', 'ignore'])
+            df['timestamp'] = pd.to_datetime(df['timestamp'], unit='ms')
+            df['close'] = df['close'].astype(float)
+            
+            # 初始化K线列表
+            state.klines = df[['timestamp', 'close']].to_dict('records')
+            logger.info(f"成功加载{len(state.klines)}条{symbol}的K线数据")
 
-            return (df, rsi_series)
-    return (None, None)
+            # 计算初始RSI
+            if len(state.klines) >= Config.RSI_PERIOD:
+                rsi_value = DataProcessor.calculate_rsi(pd.DataFrame(state.klines), Config.RSI_PERIOD)
+                logger.info(f"{symbol}当前RSI: {rsi_value:.2f}")
+
+            # 模拟实时更新
+            for i in range(5):
+                # 模拟新价格数据
+                last_close = state.klines[-1]['close']
+                new_close = last_close * (1 + (random.uniform(-0.01, 0.01)))
+                new_timestamp = state.klines[-1]['timestamp'] + pd.Timedelta(minutes=1)
+
+                # 添加新数据
+                state.klines.append({
+                    'timestamp': new_timestamp,
+                    'close': new_close
+                })
+
+                # 保持K线列表长度
+                if len(state.klines) > Config.RSI_PERIOD + 100:
+                    state.klines.pop(0)
+
+                # 计算RSI并检查交易条件
+                rsi_value = None
+                if len(state.klines) >= Config.RSI_PERIOD:
+                    rsi_value = DataProcessor.calculate_rsi(pd.DataFrame(state.klines), Config.RSI_PERIOD)
+                    logger.info(f"{symbol}模拟RSI更新: {rsi_value:.2f}, 价格: {new_close:.4f}")
+                    
+                    # 检查交易条件
+                    executor.check_trading_conditions(symbol, new_close, rsi_value, state)
+
+                # 等待1秒
+                time.sleep(1)
+
+        except Exception as e:
+            logger.error(f"获取{symbol}的K线数据失败: {e}")
+            return
+
+    except Exception as e:
+        logger.error(f"处理{symbol}时发生错误: {e}", exc_info=True)
+
+
 
 def main():
     global client
