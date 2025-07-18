@@ -38,14 +38,13 @@ class DataProcessor:
         """处理K线数据并更新交易状态"""
         try:
             # 提取K线数据
-            symbol = kline_data['s']
-            kline = kline_data['k']
-            close_price = float(kline['c'])
-            timestamp = pd.to_datetime(kline['T'], unit='ms')
+            symbol = kline_data['symbol']
+            close_price = float(kline_data['close'])
+            timestamp = pd.to_datetime(kline_data['event_time'], unit='ms')
 
             # 添加到K线列表
-            # 如果是新K线（闭合后），添加新记录；否则更新最后一条记录
-            if kline['x'] or not state.klines or state.klines[-1]['timestamp'] != timestamp:
+            # 如果是新K线，添加新记录；否则更新最后一条记录
+            if not state.klines or state.klines[-1]['timestamp'] != timestamp:
                 state.klines.append({
                     'timestamp': timestamp,
                     'close': close_price
@@ -62,8 +61,7 @@ class DataProcessor:
             if len(state.klines) >= Config.RSI_PERIOD:
                 df = pd.DataFrame(state.klines)
                 rsi_value = DataProcessor.calculate_rsi(df, Config.RSI_PERIOD)
-                status = "(K线闭合)" if kline['x'] else "(实时计算)"
-                logger.info(f"[{symbol}] 当前RSI{status}: {rsi_value:.2f}, 价格: {close_price}")
+                logger.info(f"[{symbol}] 当前RSI: {rsi_value:.2f}, 价格: {close_price}")
                 return df, rsi_value
             return None, None
         except Exception as e:

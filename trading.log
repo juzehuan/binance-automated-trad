@@ -779,3 +779,7 @@
 2025-07-18 16:15:59,480 - trading_system - INFO - [ONDOUSDT] 当前RSI: 37.06, 价格: 1.0555
 2025-07-18 16:15:59,492 - trading_system - INFO - [CRVUSDT] 当前RSI: 53.53, 价格: 1.0372
 2025-07-18 16:16:00,812 - trading_system - INFO - 程序已退出
+2025-07-18 16:34:24,283 - trading_system - INFO - 使用WebSocket数据源
+2025-07-18 16:34:42,647 - trading_system - INFO - 使用WebSocket数据源
+2025-07-18 16:35:41,498 - trading_system - INFO - 使用WebSocket数据源
+2025-07-18 16:36:45,536 - trading_system - INFO - 使用WebSocket数据源

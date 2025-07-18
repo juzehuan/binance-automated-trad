@@ -7,6 +7,7 @@ import pandas as pd
 import concurrent.futures
 from concurrent.futures import ThreadPoolExecutor
 import sys
+import random
 
 # 导入自定义模块
 from config import Config
@@ -159,34 +160,35 @@ def process_symbol(symbol):
                 rsi_value = DataProcessor.calculate_rsi(pd.DataFrame(state.klines), Config.RSI_PERIOD)
                 logger.info(f"{symbol}当前RSI: {rsi_value:.2f}")
 
+            # 注释掉模拟实时更新代码，避免与WebSocket数据冲突
             # 模拟实时更新
-            for i in range(5):
-                # 模拟新价格数据
-                last_close = state.klines[-1]['close']
-                new_close = last_close * (1 + (random.uniform(-0.01, 0.01)))
-                new_timestamp = state.klines[-1]['timestamp'] + pd.Timedelta(minutes=1)
+            # for i in range(5):
+            #     # 模拟新价格数据
+            #     last_close = state.klines[-1]['close']
+            #     new_close = last_close * (1 + (random.uniform(-0.01, 0.01)))
+            #     new_timestamp = state.klines[-1]['timestamp'] + pd.Timedelta(minutes=1)
 
-                # 添加新数据
-                state.klines.append({
-                    'timestamp': new_timestamp,
-                    'close': new_close
-                })
+            #     # 添加新数据
+            #     state.klines.append({
+            #         'timestamp': new_timestamp,
+            #         'close': new_close
+            #     })
 
-                # 保持K线列表长度
-                if len(state.klines) > Config.RSI_PERIOD + 100:
-                    state.klines.pop(0)
+            #     # 保持K线列表长度
+            #     if len(state.klines) > Config.RSI_PERIOD + 100:
+            #         state.klines.pop(0)
 
-                # 计算RSI并检查交易条件
-                rsi_value = None
-                if len(state.klines) >= Config.RSI_PERIOD:
-                    rsi_value = DataProcessor.calculate_rsi(pd.DataFrame(state.klines), Config.RSI_PERIOD)
-                    logger.info(f"{symbol}模拟RSI更新: {rsi_value:.2f}, 价格: {new_close:.4f}")
-                    
-                    # 检查交易条件
-                    executor.check_trading_conditions(symbol, new_close, rsi_value, state)
+            #     # 计算RSI并检查交易条件
+            #     rsi_value = None
+            #     if len(state.klines) >= Config.RSI_PERIOD:
+            #         rsi_value = DataProcessor.calculate_rsi(pd.DataFrame(state.klines), Config.RSI_PERIOD)
+            #         logger.info(f"{symbol}模拟RSI更新: {rsi_value:.2f}, 价格: {new_close:.4f}")
+            #         
+            #         # 检查交易条件
+            #         executor.check_trading_conditions(symbol, new_close, rsi_value, state)
 
-                # 等待1秒
-                time.sleep(1)
+            #     # 等待1秒
+            #     time.sleep(1)
 
         except Exception as e:
             logger.error(f"获取{symbol}的K线数据失败: {e}")
@@ -194,35 +196,3 @@ def process_symbol(symbol):
 
     except Exception as e:
         logger.error(f"处理{symbol}时发生错误: {e}", exc_info=True)
-
-
-
-def main():
-    global client
-
-    # 解决时间戳不同步问题：启用自动时间同步
-    client = Client(api_key, api_secret, {'proxies': proxies}, testnet=Config.TESTNET)
-    client.ping()  # 测试连接并自动同步时间
-
-    # 为每个交易对设置合约杠杆
-    for symbol in Config.SYMBOLS:
-        set_leverage(symbol, Config.LEVERAGE)
-
-    # 注册信号处理器
-    signal.signal(signal.SIGINT, signal_handler)
-    signal.signal(signal.SIGTERM, signal_handler)
-
-    # 保持程序运行
-    logger.info('程序正在运行，按Ctrl+C退出...')
-    # 创建线程池，最大线程数为交易对数量
-    max_workers = min(len(Config.SYMBOLS), 10)  # 限制最大线程数为10
-    with ThreadPoolExecutor(max_workers=max_workers) as executor:
-        while True:
-            # 提交所有交易对的处理任务
-            futures = {executor.submit(process_symbol, symbol): symbol for symbol in Config.SYMBOLS}
-
-            # 等待刷新间隔
-            time.sleep(refresh_interval - 0.001)  # 减去动画暂停时间以保持总间隔一致
-
-if __name__ == '__main__':
-    main()

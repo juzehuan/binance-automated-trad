@@ -34,27 +34,11 @@ class BinanceWebSocketClient:
     def on_message(self, message):
         """接收到WebSocket消息时调用"""
         try:
-            data = json.loads(message)
-            if 'data' in data:
-                # 处理K线数据
-                kline_data = data['data']
-                if self.data_callback:
-                    self.data_callback(kline_data)
+            # 处理K线数据
+            if self.data_callback:
+                self.data_callback(message)
         except Exception as e:
             logger.error(f'处理消息错误: {e}')
-
-    def on_error(self, error):
-        """WebSocket错误时调用"""
-        logger.error(f'WebSocket错误: {error}')
-
-    def on_close(self):
-        """WebSocket关闭时调用"""
-        logger.info('WebSocket连接已关闭')
-        self.running = False
-        # 尝试重连
-        logger.info('尝试重新连接...')
-        time.sleep(5)
-        self.start(self.data_callback)
 
     def start(self, data_callback=None):
         """启动WebSocket客户端"""
@@ -66,7 +50,7 @@ class BinanceWebSocketClient:
             api_key=self.api_key,
             api_secret=self.api_secret,
             testnet=self.testnet,
-            proxies=self.proxies
+            https_proxy=self.proxies['https']
         )
 
         # 启动WebSocket管理器
@@ -76,11 +60,10 @@ class BinanceWebSocketClient:
         for symbol in self.symbols:
             stream_name = f'{symbol.lower()}@kline_{self.interval}'
             logger.info(f'订阅流: {stream_name}')
-            self.twm.start_stream(
-                stream_name=stream_name,
-                callback=self.on_message,
-                on_error=self.on_error,
-                on_close=self.on_close
+            self.twm.start_kline_socket(
+                symbol=symbol.lower(),
+                interval=self.interval,
+                callback=self.on_message
             )
 
         logger.info('WebSocket客户端已启动')
