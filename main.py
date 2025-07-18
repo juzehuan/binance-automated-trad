@@ -68,7 +68,7 @@ class Config:
 class TradingState:
     def __init__(self):
         self.in_position = False
-        self.last_buy_price = 0
+        self.last_short_price = 0
         self.klines = []
         self.take_profit_price = 0
 
@@ -115,24 +115,24 @@ def calculate_rsi(data, period=14):
 
     return rsi.iloc[-1] if not rsi.empty else 50
 
-def place_buy_order(symbol, quantity):
+def place_short_order(symbol, quantity):
     global client, state
     try:
         order = client.futures_create_order(
             symbol=symbol,
-            side=Client.SIDE_BUY,
+            side=Client.SIDE_SELL,
             type=Client.ORDER_TYPE_MARKET,
             quantity=quantity
         )
-        logger.info(f"买入订单已执行: {order}")
+        logger.info(f"做空订单已执行: {order}")
         state.in_position = True
-        state.last_buy_price = float(order['fills'][0]['price'])
-        # 设置止盈价格
-        state.take_profit_price = state.last_buy_price * (1 + Config.TAKE_PROFIT_PERCENT / 100)
+        state.last_short_price = float(order['fills'][0]['price'])
+        # 设置止盈价格（做空时止盈价格低于开仓价格）
+        state.take_profit_price = state.last_short_price * (1 - Config.TAKE_PROFIT_PERCENT / 100)
         logger.info(f"设置止盈价格: {state.take_profit_price}")
         return order
     except Exception as e:
-        logger.error(f"买入订单执行失败: {e}")
+        logger.error(f"做空订单执行失败: {e}")
         return None
 
 def place_sell_order(symbol, quantity):
@@ -189,7 +189,7 @@ def handle_socket_message(msg):
             if current_rsi < Config.OVERSOLD and not state.in_position:
                 logger.info(f"RSI低于超卖阈值({Config.OVERSOLD}), 准备买入...")
                 # 这里简化处理，实际交易中需要计算合适的交易量
-                place_buy_order(Config.SYMBOL, 0.001)
+                place_short_order(Config.SYMBOL, 0.001)
 
             # 检查止盈条件
             elif state.in_position and close_price >= state.take_profit_price:
@@ -232,7 +232,7 @@ def process_kline_data(symbol, df):
         # 检查买入条件
         if current_rsi < Config.OVERSOLD and not state.in_position:
             logger.info(f"[{symbol}] RSI低于超卖阈值({Config.OVERSOLD}), 准备买入...")
-            place_buy_order(symbol, 0.001)
+            place_short_order(symbol, 0.001)
 
         # 检查止盈条件
         elif state.in_position and close_price >= state.take_profit_price:
