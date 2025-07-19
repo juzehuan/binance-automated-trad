@@ -26,7 +26,8 @@ class TradingConfig:
     # 交易配置
     TESTNET: bool = False
     LEVERAGE: int = 10
-    TAKE_PROFIT_PERCENT: float = 5.0
+    
+    TAKE_PROFIT_PERCENT: float = 10.0  # 做空目标盈利百分比，对应价格下跌幅度
 
     # API配置
     API_KEY: str = os.getenv('ROOT_API_KEY', '')

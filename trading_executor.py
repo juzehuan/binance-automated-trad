@@ -1,5 +1,6 @@
 from config import TradingConfig
 import logging
+import time
 from binance.exceptions import BinanceAPIException, BinanceOrderException
 
 logger = logging.getLogger('trading_system')
@@ -42,9 +43,10 @@ class TradingExecutor:
                 'fills': [{'price': close_price, 'qty': quantity}]
             }
 
-            state.in_position = True
+
             state.last_short_price = close_price
             # 设置止盈价格（做空时止盈价格低于开仓价格）
+            # 做空盈利目标价格 = 开仓价 × (1 - 目标盈利百分比)，与用户提供的计算公式一致
             state.take_profit_price = close_price * (1 - self.config.TAKE_PROFIT_PERCENT / 100)
             profit_percent = self.config.TAKE_PROFIT_PERCENT
 
@@ -62,10 +64,12 @@ class TradingExecutor:
                 quantity=quantity
             )
             logger.info(f"[{symbol}] 做空订单已执行: {order}")
-            state.in_position = True
-            state.last_short_price = float(order['fills'][0]['price'])
-            # 设置止盈价格（做空时止盈价格低于开仓价格）
-            state.take_profit_price = state.last_short_price * (1 - self.config.TAKE_PROFIT_PERCENT / 100)
+            with state.lock:
+                state.in_position = True
+                state.last_short_price = float(order['fills'][0]['price'])
+                # 设置止盈价格（做空时止盈价格低于开仓价格）
+                # 做空盈利目标价格 = 开仓价 × (1 - 目标盈利百分比)，与用户提供的计算公式一致
+                state.take_profit_price = state.last_short_price * (1 - self.config.TAKE_PROFIT_PERCENT / 100)
             logger.info(f"[{symbol}] 设置止盈价格: {state.take_profit_price}")
             return order
         except Exception as e:
@@ -77,8 +81,12 @@ class TradingExecutor:
         """平空单（支持模拟平仓）"""
         if self.config.SIMULATION_MODE:
             # 模拟平空订单（买入）
+            with state.lock:
+                state.is_closing_position = True
             close_price = self.get_latest_price(symbol)
             if close_price is None:
+                with state.lock:
+                    state.is_closing_position = False
                 logger.error(f"[{symbol}] 模拟平仓失败: 无法获取最新价格")
                 return None
 
@@ -95,29 +103,42 @@ class TradingExecutor:
                 'fills': [{'price': close_price, 'qty': quantity}]
             }
 
-            state.in_position = False
+            with state.lock:
+                    state.in_position = False
+                    state.is_closing_position = False
+            logger.info(f"[{symbol}] 持仓状态更新为: {state.in_position}")
             state.last_short_price = 0
             state.take_profit_price = 0
             logger.info(f"[{symbol}] [模拟] 平仓订单已执行: {simulated_order}")
             logger.info(f"[{symbol}] [模拟] 平仓价格: {close_price}, 获利金额: {profit:.2f} USDT, 获利百分比: {profit_percent:.2f}%")
             return simulated_order
-        else:
-            # 真实交易平空单（买入）
-            try:
-                order = self.client.futures_create_order(
-                    symbol=symbol,
-                    side=self.client.SIDE_BUY,
-                    type=self.client.ORDER_TYPE_MARKET,
-                    quantity=quantity
-                )
-                logger.info(f"[{symbol}] 平空订单已执行: {order}")
-                state.in_position = False
-                state.last_short_price = 0
-                state.take_profit_price = 0
-                return order
-            except Exception as e:
-                logger.error(f"[{symbol}] 平空订单执行失败: {e}")
-                return None
+        with state.lock:
+                if state.in_position:
+                    # 真实交易平空单（买入）
+                    try:
+                        with state.lock:
+                            state.is_closing_position = True
+
+                        order = self.client.futures_create_order(
+                            symbol=symbol,
+                            side=self.client.SIDE_BUY,
+                            type=self.client.ORDER_TYPE_MARKET,
+                            quantity=quantity
+                        )
+
+                        with state.lock:
+                            state.in_position = False
+                            state.last_short_price = 0
+                            state.take_profit_price = 0
+                            state.is_closing_position = False
+
+                        logger.info(f"[{symbol}] 平空订单已执行: {order}")
+                        return order
+                    except Exception as e:
+                        with state.lock:
+                            state.is_closing_position = False
+                        logger.error(f"[{symbol}] 平空订单执行失败: {e}")
+                        return None
 
 
     def get_available_balance(self, asset):
@@ -155,34 +176,52 @@ class TradingExecutor:
             return None
 
     def check_trading_conditions(self, symbol, rsi_value, state):
-        """检查交易条件并执行交易"""
         # 获取最新价格
         close_price = self.get_latest_price(symbol)
         if close_price is None:
             return
         logger.info(f"[{symbol}] 最新价格: {close_price}, RSI: {rsi_value}")
         # 统一交易条件判断（模拟与真实交易共用同一套逻辑）
-        if not state.in_position:
-            # RSI大于等于超买阈值时做空
-            print(rsi_value >= self.config.OVERBOUGHT and not state.in_position)
-            print(state.in_position)
-            if rsi_value >= self.config.OVERBOUGHT and not state.in_position:
+        # 先获取余额，减少锁持有时间
+        usdt_balance = self.get_available_balance("USDT")
+        
+        with state.lock:
+            logger.debug(f"[{symbol}] 锁获取成功，当前持仓状态: {state.in_position}")
+            if not state.in_position and rsi_value >= self.config.OVERBOUGHT and not state.is_closing_position:
                 logger.info(f"[{symbol}] RSI大于等于超买阈值({self.config.OVERBOUGHT}), 执行做空操作")
-                usdt_balance = self.get_available_balance("USDT")
+                state.in_position = True  # 立即锁定仓位
+                logger.info(f"[{symbol}] 持仓状态更新为: {state.in_position}")
+                
                 if close_price <= 0:
                     logger.error(f"[{symbol}] 无效价格: {close_price}")
+                    state.in_position = False  # 重置状态
+                    logger.debug(f"[{symbol}] 释放锁，持仓状态重置为: {state.in_position}")
                     return
+                
                 sell_quantity = (usdt_balance / close_price) * 0.25  # 四分之一USDT仓位
                 if sell_quantity > 0:
-                    self.place_short_order(symbol, sell_quantity, state)
-                    state.position_size = sell_quantity  # 记录仓位大小
-        else:
-            # RSI小于等于超卖阈值或达到止盈价格时平仓
-            if rsi_value <= self.config.OVERSOLD or close_price >= state.take_profit_price:
-                if rsi_value <= self.config.OVERSOLD:
-                    logger.info(f"[{symbol}] RSI小于等于超卖阈值({self.config.OVERSOLD}), 执行平仓操作")
+                    order_result = self.place_short_order(symbol, sell_quantity, state)
+                    if order_result is not None:
+                        state.position_size = sell_quantity  # 记录仓位大小
+
+                    else:
+                        state.in_position = False  # 订单失败，重置状态
+                        logger.error(f"[{symbol}] 下单失败，重置持仓状态")
                 else:
-                    logger.info(f"[{symbol}] 价格达到止盈点({state.take_profit_price}), 准备平仓...")
-                if hasattr(state, 'position_size') and state.position_size > 0:
-                    self.close_short_order(symbol, state.position_size, state)
-                    state.position_size = 0
+                    state.in_position = False  # 重置状态
+            else:
+                # RSI小于等于超卖阈值或达到止盈价格时平仓
+                if rsi_value <= self.config.OVERSOLD or close_price <= state.take_profit_price:
+                    if rsi_value <= self.config.OVERSOLD:
+                        logger.info(f"[{symbol}] RSI小于等于超卖阈值({self.config.OVERSOLD}), 执行平仓操作")
+                    else:
+                        logger.info(f"[{symbol}] 价格达到止盈点({state.take_profit_price}), 准备平仓...")
+                    if hasattr(state, 'position_size') and state.position_size > 0:
+                          with state.lock:
+                              state.is_closing_position = True
+                          self.close_short_order(symbol, state.position_size, state)
+                          with state.lock:
+                              state.position_size = 0
+                              state.is_closing_position = False
+
+            logger.debug(f"[{symbol}] 释放锁，当前持仓状态: {state.in_position}")

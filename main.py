@@ -80,15 +80,25 @@ logger.addHandler(simulation_file_handler)
 logger.addHandler(real_file_handler)
 
 # 状态跟踪
+import threading
+
 class TradingState:
     def __init__(self):
         self.in_position = False
         self.last_short_price = 0
         self.klines = []
         self.take_profit_price = 0
+        self.is_closing_position = False  # 平仓状态标记
+        self.lock = threading.RLock()
 
-# 为每个交易对创建独立的状态
-state_map = {symbol: TradingState() for symbol in config.SYMBOLS}
+# 初始化交易状态字典（持久化每个交易对的状态）
+global state_map
+if 'state_map' not in globals():
+    state_map = {}
+# 确保每个交易对都有持久化的状态实例
+for symbol in config.SYMBOLS:
+    if symbol not in state_map:
+        state_map[symbol] = TradingState()
 
 # 初始化变量
 client = None
@@ -105,9 +115,8 @@ def signal_handler(sig, frame):
 def process_symbol(symbol):
     logger.info(f"开始处理交易对: {symbol}")
     try:
-        # 初始化交易状态
-        state = TradingState()
-        state_map[symbol] = state
+        # 获取持久化的交易状态
+        state = state_map[symbol]
 
         # 获取K线数据
         try:
