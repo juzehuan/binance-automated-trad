@@ -50,8 +50,8 @@ class TradingExecutor:
             state.take_profit_price = close_price * (1 - self.config.TAKE_PROFIT_PERCENT / 100)
             profit_percent = self.config.TAKE_PROFIT_PERCENT
 
-            logger.info(f"[{symbol}] [模拟] 做空订单已执行: {simulated_order}")
-            logger.info(f"[{symbol}] [模拟] 买入价格: {close_price}, 止盈价格: {state.take_profit_price}, 止盈获利百分比: {profit_percent}%")
+            logger.info(f"[{symbol}] [模拟] 做空订单已执行: 数量={quantity}, 开仓价格={close_price}, 止盈价格={state.take_profit_price}, 目标获利={profit_percent}%")
+            logger.info(f"[{symbol}] [模拟] 订单详情: {simulated_order}")
             return simulated_order
 
         # 真实交易逻辑
@@ -63,7 +63,8 @@ class TradingExecutor:
                 type=self.client.ORDER_TYPE_MARKET,
                 quantity=quantity
             )
-            logger.info(f"[{symbol}] 做空订单已执行: {order}")
+            logger.info(f"[{symbol}] 做空订单已执行: 数量={quantity}, 开仓价格={state.last_short_price}, 止盈价格={state.take_profit_price}, 目标获利={self.config.TAKE_PROFIT_PERCENT}%")
+            logger.info(f"[{symbol}] 订单详情: {order}")
             with state.lock:
                 state.in_position = True
                 state.last_short_price = float(order['fills'][0]['price'])
@@ -109,8 +110,8 @@ class TradingExecutor:
             logger.info(f"[{symbol}] 持仓状态更新为: {state.in_position}")
             state.last_short_price = 0
             state.take_profit_price = 0
-            logger.info(f"[{symbol}] [模拟] 平仓订单已执行: {simulated_order}")
-            logger.info(f"[{symbol}] [模拟] 平仓价格: {close_price}, 获利金额: {profit:.2f} USDT, 获利百分比: {profit_percent:.2f}%")
+            logger.info(f"[{symbol}] [模拟] 平仓订单已执行: 数量={quantity}, 平仓价格={close_price}, 开仓价格={state.last_short_price}, 获利金额={profit:.2f} USDT, 获利百分比={profit_percent:.2f}%")
+            logger.info(f"[{symbol}] [模拟] 订单详情: {simulated_order}")
             return simulated_order
         with state.lock:
                 if state.in_position:
@@ -132,7 +133,8 @@ class TradingExecutor:
                             state.take_profit_price = 0
                             state.is_closing_position = False
 
-                        logger.info(f"[{symbol}] 平空订单已执行: {order}")
+                        logger.info(f"[{symbol}] 平空订单已执行: 数量={quantity}, 平仓价格={float(order['fills'][0]['price'])}, 开仓价格={state.last_short_price}")
+                        logger.info(f"[{symbol}] 订单详情: {order}")
                         return order
                     except Exception as e:
                         with state.lock:
@@ -184,20 +186,20 @@ class TradingExecutor:
         # 统一交易条件判断（模拟与真实交易共用同一套逻辑）
         # 先获取余额，减少锁持有时间
         usdt_balance = self.get_available_balance("USDT")
-        
+
         with state.lock:
             logger.debug(f"[{symbol}] 锁获取成功，当前持仓状态: {state.in_position}")
             if not state.in_position and rsi_value >= self.config.OVERBOUGHT and not state.is_closing_position:
                 logger.info(f"[{symbol}] RSI大于等于超买阈值({self.config.OVERBOUGHT}), 执行做空操作")
                 state.in_position = True  # 立即锁定仓位
                 logger.info(f"[{symbol}] 持仓状态更新为: {state.in_position}")
-                
+
                 if close_price <= 0:
                     logger.error(f"[{symbol}] 无效价格: {close_price}")
                     state.in_position = False  # 重置状态
                     logger.debug(f"[{symbol}] 释放锁，持仓状态重置为: {state.in_position}")
                     return
-                
+
                 sell_quantity = (usdt_balance / close_price) * 0.25  # 四分之一USDT仓位
                 if sell_quantity > 0:
                     order_result = self.place_short_order(symbol, sell_quantity, state)

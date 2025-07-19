@@ -1,5 +1,6 @@
 from binance.client import Client
 import logging
+from config import TradingConfig
 from logging.handlers import RotatingFileHandler
 import signal
 import time
@@ -19,6 +20,21 @@ trading_executor = TradingExecutor(client, config)
 
 # 配置日志系统
 logger = logging.getLogger('trading_system')
+# 配置日志文件处理器
+file_handler = RotatingFileHandler(
+    TradingConfig.REAL_LOG_FILE,
+    maxBytes=10*1024*1024,  # 10MB日志轮转
+    backupCount=5,
+    encoding='utf-8'
+)
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+file_handler.setFormatter(formatter)
+file_handler.setLevel(logging.INFO)
+logger.addHandler(file_handler)
+# 保留控制台输出
+console_handler = logging.StreamHandler()
+console_handler.setFormatter(formatter)
+logger.addHandler(console_handler)
 logger.setLevel(getattr(logging, config.LOG_LEVEL))
 
 # 创建格式化器

@@ -20,13 +20,13 @@ class TradingConfig:
 
     # RSI指标配置
     RSI_PERIOD: int = 6
-    OVERBOUGHT: int = 25 # 超买
-    OVERSOLD: int = 22 # 超卖
+    OVERBOUGHT: int = 95 # 超买
+    OVERSOLD: int = 60 # 超卖
 
     # 交易配置
     TESTNET: bool = False
     LEVERAGE: int = 10
-    
+
     TAKE_PROFIT_PERCENT: float = 10.0  # 做空目标盈利百分比，对应价格下跌幅度
 
     # API配置
